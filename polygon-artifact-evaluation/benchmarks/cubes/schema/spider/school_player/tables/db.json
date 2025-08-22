@@ -1,0 +1,159 @@
+{
+    "Problem Number": "spider/school_player/tables/db",
+    "Tables": [
+        {
+            "TableName": "school",
+            "PKeys": [
+                {
+                    "Name": "School_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "School",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Enrollment",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Founded",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Denomination",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Boys_or_Girls",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Day_or_Boarding",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Year_Entered_Competition",
+                    "Type": "real"
+                },
+                {
+                    "Name": "School_Colors",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "school_details",
+            "PKeys": [
+                {
+                    "Name": "School_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "School_ID",
+                    "PName": "School_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Nickname",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Colors",
+                    "Type": "text"
+                },
+                {
+                    "Name": "League",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Class",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Division",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "school_performance",
+            "PKeys": [
+                {
+                    "Name": "School_Id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "School_Year",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "School_Id",
+                    "PName": "School_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Class_A",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Class_AA",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "player",
+            "PKeys": [
+                {
+                    "Name": "Player_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "School_ID",
+                    "PName": "School_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Player",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Team",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Position",
+                    "Type": "text"
+                },
+                {
+                    "Name": "School_ID",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

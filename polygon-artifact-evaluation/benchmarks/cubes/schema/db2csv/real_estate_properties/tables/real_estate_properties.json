@@ -1,0 +1,215 @@
+{
+    "Problem Number": "db2csv/real_estate_properties/tables/real_estate_properties",
+    "Tables": [
+        {
+            "TableName": "Ref_Feature_Types",
+            "PKeys": [
+                {
+                    "Name": "feature_type_code",
+                    "Type": "VARCHAR(20)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "feature_type_name",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Property_Types",
+            "PKeys": [
+                {
+                    "Name": "property_type_code",
+                    "Type": "VARCHAR(20)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "property_type_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Other_Available_Features",
+            "PKeys": [
+                {
+                    "Name": "feature_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "feature_type_code",
+                    "PName": "feature_type_code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "feature_type_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "feature_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "feature_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Properties",
+            "PKeys": [
+                {
+                    "Name": "property_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "property_type_code",
+                    "PName": "property_type_code",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "property_type_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "date_on_market",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_sold",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "property_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "property_address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "room_count",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "vendor_requested_price",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "buyer_offered_price",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "agreed_selling_price",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "apt_feature_1",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "apt_feature_2",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "apt_feature_3",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "fld_feature_1",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "fld_feature_2",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "fld_feature_3",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "hse_feature_1",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "hse_feature_2",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "hse_feature_3",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "oth_feature_1",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "oth_feature_2",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "oth_feature_3",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "shp_feature_1",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "shp_feature_2",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "shp_feature_3",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_property_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Other_Property_Features",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "property_id",
+                    "PName": "property_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "feature_id",
+                    "PName": "feature_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "property_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "feature_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "property_feature_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        }
+    ]
+}

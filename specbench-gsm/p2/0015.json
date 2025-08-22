@@ -1,0 +1,20 @@
+{
+  "question": "{name1}'s dog has {n1} puppies, {k1} of which have spots. {name2}'s dog has {n2} puppies, {k2} of which have spots. {name3} has {n3} dogs, each having {k3} puppies with spots. After a visit to the vet, {name1} discovered that half of his unspotted puppies actually have spots that were not visible before. What percentage of all the puppies have spots?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "name3": "str",
+    "n1": "int",
+    "n2": "int",
+    "n3": "int",
+    "k1": "int",
+    "k2": "int",
+    "k3": "int"
+  },
+  "answer": "int(100 * (k1+(n1-k1)//2+k2+n3*k3) / (n1+n2+n3*k3))",
+  "constraints": [],
+  "private_constraints": [
+    "divides(n1-k1, 2)",
+    "is_int(100 * (k1+(n1-k1)//2+k2+n3*k3) / (n1+n2+n3*k3))"
+  ]
+}

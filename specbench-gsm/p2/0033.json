@@ -1,0 +1,24 @@
+{
+  "question": "{name1} and {name2} are sisters from {city} who love collecting signatures from {celebrity_type}. During their {vacation_type} from school, the sisters spend every afternoon collecting signatures. After {n1} weeks, {name1} and {name2} compare their autograph books, counting up the number of signatures each sister has collected. {name1} has {s1} signatures in her book, and {name2} has {s2}. The sisters have {n2} more weeks of {vacation_type}, and they decide they want to reach {goal} signatures between them by the end of the break. However, during the remaining {n2} weeks, {name1} is only able to collect signatures on weekends, reducing her weekly collection by 5 per week, while {name2} decides to increase her weekly collection. How many signatures will {name2} need to collect per week to make sure they reach their goal?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "city": "str",
+    "celebrity_type": "str",
+    "vacation_type": "str",
+    "season": "str",
+    "n1": "int",
+    "n2": "int",
+    "s1": "int",
+    "s2": "int",
+    "goal": "int"
+  },
+  "answer": "(goal - (s1+s2) - n2 * 5)//n2",
+  "constraints": [],
+  "private_constraints": [
+    "s1 + s2 < goal",
+    "(goal - (s1 + s2)) - n2 * 5 > 0",
+    "divides((goal - (s1 + s2)) - n2 * 5, n2)",
+    "(goal - (s1+s2) - n2 * 5)//n2 > 5"
+  ]
+}

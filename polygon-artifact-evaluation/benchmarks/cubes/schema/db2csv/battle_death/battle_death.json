@@ -1,0 +1,113 @@
+{
+    "Problem Number": "db2csv/battle_death/battle_death",
+    "Tables": [
+        {
+            "TableName": "battle",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "bulgarian_commander",
+                    "Type": "text"
+                },
+                {
+                    "Name": "latin_commander",
+                    "Type": "text"
+                },
+                {
+                    "Name": "result",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "ship",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "lost_in_battle",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "lost_in_battle",
+                    "Type": "int"
+                },
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "tonnage",
+                    "Type": "text"
+                },
+                {
+                    "Name": "ship_type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "disposition_of_ship",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "death",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "caused_by_ship_id",
+                    "PName": "id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "caused_by_ship_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "note",
+                    "Type": "text"
+                },
+                {
+                    "Name": "killed",
+                    "Type": "int"
+                },
+                {
+                    "Name": "injured",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

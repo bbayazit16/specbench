@@ -1,0 +1,79 @@
+{
+    "Problem Number": "spider/movie_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Movie",
+            "PKeys": [
+                {
+                    "Name": "mID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "title",
+                    "Type": "text"
+                },
+                {
+                    "Name": "year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "director",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "Reviewer",
+            "PKeys": [
+                {
+                    "Name": "rID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "Rating",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "rID",
+                    "PName": "rID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "mID",
+                    "PName": "mID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "rID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "mID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "stars",
+                    "Type": "int"
+                },
+                {
+                    "Name": "ratingDate",
+                    "Type": "date"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+row_dep: unique(Players.player_id);
+         unique(Championships.year)
+col_dep: Championships.Wimbledon <- Players.player_id;
+         Championships.Fr_open <- Players.player_id;
+         Championships.US_open <- Players.player_id;
+         Championships.Au_open <- Players.player_id

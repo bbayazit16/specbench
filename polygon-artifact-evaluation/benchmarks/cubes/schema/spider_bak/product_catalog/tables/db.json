@@ -1,0 +1,183 @@
+{
+    "Problem Number": "spider_bak/product_catalog/tables/db",
+    "Tables": [
+        {
+            "TableName": "Attribute_Definitions",
+            "PKeys": [
+                {
+                    "Name": "attribute_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "attribute_name",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "attribute_data_type",
+                    "Type": "VARCHAR(10)"
+                }
+            ]
+        },
+        {
+            "TableName": "Catalogs",
+            "PKeys": [
+                {
+                    "Name": "catalog_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "catalog_name",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "catalog_publisher",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "date_of_publication",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_of_latest_revision",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Catalog_Structure",
+            "PKeys": [
+                {
+                    "Name": "catalog_level_number",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "catalog_id",
+                    "PName": "catalog_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "catalog_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "catalog_level_name",
+                    "Type": "VARCHAR(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "Catalog_Contents",
+            "PKeys": [
+                {
+                    "Name": "catalog_entry_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "catalog_level_number",
+                    "PName": "catalog_level_number",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "catalog_level_number",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "parent_entry_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "previous_entry_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "next_entry_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "catalog_entry_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "product_stock_number",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "price_in_dollars",
+                    "Type": "DOUBLE"
+                },
+                {
+                    "Name": "price_in_euros",
+                    "Type": "DOUBLE"
+                },
+                {
+                    "Name": "price_in_pounds",
+                    "Type": "DOUBLE"
+                },
+                {
+                    "Name": "capacity",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "length",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "height",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "width",
+                    "Type": "VARCHAR(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "Catalog_Contents_Additional_Attributes",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "catalog_level_number",
+                    "PName": "catalog_level_number",
+                    "PTable": 2
+                },
+                {
+                    "FName": "catalog_entry_id",
+                    "PName": "catalog_entry_id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "catalog_entry_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "catalog_level_number",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "attribute_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "attribute_value",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        }
+    ]
+}

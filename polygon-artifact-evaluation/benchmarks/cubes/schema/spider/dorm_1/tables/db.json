@@ -1,0 +1,139 @@
+{
+    "Problem Number": "spider/dorm_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Student",
+            "PKeys": [
+                {
+                    "Name": "StuID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "LName",
+                    "Type": "VARCHAR(12)"
+                },
+                {
+                    "Name": "Fname",
+                    "Type": "VARCHAR(12)"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Sex",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "Major",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Advisor",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "city_code",
+                    "Type": "VARCHAR(3)"
+                }
+            ]
+        },
+        {
+            "TableName": "Dorm",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "dormid",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "dorm_name",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "student_capacity",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "gender",
+                    "Type": "VARCHAR(1)"
+                }
+            ]
+        },
+        {
+            "TableName": "Dorm_amenity",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "amenid",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "amenity_name",
+                    "Type": "VARCHAR(25)"
+                }
+            ]
+        },
+        {
+            "TableName": "Has_amenity",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "amenid",
+                    "PName": "amenid",
+                    "PTable": 2
+                },
+                {
+                    "FName": "dormid",
+                    "PName": "dormid",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "dormid",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "amenid",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Lives_in",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "dormid",
+                    "PName": "dormid",
+                    "PTable": 1
+                },
+                {
+                    "FName": "stuid",
+                    "PName": "StuID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "stuid",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "dormid",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "room_number",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+  "question": "The {event} team hid {total} {item}. The {family} twins each found {n} {item}. All the other {item} except {m} were found by their friends. How many {item} did the friends find?",
+  "types": {
+    "event": "str",
+    "item": "str",
+    "family": "str",
+    "total": "int",
+    "n": "int",
+    "m": "int"
+  },
+  "answer": "total - 2*n - m",
+  "constraints": [],
+  "private_constraints": [
+    "2*n + m < total"
+  ]
+}

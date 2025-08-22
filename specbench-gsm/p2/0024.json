@@ -1,0 +1,30 @@
+{
+  "question": "According to its nutritional info, a bag of {food} has {cal} calories per serving. A {size} {unit} bag has {n} servings. The healthy daily calorie target is 15 calories per pound of body weight. {name1} weighs {w1} lbs, and he has already consumed {spent1} calories and burned {burned1} calories through exercise. {name2} weighs {w2} lbs, and she has already consumed {spent2} in food and {extra2} calories in ice cream. How many more {unit} of {food} does {name1} need to consume than {name2}?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "food": "str",
+    "unit": "str",
+    "cal": "int",
+    "size": "int",
+    "n": "int",
+    "w1": "int",
+    "spent1": "int",
+    "burned1": "int",
+    "w2": "int",
+    "spent2": "int",
+    "extra2": "int"
+  },
+  "answer": "((w1*15 - spent1 + burned1)//cal - (w2*15-spent2 - extra2) // cal) * size // n",
+  "constraints": [
+    "unit in ['grams', 'oz', 'ounces']"
+  ],
+  "private_constraints": [
+    "divides(size, n)",
+    "w1*15 - spent1 + burned1 > 0",
+    "divides(w1*15 - spent1 + burned1, cal)",
+    "w2*15 - spent2 - extra2 > 0",
+    "divides(w2*15 - spent2 - extra2, cal)",
+    "((w1*15 - spent1 + burned1) // cal) > ((w2*15-spent2 - extra2) // cal)"
+  ]
+}

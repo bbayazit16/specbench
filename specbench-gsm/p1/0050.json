@@ -1,0 +1,18 @@
+{
+  "question": "The area of {name}'s rectangular {room_type} is {area} square {unit}. If the length of his room is {diff} {unit} longer that its width, what is the perimeter of the room in {unit}?",
+  "types": {
+    "name": "str",
+    "room_type": "str",
+    "unit": "str",
+    "area": "int",
+    "width": "int",
+    "diff": "int"
+  },
+  "answer": "2 * (width + width + diff)",
+  "constraints": [
+    "unit in ['meters', 'feet']"
+  ],
+  "private_constraints": [
+    "width * (width+diff) == area"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/029",
+    "Tables": [
+        {
+            "TableName": "029_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Pre",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Ba",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "pre_Ba",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "kgs",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "fl",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "029_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Pre",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Ba",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "pre_Ba",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "kgs",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "fl",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

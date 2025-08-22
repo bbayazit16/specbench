@@ -1,0 +1,112 @@
+{
+    "Problem Number": "spider/gas_company/tables/db",
+    "Tables": [
+        {
+            "TableName": "company",
+            "PKeys": [
+                {
+                    "Name": "Company_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Rank",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Company",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Headquarters",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Main_Industry",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Sales_billion",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Profits_billion",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Assets_billion",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Market_Value",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "gas_station",
+            "PKeys": [
+                {
+                    "Name": "Station_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Open_Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Manager_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Vice_Manager_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Representative_Name",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "station_company",
+            "PKeys": [
+                {
+                    "Name": "Station_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Company_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Company_ID",
+                    "PName": "Company_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Station_ID",
+                    "PName": "Station_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Rank_of_the_Year",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "Problem Number": "textbook/tables/3",
+    "Tables": [
+        {
+            "TableName": "3-1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Room",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "3-2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID_key_student",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "ID_key",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

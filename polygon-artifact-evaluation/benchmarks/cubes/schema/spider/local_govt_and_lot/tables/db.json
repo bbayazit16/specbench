@@ -1,0 +1,366 @@
+{
+    "Problem Number": "spider/local_govt_and_lot/tables/db",
+    "Tables": [
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "customer_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Properties",
+            "PKeys": [
+                {
+                    "Name": "property_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "property_type_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "property_address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Residents",
+            "PKeys": [
+                {
+                    "Name": "resident_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "property_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_moved_in",
+                    "Type": "DATETIME"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "property_id",
+                    "PName": "property_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "date_moved_out",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Organizations",
+            "PKeys": [
+                {
+                    "Name": "organization_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "parent_organization_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "organization_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Services",
+            "PKeys": [
+                {
+                    "Name": "service_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "organization_id",
+                    "PName": "organization_id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "organization_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "service_type_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "service_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Residents_Services",
+            "PKeys": [
+                {
+                    "Name": "resident_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "service_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "resident_id",
+                    "PName": "resident_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "property_id",
+                    "PName": "property_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "date_moved_in",
+                    "PName": "date_moved_in",
+                    "PTable": 2
+                },
+                {
+                    "FName": "service_id",
+                    "PName": "service_id",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "date_moved_in",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "property_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_requested",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_provided",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Things",
+            "PKeys": [
+                {
+                    "Name": "thing_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "organization_id",
+                    "PName": "organization_id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "organization_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Type_of_Thing_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "service_type_code",
+                    "Type": "CHAR(10)"
+                },
+                {
+                    "Name": "service_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer_Events",
+            "PKeys": [
+                {
+                    "Name": "Customer_Event_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "resident_id",
+                    "PName": "resident_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "property_id",
+                    "PName": "property_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "date_moved_in",
+                    "PName": "date_moved_in",
+                    "PTable": 2
+                },
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 0
+                },
+                {
+                    "FName": "thing_id",
+                    "PName": "thing_id",
+                    "PTable": 6
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_moved_in",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "property_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "resident_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "thing_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer_Event_Notes",
+            "PKeys": [
+                {
+                    "Name": "Customer_Event_Note_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Customer_Event_ID",
+                    "PName": "Customer_Event_ID",
+                    "PTable": 7
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Customer_Event_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "service_type_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "resident_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "property_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_moved_in",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Timed_Status_of_Things",
+            "PKeys": [
+                {
+                    "Name": "thing_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Date_and_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Status_of_Thing_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "thing_id",
+                    "PName": "thing_id",
+                    "PTable": 6
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "Timed_Locations_of_Things",
+            "PKeys": [
+                {
+                    "Name": "thing_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Date_and_Time",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Location_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "thing_id",
+                    "PName": "thing_id",
+                    "PTable": 6
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

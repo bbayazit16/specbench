@@ -1,0 +1,89 @@
+{
+    "Problem Number": "spider_bak/twitter_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "follows",
+            "PKeys": [
+                {
+                    "Name": "f1",
+                    "Type": "int(11)"
+                },
+                {
+                    "Name": "f2",
+                    "Type": "int(11)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "f2",
+                    "PName": "uid",
+                    "PTable": 2
+                },
+                {
+                    "FName": "f1",
+                    "PName": "uid",
+                    "PTable": 2
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "tweets",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "bigint(20)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "uid",
+                    "PName": "uid",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "uid",
+                    "Type": "int(11)"
+                },
+                {
+                    "Name": "text",
+                    "Type": "char(140)"
+                },
+                {
+                    "Name": "createdate",
+                    "Type": "datetime"
+                }
+            ]
+        },
+        {
+            "TableName": "user_profiles",
+            "PKeys": [
+                {
+                    "Name": "uid",
+                    "Type": "int(11)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "varchar(255)"
+                },
+                {
+                    "Name": "email",
+                    "Type": "varchar(255)"
+                },
+                {
+                    "Name": "partitionid",
+                    "Type": "int(11)"
+                },
+                {
+                    "Name": "followers",
+                    "Type": "int(11)"
+                }
+            ]
+        }
+    ]
+}

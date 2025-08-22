@@ -1,0 +1,149 @@
+{
+    "Problem Number": "spider_bak/music_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "genre",
+            "PKeys": [
+                {
+                    "Name": "g_name",
+                    "Type": "varchar2(20)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "rating",
+                    "Type": "varchar2(10)"
+                },
+                {
+                    "Name": "most_popular_in",
+                    "Type": "varchar2(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "artist",
+            "PKeys": [
+                {
+                    "Name": "artist_name",
+                    "Type": "varchar2(50)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "preferred_genre",
+                    "PName": "g_name",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "country",
+                    "Type": "varchar2(20)"
+                },
+                {
+                    "Name": "gender",
+                    "Type": "varchar2(20)"
+                },
+                {
+                    "Name": "preferred_genre",
+                    "Type": "varchar2(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "files",
+            "PKeys": [
+                {
+                    "Name": "f_id",
+                    "Type": "number(10)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "artist_name",
+                    "PName": "artist_name",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "artist_name",
+                    "Type": "varchar2(50)"
+                },
+                {
+                    "Name": "file_size",
+                    "Type": "varchar2(20)"
+                },
+                {
+                    "Name": "duration",
+                    "Type": "varchar2(20)"
+                },
+                {
+                    "Name": "formats",
+                    "Type": "varchar2(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "song",
+            "PKeys": [
+                {
+                    "Name": "song_name",
+                    "Type": "varchar2(50)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "genre_is",
+                    "PName": "g_name",
+                    "PTable": 0
+                },
+                {
+                    "FName": "f_id",
+                    "PName": "f_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "artist_name",
+                    "PName": "artist_name",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "artist_name",
+                    "Type": "varchar2(50)"
+                },
+                {
+                    "Name": "country",
+                    "Type": "varchar2(20)"
+                },
+                {
+                    "Name": "f_id",
+                    "Type": "number(10)"
+                },
+                {
+                    "Name": "genre_is",
+                    "Type": "varchar2(20)"
+                },
+                {
+                    "Name": "rating",
+                    "Type": "number(10)"
+                },
+                {
+                    "Name": "languages",
+                    "Type": "varchar2(20)"
+                },
+                {
+                    "Name": "releasedate",
+                    "Type": "Date"
+                },
+                {
+                    "Name": "resolution",
+                    "Type": "number(10)"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "Problem Number": "spider/local_govt_in_alabama/tables/db",
+    "Tables": [
+        {
+            "TableName": "Services",
+            "PKeys": [
+                {
+                    "Name": "Service_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Service_Type_Code",
+                    "Type": "CHAR(15)"
+                }
+            ]
+        },
+        {
+            "TableName": "Participants",
+            "PKeys": [
+                {
+                    "Name": "Participant_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Participant_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Participant_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Events",
+            "PKeys": [
+                {
+                    "Name": "Event_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Service_ID",
+                    "PName": "Service_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Service_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Event_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Participants_in_Events",
+            "PKeys": [
+                {
+                    "Name": "Event_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Participant_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Event_ID",
+                    "PName": "Event_ID",
+                    "PTable": 2
+                },
+                {
+                    "FName": "Participant_ID",
+                    "PName": "Participant_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

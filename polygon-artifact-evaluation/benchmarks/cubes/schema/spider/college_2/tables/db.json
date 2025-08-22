@@ -1,0 +1,383 @@
+{
+    "Problem Number": "spider/college_2/tables/db",
+    "Tables": [
+        {
+            "TableName": "classroom",
+            "PKeys": [
+                {
+                    "Name": "building",
+                    "Type": "varchar(15)"
+                },
+                {
+                    "Name": "room_number",
+                    "Type": "varchar(7)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "capacity",
+                    "Type": "numeric(4,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "department",
+            "PKeys": [
+                {
+                    "Name": "dept_name",
+                    "Type": "varchar(20)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "building",
+                    "Type": "varchar(15)"
+                },
+                {
+                    "Name": "budget",
+                    "Type": "numeric(12,2)"
+                }
+            ]
+        },
+        {
+            "TableName": "course",
+            "PKeys": [
+                {
+                    "Name": "course_id",
+                    "Type": "varchar(8)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "dept_name",
+                    "PName": "dept_name",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "title",
+                    "Type": "varchar(50)"
+                },
+                {
+                    "Name": "dept_name",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "credits",
+                    "Type": "numeric(2,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "instructor",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "varchar(5)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "dept_name",
+                    "PName": "dept_name",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "dept_name",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "salary",
+                    "Type": "numeric(8,2)"
+                }
+            ]
+        },
+        {
+            "TableName": "section",
+            "PKeys": [
+                {
+                    "Name": "course_id",
+                    "Type": "varchar(8)"
+                },
+                {
+                    "Name": "sec_id",
+                    "Type": "varchar(8)"
+                },
+                {
+                    "Name": "semester",
+                    "Type": "varchar(6)"
+                },
+                {
+                    "Name": "year",
+                    "Type": "numeric(4,0)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "building",
+                    "PName": "building",
+                    "PTable": 0
+                },
+                {
+                    "FName": "room_number",
+                    "PName": "room_number",
+                    "PTable": 0
+                },
+                {
+                    "FName": "course_id",
+                    "PName": "course_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "building",
+                    "Type": "varchar(15)"
+                },
+                {
+                    "Name": "room_number",
+                    "Type": "varchar(7)"
+                },
+                {
+                    "Name": "time_slot_id",
+                    "Type": "varchar(4)"
+                }
+            ]
+        },
+        {
+            "TableName": "teaches",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "varchar(5)"
+                },
+                {
+                    "Name": "course_id",
+                    "Type": "varchar(8)"
+                },
+                {
+                    "Name": "sec_id",
+                    "Type": "varchar(8)"
+                },
+                {
+                    "Name": "semester",
+                    "Type": "varchar(6)"
+                },
+                {
+                    "Name": "year",
+                    "Type": "numeric(4,0)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "ID",
+                    "PName": "ID",
+                    "PTable": 3
+                },
+                {
+                    "FName": "course_id",
+                    "PName": "course_id",
+                    "PTable": 4
+                },
+                {
+                    "FName": "sec_id",
+                    "PName": "sec_id",
+                    "PTable": 4
+                },
+                {
+                    "FName": "semester",
+                    "PName": "semester",
+                    "PTable": 4
+                },
+                {
+                    "FName": "year",
+                    "PName": "year",
+                    "PTable": 4
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "student",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "varchar(5)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "dept_name",
+                    "PName": "dept_name",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "dept_name",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "tot_cred",
+                    "Type": "numeric(3,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "takes",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "varchar(5)"
+                },
+                {
+                    "Name": "course_id",
+                    "Type": "varchar(8)"
+                },
+                {
+                    "Name": "sec_id",
+                    "Type": "varchar(8)"
+                },
+                {
+                    "Name": "semester",
+                    "Type": "varchar(6)"
+                },
+                {
+                    "Name": "year",
+                    "Type": "numeric(4,0)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "ID",
+                    "PName": "ID",
+                    "PTable": 6
+                },
+                {
+                    "FName": "course_id",
+                    "PName": "course_id",
+                    "PTable": 4
+                },
+                {
+                    "FName": "sec_id",
+                    "PName": "sec_id",
+                    "PTable": 4
+                },
+                {
+                    "FName": "semester",
+                    "PName": "semester",
+                    "PTable": 4
+                },
+                {
+                    "FName": "year",
+                    "PName": "year",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "grade",
+                    "Type": "varchar(2)"
+                }
+            ]
+        },
+        {
+            "TableName": "advisor",
+            "PKeys": [
+                {
+                    "Name": "s_ID",
+                    "Type": "varchar(5)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "s_ID",
+                    "PName": "ID",
+                    "PTable": 6
+                },
+                {
+                    "FName": "i_ID",
+                    "PName": "ID",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "i_ID",
+                    "Type": "varchar(5)"
+                }
+            ]
+        },
+        {
+            "TableName": "time_slot",
+            "PKeys": [
+                {
+                    "Name": "time_slot_id",
+                    "Type": "varchar(4)"
+                },
+                {
+                    "Name": "day",
+                    "Type": "varchar(1)"
+                },
+                {
+                    "Name": "start_hr",
+                    "Type": "numeric(2)"
+                },
+                {
+                    "Name": "start_min",
+                    "Type": "numeric(2)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "end_hr",
+                    "Type": "numeric(2)"
+                },
+                {
+                    "Name": "end_min",
+                    "Type": "numeric(2)"
+                }
+            ]
+        },
+        {
+            "TableName": "prereq",
+            "PKeys": [
+                {
+                    "Name": "course_id",
+                    "Type": "varchar(8)"
+                },
+                {
+                    "Name": "prereq_id",
+                    "Type": "varchar(8)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "prereq_id",
+                    "PName": "course_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "course_id",
+                    "PName": "course_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

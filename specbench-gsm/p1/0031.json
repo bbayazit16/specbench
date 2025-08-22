@@ -1,0 +1,17 @@
+{
+  "question": "{name1}, {name2} are currently {age_diff} years apart in age. {name1} and {name3} are currently {age_diff2} years apart. If {name1}, who is younger than {name2} but older than {name3}, is {age1} years old, what's the average of their ages?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "name3": "str",
+    "age_diff": "int",
+    "age_diff2": "int",
+    "age1": "int"
+  },
+  "answer": "(3*age1 + age_diff - age_diff2) // 3",
+  "constraints": [],
+  "private_constraints": [
+    "is_int((3*age1 + age_diff - age_diff2) / 3)",
+    "age1 - age_diff2 > 0"
+  ]
+}

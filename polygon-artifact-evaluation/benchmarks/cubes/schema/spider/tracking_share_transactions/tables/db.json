@@ -1,0 +1,179 @@
+{
+    "Problem Number": "spider/tracking_share_transactions/tables/db",
+    "Tables": [
+        {
+            "TableName": "Investors",
+            "PKeys": [
+                {
+                    "Name": "investor_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Investor_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Lots",
+            "PKeys": [
+                {
+                    "Name": "lot_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "investor_id",
+                    "PName": "investor_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "investor_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "lot_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Transaction_Types",
+            "PKeys": [
+                {
+                    "Name": "transaction_type_code",
+                    "Type": "VARCHAR(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "transaction_type_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Transactions",
+            "PKeys": [
+                {
+                    "Name": "transaction_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "transaction_type_code",
+                    "PName": "transaction_type_code",
+                    "PTable": 2
+                },
+                {
+                    "FName": "investor_id",
+                    "PName": "investor_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "investor_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "transaction_type_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "date_of_transaction",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "amount_of_transaction",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "share_count",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Sales",
+            "PKeys": [
+                {
+                    "Name": "sales_transaction_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "sales_transaction_id",
+                    "PName": "transaction_id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "sales_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Purchases",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "purchase_transaction_id",
+                    "PName": "transaction_id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "purchase_transaction_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "purchase_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Transactions_Lots",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "transaction_id",
+                    "PName": "transaction_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "lot_id",
+                    "PName": "lot_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "transaction_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "lot_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

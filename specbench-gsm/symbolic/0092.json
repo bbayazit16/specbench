@@ -1,0 +1,26 @@
+{
+  "question": "{name1} slew {n1} {creature} with his mighty {weapon1}, while {name2}, using a {weapon2}, slew a fraction of {frac1} as many {creature} as {name1}. Using a {weapon3}, {name3} slew {mult1} as many {creature} as {name2}. But {name4}, having forgotten his {weapon4} at home, slew a fraction of {frac2} as many {creature} as {name3} using a {weapon5}. How many {creature} has {name4} slain?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "name3": "str",
+    "name4": "str",
+    "creature": "str",
+    "weapon1": "str",
+    "weapon2": "str",
+    "weapon3": "str",
+    "weapon4": "str",
+    "weapon5": "str",
+    "n1": "int",
+    "frac1": "float",
+    "mult1": "float",
+    "frac2": "float"
+  },
+  "answer": "int(n1 * frac1 * mult1 * frac2)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n1 * frac1)",
+    "is_int(n1 * frac1 * mult1)",
+    "is_int(n1 * frac1 * mult1 * frac2)"
+  ]
+}

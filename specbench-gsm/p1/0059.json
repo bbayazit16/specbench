@@ -1,0 +1,21 @@
+{
+  "question": "I have {n1} liters of {fruit1} drink that is a fraction of {frac1} water and I wish to add it to {n2} liters of {fruit2} drink that is a fraction {frac2} water. But as I pour it, I spill {spill} liters of the {fruit1} drink. To make up for that, I add {spill} liters of water to the mix. What percentage of the final mix is water?",
+  "types": {
+    "fruit1": "str",
+    "fruit2": "str",
+    "n1": "int",
+    "n2": "int",
+    "frac1": "float",
+    "frac2": "float",
+    "spill": "int"
+  },
+  "answer": "int((int(n2 * frac2 + (n1 - spill) * frac1) + spill) / (n1+n2) * 100)",
+  "constraints": [],
+  "private_constraints": [
+    "spill < n1",
+    "is_int(n2 * frac2)",
+    "is_int((n1 - spill) * frac1)",
+    "is_int(n2 * frac2 + (n1 - spill) * frac1)",
+    "is_int((int(n2 * frac2 + (n1 - spill) * frac1) + spill) / (n1+n2) * 100)"
+  ]
+}

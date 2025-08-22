@@ -1,0 +1,21 @@
+{
+  "question": "{name} receives {n} emails a day. {p}% of those emails don't require any response. From the rest, {name} can only respond to {k} less than the fraction {frac} of them. How many emails does {name} respond to in a {d} day work week? {name} work overtime on the last day so he can respond to {pp}% more emails than usual.",
+  "types": {
+    "name": "str",
+    "n": "int",
+    "p": "int",
+    "k": "int",
+    "frac": "float",
+    "d": "int",
+    "pp": "int"
+  },
+  "answer": "int((d-1) * (((n * (100 - p) / 100) * frac)-k)) + int((1+pp/100)*(((n * (100 - p) / 100) * frac)-k))",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * p / 100)",
+    "is_int(n * (100 - p) / 100)",
+    "(n * (100 - p) / 100) * (frac) > k + 7",
+    "is_int((n * (100 - p) / 100) * (frac))",
+    "is_int((1+pp/100)*(((n * (100 - p) / 100) * frac)-k))"
+  ]
+}

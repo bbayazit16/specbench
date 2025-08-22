@@ -1,0 +1,21 @@
+{
+  "question": "{name} is feeding his livestock {food}. Each {animal1} needs {n1} {unit}, and each {animal2} needs {n2} {unit} less than twice the amount each {animal1} needs. If there are {k1} {animal1}s and {k2} {animal2}s, how many {unit} of {food} does {name} need?",
+  "types": {
+    "name": "str",
+    "food": "str",
+    "animal1": "str",
+    "animal2": "str",
+    "unit": "str",
+    "n1": "int",
+    "n2": "int",
+    "k1": "int",
+    "k2": "int"
+  },
+  "answer": "k1*n1 + k2*(2*n1 - n2)",
+  "constraints": [
+    "unit in ['kg', 'kilograms', 'pounds']"
+  ],
+  "private_constraints": [
+    "2*n1 - n2 > 0"
+  ]
+}

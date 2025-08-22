@@ -1,0 +1,75 @@
+{
+    "Problem Number": "spider/election_representative/tables/db",
+    "Tables": [
+        {
+            "TableName": "election",
+            "PKeys": [
+                {
+                    "Name": "Election_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Representative_ID",
+                    "PName": "Representative_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Representative_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Votes",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Vote_Percent",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Seats",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Place",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "representative",
+            "PKeys": [
+                {
+                    "Name": "Representative_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "State",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Party",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Lifespan",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

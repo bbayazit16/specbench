@@ -1,0 +1,17 @@
+{
+  "question": "In a set of {item}'s cards, there are {n1} {c1} cards, and {p}% more {c2} cards. {c3} cards are as many as the sum of {c1} and {c2} cards. How many cards of all mentioned colors are there?",
+  "types": {
+    "item": "str",
+    "c1": "str",
+    "c2": "str",
+    "c3": "str",
+    "n1": "int",
+    "p": "int"
+  },
+  "answer": "2 * (n1 + (p/100 * n1))",
+  "constraints": [],
+  "private_constraints": [
+    "p < 100",
+    "is_int(p/100 * n1)"
+  ]
+}

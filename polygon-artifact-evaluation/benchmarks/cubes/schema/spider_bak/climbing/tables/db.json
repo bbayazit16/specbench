@@ -1,0 +1,75 @@
+{
+    "Problem Number": "spider_bak/climbing/tables/db",
+    "Tables": [
+        {
+            "TableName": "mountain",
+            "PKeys": [
+                {
+                    "Name": "Mountain_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Height",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Prominence",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Range",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "climber",
+            "PKeys": [
+                {
+                    "Name": "Climber_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Mountain_ID",
+                    "PName": "Mountain_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Time",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Points",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Mountain_ID",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

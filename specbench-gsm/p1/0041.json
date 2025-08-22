@@ -1,0 +1,19 @@
+{
+  "question": "A {structure} is made out of {n1} {color1} {obj}s, {mult} times as many {color2} {obj}s, and an unknown number of {color3} {obj}s. If there are {total} {obj}s in the {structure} in total, what percentage of {obj}s are {color3}?",
+  "types": {
+    "structure": "str",
+    "obj": "str",
+    "color1": "str",
+    "color2": "str",
+    "color3": "str",
+    "n1": "int",
+    "mult": "float",
+    "total": "int"
+  },
+  "answer": "int((total - n1 - mult * n1)/total*100)",
+  "constraints": [],
+  "private_constraints": [
+    "total > n1 + mult * n1",
+    "is_int((total - n1 - mult * n1)/total*100)"
+  ]
+}

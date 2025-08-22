@@ -1,0 +1,20 @@
+{
+  "question": "In a {n}-item quiz, {p1}% of the questions are {s1}, and the rest are equally divided as {s2} and {s3} questions. If {name} is sure to get {r1}% of the {s1} questions, and {frac} of the {s2} and {s3} questions correctly, how many points is she sure to get?",
+  "types": {
+    "s1": "str",
+    "s2": "str",
+    "s3": "str",
+    "name": "str",
+    "frac": "float",
+    "p1": "int",
+    "r1": "int",
+    "n": "int"
+  },
+  "answer": "int(n * (p1/100) * (r1/100)) + int(n*(1-(p1/100))*frac)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * (p1/100))",
+    "is_int(n * (p1/100) * (r1/100))",
+    "is_int(n*(1-(p1/100))*frac)"
+  ]
+}

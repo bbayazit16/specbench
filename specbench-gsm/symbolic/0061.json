@@ -1,0 +1,20 @@
+{
+  "question": "{name} has a bag of {objects} with {n} inside. He tripped over {obstacle} while carrying it and dropped a fraction of {frac} of them. He scrambled to search for them but only came up with {k}. When he went back home, he inspected the {objects} further. {fake_num} of them he picked up weren't {objects}, but actually {fake_object} so he got rid of it. How many {objects} did {name} end up with?",
+  "types": {
+    "name": "str",
+    "objects": "str",
+    "obstacle": "str",
+    "fake_object": "str",
+    "fake_num": "int",
+    "frac": "float",
+    "n": "int",
+    "k": "int"
+  },
+  "answer": "int(n * (1-frac)) + k - fake_num",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * frac)",
+    "k < n * frac",
+    "k > fake_num"
+  ]
+}

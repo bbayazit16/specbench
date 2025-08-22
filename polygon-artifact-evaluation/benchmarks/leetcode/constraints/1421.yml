@@ -1,0 +1,4 @@
+row_dep: unique(NPV.id, NPV.year);
+         unique(Queries.id, Queries.year)
+col_dep: Queries.id<-NPV.id
+col_val: NPV.npv>=0

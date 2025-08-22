@@ -1,0 +1,77 @@
+{
+  "Tables": [
+    {
+      "TableName": "months",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "mid",
+          "Type": "int"
+        },
+        {
+          "Name": "month",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "weekdays",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "did",
+          "Type": "int"
+        },
+        {
+          "Name": "day_of_week",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "carriers",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "cid",
+          "Type": "int"
+        },
+        {
+          "Name": "name",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "flights",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "fid",
+          "Type": "int"
+        },
+        {
+          "Name": "year",
+          "Type": "int"
+        },
+        {
+          "Name": "month_id",
+          "Type": "int"
+        },
+        {
+          "Name": "day_of_month",
+          "Type": "int"
+        },
+        {
+          "Name": "carrier_id",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

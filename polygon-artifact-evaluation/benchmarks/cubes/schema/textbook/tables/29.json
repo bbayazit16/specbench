@@ -1,0 +1,59 @@
+{
+    "Problem Number": "textbook/tables/29",
+    "Tables": [
+        {
+            "TableName": "aircraft",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "aid",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "aname",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "crusingrange",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "flights",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "flno",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "origin",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "destination",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "distance",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "departs",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "arrives",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "price",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

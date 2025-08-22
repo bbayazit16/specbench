@@ -1,0 +1,17 @@
+{
+  "question": "{name1} scored {n1} points in one game of {game}. {name2} scored {n2} points more than a fraction of {frac} as many as {name1}. What is the average of their scores?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "game": "str",
+    "n1": "int",
+    "n2": "int",
+    "frac": "float"
+  },
+  "answer": "(n1 + int(frac * n1 + n2))//2",
+  "constraints": [],
+  "private_constraints": [
+    "divides(n1 + int(frac * n1 + n2),2)",
+    "is_int(frac * n1)"
+  ]
+}

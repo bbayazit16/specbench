@@ -1,0 +1,17 @@
+{
+  "question": "A {container} of {liquid} is {vol} {unit}s of {liquid}. {name} drinks {num} {container}s of {liquid}. If {liquid} has {cal} calories per {unit} how many calories did he consume?",
+  "types": {
+    "name": "str",
+    "container": "str",
+    "liquid": "str",
+    "unit": "str",
+    "vol": "int",
+    "num": "int",
+    "cal": "int"
+  },
+  "answer": "vol * num * cal",
+  "constraints": [
+    "unit in ['cc', 'mL', 'ounces']"
+  ],
+  "private_constraints": []
+}

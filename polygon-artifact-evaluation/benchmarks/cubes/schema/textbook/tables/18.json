@@ -1,0 +1,39 @@
+{
+    "Problem Number": "textbook/tables/18",
+    "Tables": [
+        {
+            "TableName": "18-1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "P_id",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "cost",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "18-3",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "S_name",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

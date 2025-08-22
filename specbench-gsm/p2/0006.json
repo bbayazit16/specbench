@@ -1,0 +1,23 @@
+{
+  "question": "{name} has {x} {area}s of {fruit} field. There are {k} {fruit}s per a fraction of {frac} of a {area}. {name} can harvest his {fruit}s every {n} months. In addition, {name} owns a {x2}-{area} {fruit2} field that produces {k2} {fruit2}s per {area}. The {fruit2}s can be harvested every 4 months. In the span of two years, how many more {fruit}s does {name} harvest than {fruit2}s?",
+  "types": {
+    "name": "str",
+    "fruit": "str",
+    "fruit2": "str",
+    "area": "str",
+    "x": "int",
+    "k": "int",
+    "n": "int",
+    "frac": "float",
+    "x2": "int",
+    "k2": "int"
+  },
+  "answer": "2*(int((k*x*1/frac*12//n)) - (x2*k2*3))",
+  "constraints": [
+    "area in ['square meters', 'hectares']"
+  ],
+  "private_constraints": [
+    "x * k * (12//n) * 1.0/frac + k2*x2*3 < 5000",
+    "int((k*x*1/frac*12//n)) > (x2*k2*3)"
+  ]
+}

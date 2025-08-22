@@ -1,0 +1,39 @@
+{
+    "Problem Number": "textbook/tables/9",
+    "Tables": [
+        {
+            "TableName": "9-1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID_class",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "ID_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Room",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "9-2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "F_name",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

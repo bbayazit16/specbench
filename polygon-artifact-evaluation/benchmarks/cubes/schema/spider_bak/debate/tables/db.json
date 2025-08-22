@@ -1,0 +1,97 @@
+{
+    "Problem Number": "spider_bak/debate/tables/db",
+    "Tables": [
+        {
+            "TableName": "people",
+            "PKeys": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "District",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Party",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "debate",
+            "PKeys": [
+                {
+                    "Name": "Debate_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Venue",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Num_of_Audience",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "debate_people",
+            "PKeys": [
+                {
+                    "Name": "Debate_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Affirmative",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Negative",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Negative",
+                    "PName": "People_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Affirmative",
+                    "PName": "People_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Debate_ID",
+                    "PName": "Debate_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "If_Affirmative_Win",
+                    "Type": "bool"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "question": "The vending machine sells {item1} for {price1} cents, {item2} for {price2} cents, and {item3} for {cur}{price3}. {name} spent {cur}{total} and got {n1} bags of {item1}, {n3} packs of {item3}, and had {p}% of his money left in change. How many {item2} did he buy?",
+  "types": {
+    "name": "str",
+    "item1": "str",
+    "item2": "str",
+    "item3": "str",
+    "cur": "str",
+    "price1": "int",
+    "price2": "int",
+    "price3": "int",
+    "total": "int",
+    "n1": "int",
+    "n3": "int",
+    "p": "int"
+  },
+  "answer": "int((total * (100 - p) / 100 - n1 * price1 / 100 - (n3*price3)) / (price2 / 100))",
+  "constraints": [],
+  "private_constraints": [
+    "price2 > price1",
+    "is_int((total) * p /100)",
+    "is_int(((total) * (100 - p) / 100 - (n1 * price1 / 100)- (n3*price3)) / (price2 / 100))",
+    "((total * (100 - p) / 100) - (n1 * price1 / 100) - (n3*price3)) > 0",
+    "((total * (100 - p) / 100) - (n1 * price1 / 100) - (n3*price3)) % (price2 / 100) == 0"
+  ]
+}

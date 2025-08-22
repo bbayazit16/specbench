@@ -1,0 +1,35 @@
+{
+  "Tables": [
+    {
+      "TableName": "parts",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "pnum",
+          "Type": "int"
+        },
+        {
+          "Name": "qoh",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "supply",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "pnum",
+          "Type": "int"
+        },
+        {
+          "Name": "shipdate",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

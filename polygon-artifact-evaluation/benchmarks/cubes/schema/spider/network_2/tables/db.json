@@ -1,0 +1,63 @@
+{
+    "Problem Number": "spider/network_2/tables/db",
+    "Tables": [
+        {
+            "TableName": "Person",
+            "PKeys": [
+                {
+                    "Name": "name",
+                    "Type": "varchar(20)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "age",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "city",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "gender",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "job",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "PersonFriend",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "friend",
+                    "PName": "name",
+                    "PTable": 0
+                },
+                {
+                    "FName": "name",
+                    "PName": "name",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "friend",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "year",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

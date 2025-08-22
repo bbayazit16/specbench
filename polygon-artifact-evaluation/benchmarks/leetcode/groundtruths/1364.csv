@@ -1,0 +1,2 @@
+qid,mysql_groundtruth
+1364,"SELECT invoice_id, t.customer_name, price, contacts_cnt, trusted_contacts_cnt FROM Invoices I LEFT JOIN ( SELECT a.customer_id, customer_name, COUNT(contact_name) AS contacts_cnt, SUM(CASE WHEN contact_email in (SELECT email FROM customers) THEN 1 ELSE 0 END) AS trusted_contacts_cnt FROM Customers a LEFT JOIN Contacts b ON a.customer_id = b.user_id GROUP BY a.customer_id, customer_name ) t ON I.user_id = t.customer_id ORDER BY 1 "

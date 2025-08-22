@@ -1,0 +1,21 @@
+{
+  "question": "A {facility} has a capacity of {total} {item}s with a fraction of {frac} occupied and a fraction {frac_2} of all the {item}s being out of service. Due to the {event}, {daily} patients are admitted into the {facility} each day. Calculate the total number of unoccupied {item}s in the {facility} after {period} weeks.",
+  "types": {
+    "facility": "str",
+    "item": "str",
+    "event": "str",
+    "total": "int",
+    "frac": "float",
+    "frac_2": "float",
+    "daily": "int",
+    "period": "int"
+  },
+  "answer": "total - (total * (frac+frac_2) + daily * period * 7)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(total*frac)",
+    "is_int(total*frac_2)",
+    "is_int(total * (frac + frac_2))",
+    "total * (frac+frac_2) + daily * period * 7 < total"
+  ]
+}

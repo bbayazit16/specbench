@@ -1,0 +1,99 @@
+{
+    "Problem Number": "spider_bak/club_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Student",
+            "PKeys": [
+                {
+                    "Name": "StuID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "LName",
+                    "Type": "VARCHAR(12)"
+                },
+                {
+                    "Name": "Fname",
+                    "Type": "VARCHAR(12)"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Sex",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "Major",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Advisor",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "city_code",
+                    "Type": "VARCHAR(3)"
+                }
+            ]
+        },
+        {
+            "TableName": "Club",
+            "PKeys": [
+                {
+                    "Name": "ClubID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ClubName",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "ClubDesc",
+                    "Type": "VARCHAR(1024)"
+                },
+                {
+                    "Name": "ClubLocation",
+                    "Type": "VARCHAR(40)"
+                }
+            ]
+        },
+        {
+            "TableName": "Member_of_club",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "ClubID",
+                    "PName": "ClubID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "StuID",
+                    "PName": "StuID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "StuID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "ClubID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Position",
+                    "Type": "VARCHAR(40)"
+                }
+            ]
+        }
+    ]
+}

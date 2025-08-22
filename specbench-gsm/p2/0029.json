@@ -1,0 +1,24 @@
+{
+  "question": "{name1} is {age} years old. In {years} years, his {relation_type} {name2} will be {mult} times as old as {name1} is now. {name1}'s brother, {name3}, is {x1} years younger than {name1}, and {name2} sister {name4} is {x2} years older than {name3}. What will be the average of all four in {future} years?",
+  "types": {
+    "name1": "str",
+    "name3": "str",
+    "name2": "str",
+    "name4": "str",
+    "relation_type": "str",
+    "age": "int",
+    "years": "int",
+    "mult": "int",
+    "future": "int",
+    "x1": "int",
+    "x2": "int"
+  },
+  "answer": "(age + (age*mult-years) + age - x1 + age - x1 + x2) // 4 + future",
+  "constraints": [],
+  "private_constraints": [
+    "age > x1",
+    "future != years",
+    "age * mult - years > 0",
+    "divides(age + (age*mult-years) + age - x1 + age - x1 + x2, 4)"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/010",
+    "Tables": [
+        {
+            "TableName": "i010_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "phone_number",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "i010_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "phone_number",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

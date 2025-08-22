@@ -1,0 +1,19 @@
+{
+  "question": "There are currently {n1} {c1} balls, {n2} {c2} balls, and {n3} {c3} balls in the {place}. {c1} balls cost {cur}{p1}, {c3} balls cost {cur}{p3}, and {c2} balls cost {cur}{p2}. How much will the {place} have received after all the balls are sold?",
+  "types": {
+    "place": "str",
+    "c1": "str",
+    "c2": "str",
+    "c3": "str",
+    "cur": "str",
+    "n1": "int",
+    "n2": "int",
+    "n3": "int",
+    "p1": "int",
+    "p2": "int",
+    "p3": "int"
+  },
+  "answer": "n1*p1 + n2*p2 + n3*p3",
+  "constraints": [],
+  "private_constraints": []
+}

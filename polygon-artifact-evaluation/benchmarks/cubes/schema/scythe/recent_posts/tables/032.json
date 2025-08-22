@@ -1,0 +1,28 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/032",
+    "Tables": [
+        {
+            "TableName": "032",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "crit1",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "crit2",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "value",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

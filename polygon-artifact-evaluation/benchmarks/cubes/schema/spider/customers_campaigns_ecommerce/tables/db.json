@@ -1,0 +1,273 @@
+{
+    "Problem Number": "spider/customers_campaigns_ecommerce/tables/db",
+    "Tables": [
+        {
+            "TableName": "Premises",
+            "PKeys": [
+                {
+                    "Name": "premise_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "premises_type",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "premise_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Products",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "product_category",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "product_name",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "payment_method",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "customer_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "customer_phone",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "customer_email",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "customer_address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "customer_login",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "customer_password",
+                    "Type": "VARCHAR(10)"
+                }
+            ]
+        },
+        {
+            "TableName": "Mailshot_Campaigns",
+            "PKeys": [
+                {
+                    "Name": "mailshot_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "product_category",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "mailshot_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "mailshot_start_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "mailshot_end_date",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer_Addresses",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "premise_id",
+                    "PName": "premise_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "premise_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_address_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "address_type_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "date_address_to",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer_Orders",
+            "PKeys": [
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "order_status_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "shipping_method_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "order_placed_datetime",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "order_delivered_datetime",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "order_shipping_charges",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Mailshot_Customers",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "mailshot_id",
+                    "PName": "mailshot_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "mailshot_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "outcome_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "mailshot_customer_date",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Order_Items",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "order_id",
+                    "PName": "order_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "item_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "order_item_status_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "item_status_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "item_delivered_datetime",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "item_order_quantity",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        }
+    ]
+}

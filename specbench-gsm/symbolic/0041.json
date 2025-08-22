@@ -1,0 +1,18 @@
+{
+  "question": "A {structure} is made out of {n1} {color1} {obj}s, {mult} times as many {color2} {obj}s, and an unknown number of {color3} {obj}s. If there are {total} {obj}s in the {structure} in total, how many {color3} {obj}s are there?",
+  "types": {
+    "structure": "str",
+    "obj": "str",
+    "color1": "str",
+    "color2": "str",
+    "color3": "str",
+    "n1": "int",
+    "mult": "float",
+    "total": "int"
+  },
+  "answer": "total - n1 - mult * n1",
+  "constraints": [],
+  "private_constraints": [
+    "total > n1 + mult * n1"
+  ]
+}

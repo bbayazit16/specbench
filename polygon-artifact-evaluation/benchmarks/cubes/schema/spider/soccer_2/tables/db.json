@@ -1,0 +1,84 @@
+{
+    "Problem Number": "spider/soccer_2/tables/db",
+    "Tables": [
+        {
+            "TableName": "College",
+            "PKeys": [
+                {
+                    "Name": "cName",
+                    "Type": "varchar(20)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "state",
+                    "Type": "varchar(2)"
+                },
+                {
+                    "Name": "enr",
+                    "Type": "numeric(5,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "Player",
+            "PKeys": [
+                {
+                    "Name": "pID",
+                    "Type": "numeric(5,0)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "pName",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "yCard",
+                    "Type": "varchar(3)"
+                },
+                {
+                    "Name": "HS",
+                    "Type": "numeric(5,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "Tryout",
+            "PKeys": [
+                {
+                    "Name": "pID",
+                    "Type": "numeric(5,0)"
+                },
+                {
+                    "Name": "cName",
+                    "Type": "varchar(20)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "cName",
+                    "PName": "cName",
+                    "PTable": 0
+                },
+                {
+                    "FName": "pID",
+                    "PName": "pID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "pPos",
+                    "Type": "varchar(8)"
+                },
+                {
+                    "Name": "decision",
+                    "Type": "varchar(3)"
+                }
+            ]
+        }
+    ]
+}

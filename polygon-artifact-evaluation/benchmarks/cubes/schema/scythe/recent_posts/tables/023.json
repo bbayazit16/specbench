@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/023",
+    "Tables": [
+        {
+            "TableName": "023",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Child",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Parent",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

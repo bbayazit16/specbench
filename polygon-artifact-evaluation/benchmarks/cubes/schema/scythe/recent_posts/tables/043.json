@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/043",
+    "Tables": [
+        {
+            "TableName": "043",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "EntryTime",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "ResultTime",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

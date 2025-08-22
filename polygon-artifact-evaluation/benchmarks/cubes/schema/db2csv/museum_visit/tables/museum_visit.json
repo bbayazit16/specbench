@@ -1,0 +1,88 @@
+{
+    "Problem Number": "db2csv/museum_visit/tables/museum_visit",
+    "Tables": [
+        {
+            "TableName": "museum",
+            "PKeys": [
+                {
+                    "Name": "Museum_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Num_of_Staff",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Open_Year",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "visitor",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Level_of_membership",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "visit",
+            "PKeys": [
+                {
+                    "Name": "Museum_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "visitor_ID",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "visitor_ID",
+                    "PName": "ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Museum_ID",
+                    "PName": "Museum_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Num_of_Ticket",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Total_spent",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

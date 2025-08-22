@@ -1,0 +1,21 @@
+{
+  "question": "When the water is cold, {name} swims a {unit} in {t1} minutes. When the water is warm, {name} swims a {unit} in {n} minutes more than {mult} times as long. How much longer does {name} take to swim {d} {unit}s on a warm day than {dd} {unit}s on a cold day?",
+  "types": {
+    "name": "str",
+    "unit": "str",
+    "t1": "int",
+    "n": "int",
+    "mult": "float",
+    "d": "int",
+    "dd": "int"
+  },
+  "answer": "d * (n + mult * t1) - dd * t1",
+  "constraints": [
+    "unit in ['mile', 'kilometer']"
+  ],
+  "private_constraints": [
+    "t1 < 60",
+    "n + mult * t1 < 60",
+    "d * (n + mult * t1) - dd * t1 > 0"
+  ]
+}

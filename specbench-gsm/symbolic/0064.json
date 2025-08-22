@@ -1,0 +1,18 @@
+{
+  "question": "{name} has {n} jars of {item} in her {location}. Each jar of {item} can decorate {m} {food}s. {name} wants to bake enough {food}s to use up all of her {item}. If each {container} holds {k} {food}s, how many {container}s worth of {food}s should she bake?",
+  "types": {
+    "name": "str",
+    "item": "str",
+    "food": "str",
+    "location": "str",
+    "container": "str",
+    "n": "int",
+    "m": "int",
+    "k": "int"
+  },
+  "answer": "(n*m)//k",
+  "constraints": [],
+  "private_constraints": [
+    "divides(n*m, k)"
+  ]
+}

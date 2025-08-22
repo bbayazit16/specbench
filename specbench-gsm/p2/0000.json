@@ -1,0 +1,24 @@
+{
+  "question": "{n} saw a {x}-foot {big_fish} with {k} remoras, each {y} inches long attached to it. Then, a fraction of {frac} of the remoras swam away. Later, {n} saw another {x2}-foot {big_fish} with {k2} remoras, each {y2} inches long, attached to it. On average, what percentage of each {big_fish}'s body length is covered by the remoras?",
+  "types": {
+    "n": "str",
+    "big_fish": "str",
+    "x": "int",
+    "k": "int",
+    "y": "int",
+    "k2": "int",
+    "y2": "int",
+    "x2": "int",
+    "frac": "float"
+  },
+  "answer": "(int(((k-k*frac) * y)/ (x * 12) * 100) + int(k2*y2/(x2*12)*100))/2",
+  "constraints": [],
+  "private_constraints": [
+    "k * y < x * 12",
+    "is_int(frac * k)",
+    "frac* k > 2",
+    "divides(x * 12, (k-frac*k)*y)",
+    "divides(100, x * 12 / ((k-frac*k)*y))",
+    "is_int(k2*y2/(x2*12)*100)"
+  ]
+}

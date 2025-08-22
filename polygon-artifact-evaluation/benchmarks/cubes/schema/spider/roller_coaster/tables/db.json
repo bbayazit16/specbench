@@ -1,0 +1,83 @@
+{
+    "Problem Number": "spider/roller_coaster/tables/db",
+    "Tables": [
+        {
+            "TableName": "roller_coaster",
+            "PKeys": [
+                {
+                    "Name": "Roller_Coaster_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Country_ID",
+                    "PName": "Country_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Park",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Length",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Height",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Speed",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Opened",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Status",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "country",
+            "PKeys": [
+                {
+                    "Name": "Country_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Population",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Area",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Languages",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

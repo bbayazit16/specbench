@@ -1,0 +1,75 @@
+{
+    "Problem Number": "spider_bak/ship_mission/tables/db",
+    "Tables": [
+        {
+            "TableName": "mission",
+            "PKeys": [
+                {
+                    "Name": "Mission_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Ship_ID",
+                    "PName": "Ship_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Ship_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Code",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Launched_Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Speed_knots",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Fate",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "ship",
+            "PKeys": [
+                {
+                    "Name": "Ship_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Nationality",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Tonnage",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

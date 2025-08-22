@@ -1,0 +1,20 @@
+{
+  "question": "{name} went to buy some school supplies. He bought {n1} {obj1} which cost {cur}{c1} each, {n2} {obj2} which cost {cur}{c2} each, and a rim of bond paper which cost {cur}{c3}. How much did {name} spend on everything?",
+  "types": {
+    "name": "str",
+    "obj1": "str",
+    "obj2": "str",
+    "cur": "str",
+    "n1": "int",
+    "c1": "float",
+    "n2": "int",
+    "c2": "float",
+    "c3": "int"
+  },
+  "answer": "int(n1*c1 + n2*c2 + c3)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n1 * c1)",
+    "is_int(n2 * c2)"
+  ]
+}

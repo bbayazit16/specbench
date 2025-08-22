@@ -1,0 +1,59 @@
+{
+    "Problem Number": "textbook/tables/26",
+    "Tables": [
+        {
+            "TableName": "employees",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "eid",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "ename",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "salary",
+                    "Type": "FLOAT"
+                }
+            ]
+        },
+        {
+            "TableName": "flights",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "flno",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "origin",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "destination",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "distance",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "departs",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "arrives",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "price",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

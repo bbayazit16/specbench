@@ -1,0 +1,23 @@
+{
+  "question": "{name} walks {n} {unit}s every day on her favorite walking trail, which includes {m} {unit}s of walking on the beach and {k} {unit}s of walking on the sidewalk. On the sidewalk, {name} walks at {mult} times the rate of speed that she does on the beach. However, due to a recent injury, {name}'s speed has decreased by half both on the beach and sidewalk. If {t} minutes of her walk is spent on the beach, how long does it take for her to complete the entire {n}-{unit} walk, in minutes?",
+  "types": {
+    "name": "str",
+    "unit": "str",
+    "mult": "float",
+    "n": "int",
+    "m": "int",
+    "k": "int",
+    "t": "int"
+  },
+  "answer": "t+(k/Fraction(mult *m ,t))",
+  "constraints": [
+    "unit in ['miles', 'kilometers']"
+  ],
+  "private_constraints": [
+    "m + k == n",
+    "m < t",
+    "mult *m < t",
+    "divides(t, m)",
+    "is_int(k / Fraction(mult *m ,t))"
+  ]
+}

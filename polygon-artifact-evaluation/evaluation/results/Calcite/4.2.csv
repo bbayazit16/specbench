@@ -1,0 +1,5 @@
+ID,?Refuted,Time,Counterexample,#Iters,#Backtracking,%Backtracking Type 2,Unsat core sizes,M sizes,solving times,AST size,nodes changed
+13,False,,,,,,,,,,
+166,False,,,,,,,,,,
+245,False,,,,,,,,,,
+326,True,1.342945,"{'emp': [['empno', 'deptno', 'ename', 'job', 'mgr', 'hiredate', 'sal', 'comm', 'slacker'], [11, 31, '31', '30', 31, '1000-02-01', 9335, 525, 31], [10, 31, '31', '30', 31, '1000-02-01', 8626, 524, 31]], 'dept': [['deptno', 'name'], [31, '31']], 'bonus': [['ename', 'job', 'sal', 'comm'], ['31', '31', 31, 31], ['31', '31', 31, 31]], 'empnullables': [['empno', 'deptno', 'ename', 'job', 'mgr', 'hiredate', 'sal', 'comm', 'slacker'], [31, None, '31', '31', 31, '1000-02-01', 31, 31, 31]], 'empnullables_20': [['empno', 'deptno', 'ename', 'job', 'mgr', 'hiredate', 'sal', 'comm', 'slacker'], [14, 31, '31', '31', 31, '1000-02-01', 31, 31, 31], [13, 31, '31', '31', 31, '1000-02-01', 31, 31, 31]], 'emp_b': [['empno', 'deptno', 'ename', 'job', 'mgr', 'hiredate', 'sal', 'comm', 'slacker', 'birthdate'], [31, 31, '31', '31', 31, '1000-02-01', 31, 31, 31, '1000-02-01']]}",5,3,0.6666666666666666,"[1, 3, 6]","[6, 6, 6]","[0.012822, 0.016075]",6,"[2, 3, 3]"

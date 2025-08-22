@@ -1,0 +1,154 @@
+{
+    "Problem Number": "spider_bak/swimming/tables/db",
+    "Tables": [
+        {
+            "TableName": "swimmer",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Nationality",
+                    "Type": "text"
+                },
+                {
+                    "Name": "meter_100",
+                    "Type": "real"
+                },
+                {
+                    "Name": "meter_200",
+                    "Type": "text"
+                },
+                {
+                    "Name": "meter_300",
+                    "Type": "text"
+                },
+                {
+                    "Name": "meter_400",
+                    "Type": "text"
+                },
+                {
+                    "Name": "meter_500",
+                    "Type": "text"
+                },
+                {
+                    "Name": "meter_600",
+                    "Type": "text"
+                },
+                {
+                    "Name": "meter_700",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Time",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "stadium",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Capacity",
+                    "Type": "int"
+                },
+                {
+                    "Name": "City",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Opening_year",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "event",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Stadium_ID",
+                    "PName": "ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Stadium_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "record",
+            "PKeys": [
+                {
+                    "Name": "Swimmer_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Event_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Swimmer_ID",
+                    "PName": "ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Event_ID",
+                    "PName": "ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Result",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

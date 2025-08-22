@@ -1,0 +1,17 @@
+{
+  "question": "{name} works a {h}-hour shift each day, {d} days a week. He earns {cur}{r} per hour and gets a {cur}{b} bonus each week if the company performs well. How much money did {name} make in {month} if the company performed very well for the whole month?",
+  "types": {
+    "name": "str",
+    "month": "str",
+    "cur": "str",
+    "h": "int",
+    "d": "int",
+    "r": "int",
+    "b": "int"
+  },
+  "answer": "h * r * d * 4 + b * 4",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(h * r)"
+  ]
+}

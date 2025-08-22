@@ -1,0 +1,2 @@
+row_dep: unique(Follow.followee, Follow.follower)
+col_dep: Follow.followee != Follow.follower

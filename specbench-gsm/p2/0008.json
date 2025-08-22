@@ -1,0 +1,21 @@
+{
+  "question": "A juggler can juggle {n} balls. A fraction {frac_1} of the balls are {ball_type} balls, and the rest are {ball_type2} balls. A fraction {frac_2} of the {ball_type} balls are {color}, of which a fraction {frac_3} are marked. A fraction {frac_22} of the {ball_type2} balls are {color2}, and all except a fraction {frac_33} of those {color2} balls are marked. How many marked balls are there in total?",
+  "types": {
+    "ball_type": "str",
+    "ball_type2": "str",
+    "color": "str",
+    "color2": "str",
+    "frac_1": "float",
+    "frac_2": "float",
+    "frac_22": "float",
+    "frac_3": "float",
+    "frac_33": "float",
+    "n": "int"
+  },
+  "answer": "int(n * frac_1 * frac_2 * frac_3) + int(n * (1-frac_1) * frac_22 * (1-frac_33))",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * frac_1 * frac_2 * frac_3)",
+    "is_int(n * (1-frac_1) * frac_22 * (1-frac_33))"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "question": "{name} places {obj}s on {surface}s and {surface2}s. Each {surface} can hold {x} {obj}s while each {surface2} can hold {mult} that. {name} has {n} {obj}s, {k} {surface}s and {kk} {surface2}s. Unfortunately, 2 {surface2}s break. {name} then eats a fraction of {frac} of all the {obj}s. How many more {surface}s does {name} need so he can place all the remaining {obj}s?",
+  "types": {
+    "name": "str",
+    "obj": "str",
+    "surface": "str",
+    "surface2": "str",
+    "x": "int",
+    "k": "int",
+    "kk": "int",
+    "n": "int",
+    "mult": "float",
+    "frac": "float"
+  },
+  "answer": "((1-frac)*n - k*x - ((kk-2) * mult * x))//x",
+  "constraints": [],
+  "private_constraints": [
+    "divides(n, 3)",
+    "kk > 2",
+    "is_int((1-frac) * n)",
+    "k * x + ((kk -2)* mult * x) < (1-frac)*n",
+    "divides((1-frac)*n - (k*x - (kk -2)* mult * x), x)"
+  ]
+}

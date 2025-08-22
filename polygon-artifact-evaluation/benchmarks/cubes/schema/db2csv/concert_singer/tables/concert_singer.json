@@ -1,0 +1,137 @@
+{
+    "Problem Number": "db2csv/concert_singer/tables/concert_singer",
+    "Tables": [
+        {
+            "TableName": "stadium",
+            "PKeys": [
+                {
+                    "Name": "Stadium_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Capacity",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Highest",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Lowest",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Average",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "singer",
+            "PKeys": [
+                {
+                    "Name": "Singer_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Song_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Song_release_year",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Is_male",
+                    "Type": "bool"
+                }
+            ]
+        },
+        {
+            "TableName": "concert",
+            "PKeys": [
+                {
+                    "Name": "concert_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Stadium_ID",
+                    "PName": "Stadium_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "concert_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Theme",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Stadium_ID",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "singer_in_concert",
+            "PKeys": [
+                {
+                    "Name": "concert_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Singer_ID",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Singer_ID",
+                    "PName": "Singer_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "concert_ID",
+                    "PName": "concert_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

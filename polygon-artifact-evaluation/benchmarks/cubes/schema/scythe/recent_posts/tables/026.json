@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/026",
+    "Tables": [
+        {
+            "TableName": "026",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "age",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "hair_color",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

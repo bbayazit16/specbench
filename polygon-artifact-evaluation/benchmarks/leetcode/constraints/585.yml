@@ -1,0 +1,3 @@
+row_dep: unique(Insurance.pid)
+col_val: Insurance.tiv_2015>=0;
+         Insurance.tiv_2016>=0

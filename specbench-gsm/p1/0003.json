@@ -1,0 +1,21 @@
+{
+  "question": "A {g} of {n} students has various hobbies. {n_1} like to {h_1}, {n_2} like to play {h_2}, and the rest like to either {h_3} or {h_4}. How many like to {h_3} if the number that like to {h_4} is {less} less than {factor} the number that prefer playing {h_2}?",
+  "types": {
+    "g": "str",
+    "h_2": "str",
+    "h_1": "str",
+    "h_3": "str",
+    "h_4": "str",
+    "n": "int",
+    "n_1": "int",
+    "n_2": "int",
+    "factor": "float",
+    "less": "int"
+  },
+  "answer": "int(n - (n_1 + n_2) - (factor * n_2 - less))",
+  "constraints": [],
+  "private_constraints": [
+    "n_1 + n_2 < n",
+    "n - (n_1 + n_2) - (factor * n_2 - less) > 0"
+  ]
+}

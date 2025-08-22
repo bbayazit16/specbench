@@ -1,0 +1,7 @@
+row_dep: unique(Boxes.box_id);
+         unique(Chests.chest_id)
+col_dep: Boxes.chest_id <- Chests.chest_id
+col_val: Boxes.apple_count >= 0;
+         Boxes.orange_count >= 0;
+         Chests.apple_count >= 0;
+         Chests.orange_count >= 0

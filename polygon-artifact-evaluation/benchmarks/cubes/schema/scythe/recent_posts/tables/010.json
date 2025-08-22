@@ -1,0 +1,28 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/010",
+    "Tables": [
+        {
+            "TableName": "010",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Robot_ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Certif_ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "d_Start",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "d_End",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

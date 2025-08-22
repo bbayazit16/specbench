@@ -1,0 +1,24 @@
+{
+  "question": "A {job} has to clean a {building} with {n} {room}s. They have {d} days to get it done. It takes them {tt} minutes per {room}. However, due to a recent injury, the {job} has become slower and it will take them twice as long to clean a {room} these days. If they work for {h} hours a day, what percentage of their day, on average, is spent cleaning {room}s?",
+  "types": {
+    "job": "str",
+    "building": "str",
+    "room": "str",
+    "n": "int",
+    "d": "int",
+    "tt": "int",
+    "t": "int",
+    "h": "int"
+  },
+  "answer": "int(100 * (n/d) * t / (h * 60))",
+  "constraints": [],
+  "private_constraints": [
+    "t == 2 * tt",
+    "divides(n, d)",
+    "divides(60, t)",
+    "(n/d) * t < h * 60",
+    "is_int( 10 * (n/d) * t / (h * 60))",
+    "is_int(100 * (n/d) * t / (h * 60))",
+    "int(100 * (n/d) * t / (h * 60)) < 100"
+  ]
+}

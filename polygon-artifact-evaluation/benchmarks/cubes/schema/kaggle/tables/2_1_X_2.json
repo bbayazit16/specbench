@@ -1,0 +1,179 @@
+{
+    "Problem Number": "kaggle/tables/2_1_X_2",
+    "Tables": [
+        {
+            "TableName": "posts_questions_3",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "title",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "body",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "accepted_answer_id",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "answer_count",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "comment_count",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "community_owned_date",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "creation_date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "favorite_count",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "last_activity_date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "last_edit_date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "last_editor_display_name",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "last_editor_user_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "owner_display_name",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "owner_user_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "parent_id",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "post_type_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "score",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "tags",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "view_count",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "posts_answers_4",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "title",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "body",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "accepted_answer_id",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "answer_count",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "comment_count",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "community_owned_date",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "creation_date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "favorite_count",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "last_activity_date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "last_edit_date",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "last_editor_display_name",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "last_editor_user_id",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "owner_display_name",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "owner_user_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "parent_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "post_type_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "score",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "tags",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "view_count",
+                    "Type": "FLOAT"
+                }
+            ]
+        }
+    ]
+}

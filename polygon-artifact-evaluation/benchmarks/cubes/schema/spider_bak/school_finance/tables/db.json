@@ -1,0 +1,117 @@
+{
+    "Problem Number": "spider_bak/school_finance/tables/db",
+    "Tables": [
+        {
+            "TableName": "School",
+            "PKeys": [
+                {
+                    "Name": "School_id",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "School_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Mascot",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Enrollment",
+                    "Type": "int"
+                },
+                {
+                    "Name": "IHSAA_Class",
+                    "Type": "text"
+                },
+                {
+                    "Name": "IHSAA_Football_Class",
+                    "Type": "text"
+                },
+                {
+                    "Name": "County",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "budget",
+            "PKeys": [
+                {
+                    "Name": "School_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "School_id",
+                    "PName": "School_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Budgeted",
+                    "Type": "int"
+                },
+                {
+                    "Name": "total_budget_percent_budgeted",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Invested",
+                    "Type": "int"
+                },
+                {
+                    "Name": "total_budget_percent_invested",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Budget_invested_percent",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "endowment",
+            "PKeys": [
+                {
+                    "Name": "endowment_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "School_id",
+                    "PName": "School_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "School_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "donator_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "amount",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

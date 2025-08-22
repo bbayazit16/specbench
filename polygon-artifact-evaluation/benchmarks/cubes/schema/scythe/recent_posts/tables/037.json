@@ -1,0 +1,28 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/037",
+    "Tables": [
+        {
+            "TableName": "037",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Region",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Area",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "StartDate",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "EndDate",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

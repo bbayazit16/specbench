@@ -1,0 +1,26 @@
+{
+  "question": "{name} went to buy some school supplies. He bought {n1} {obj1} which cost {cur}{c1} each, {n2} {obj2} which cost {cur}{c2} each, and a ream of bond paper which cost {cur}{c3}. He also bought {n4} {obj3} which cost {cur}{c4} each. {name} can either pay a one-time {cur}20 fee to become a member and get a 20% discount on all purchases, or not become a member and receive only a 5% discount. What is the least amount {name} can spend on everything?",
+  "types": {
+    "name": "str",
+    "obj1": "str",
+    "obj2": "str",
+    "obj3": "str",
+    "cur": "str",
+    "n1": "int",
+    "c1": "float",
+    "n2": "int",
+    "c2": "float",
+    "c3": "int",
+    "n4": "int",
+    "c4": "int"
+  },
+  "answer": "int((n1*c1 + n2*c2 + c3+n4*c4)*0.8) + 20",
+  "constraints": [],
+  "private_constraints": [
+    "n4 > 2",
+    "is_int(n1 * c1)",
+    "is_int(n2 * c2)",
+    "divides(n1*c1 + n2*c2 + c3+n4*c4, 20)",
+    "(n1*c1 + n2*c2 + c3+(n4)*c4) * 0.15 > 30"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/030",
+    "Tables": [
+        {
+            "TableName": "i030",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Person",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Group",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

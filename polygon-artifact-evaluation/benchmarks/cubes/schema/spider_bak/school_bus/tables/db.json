@@ -1,0 +1,96 @@
+{
+    "Problem Number": "spider_bak/school_bus/tables/db",
+    "Tables": [
+        {
+            "TableName": "driver",
+            "PKeys": [
+                {
+                    "Name": "Driver_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Party",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Home_city",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "school",
+            "PKeys": [
+                {
+                    "Name": "School_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Grade",
+                    "Type": "text"
+                },
+                {
+                    "Name": "School",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Type",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "school_bus",
+            "PKeys": [
+                {
+                    "Name": "School_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Driver_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Driver_ID",
+                    "PName": "Driver_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "School_ID",
+                    "PName": "School_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Years_Working",
+                    "Type": "int"
+                },
+                {
+                    "Name": "If_full_time",
+                    "Type": "bool"
+                }
+            ]
+        }
+    ]
+}

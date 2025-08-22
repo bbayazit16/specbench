@@ -1,0 +1,15 @@
+{
+  "question": "{name1} operates the cash register exactly {mult} times as fast as her less-experienced colleague {name2}. Daily, {name2} processes {n} customers. What is the total weekly production for the two if they work all days of the week?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "mult": "float",
+    "n": "int"
+  },
+  "answer": "(n + n * mult) * 7",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * mult)",
+    "is_int((n + n * mult) * 7)"
+  ]
+}

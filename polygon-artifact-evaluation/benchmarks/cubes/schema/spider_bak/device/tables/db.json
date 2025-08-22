@@ -1,0 +1,96 @@
+{
+    "Problem Number": "spider_bak/device/tables/db",
+    "Tables": [
+        {
+            "TableName": "device",
+            "PKeys": [
+                {
+                    "Name": "Device_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Device",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Carrier",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Package_Version",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Applications",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Software_Platform",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "shop",
+            "PKeys": [
+                {
+                    "Name": "Shop_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Shop_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Open_Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Open_Year",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "stock",
+            "PKeys": [
+                {
+                    "Name": "Shop_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Device_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Device_ID",
+                    "PName": "Device_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Shop_ID",
+                    "PName": "Shop_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Quantity",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

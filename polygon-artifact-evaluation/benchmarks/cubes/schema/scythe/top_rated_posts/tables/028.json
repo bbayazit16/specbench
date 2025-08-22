@@ -1,0 +1,35 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/028",
+    "Tables": [
+        {
+            "TableName": "i028_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "PID",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "i028_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "PID",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "SEQ",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Desc",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+  "question": "A juggler can juggle {n} balls. A fraction of {frac_1} of the balls are {ball_type} balls, and a fraction of {frac_2} of the {ball_type} balls are {color}. How many {color} {ball_type} balls are there?",
+  "types": {
+    "ball_type": "str",
+    "color": "str",
+    "frac_1": "float",
+    "frac_2": "float",
+    "n": "int"
+  },
+  "answer": "int(n * frac_1 * frac_2)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * frac_1)",
+    "is_int(n * frac_1 * frac_2)"
+  ]
+}

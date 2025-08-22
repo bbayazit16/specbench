@@ -1,0 +1,19 @@
+{
+  "question": "{name1} is {age1} years old. In {years} years his {relation_type} {name2} will be {mult} times as old as {name1} is now. What is the average of {name1} and {name2} in {future} years?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "relation_type": "str",
+    "age1": "int",
+    "years": "int",
+    "mult": "int",
+    "future": "int"
+  },
+  "answer": "((age1 * mult - years) + age1)//2 + future",
+  "constraints": [],
+  "private_constraints": [
+    "future != years",
+    "age1 * mult - years > 0",
+    "divides(((age1 * mult - years) + age1),2)"
+  ]
+}

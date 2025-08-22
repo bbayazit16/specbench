@@ -1,0 +1,18 @@
+{
+  "question": "{name} sliced a whole {fruit} into {total} pieces. She ate {n1} slices, her {sibling1} ate {n2} more than her, and her {sibling2} ate {n3} more than her {sibling1}. How many slices of {fruit} did they all eat?",
+  "types": {
+    "name": "str",
+    "fruit": "str",
+    "sibling1": "str",
+    "sibling2": "str",
+    "total": "int",
+    "n1": "int",
+    "n2": "int",
+    "n3": "int"
+  },
+  "answer": "n1 + (n1 + n2) + (n1 + n2 + n3)",
+  "constraints": [],
+  "private_constraints": [
+    "n1 + (n1 + n2) + (n1 + n2 + n3) <= total"
+  ]
+}

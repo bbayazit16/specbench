@@ -1,0 +1,131 @@
+{
+    "Problem Number": "spider_bak/shop_membership/tables/db",
+    "Tables": [
+        {
+            "TableName": "member",
+            "PKeys": [
+                {
+                    "Name": "Member_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Card_Number",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Hometown",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Level",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "membership_register_branch",
+            "PKeys": [
+                {
+                    "Name": "Member_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Branch_ID",
+                    "PName": "Branch_ID",
+                    "PTable": 3
+                },
+                {
+                    "FName": "Member_ID",
+                    "PName": "Member_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Branch_ID",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Register_Year",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "purchase",
+            "PKeys": [
+                {
+                    "Name": "Member_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Branch_ID",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Branch_ID",
+                    "PName": "Branch_ID",
+                    "PTable": 3
+                },
+                {
+                    "FName": "Member_ID",
+                    "PName": "Member_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Total_pounds",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "branch",
+            "PKeys": [
+                {
+                    "Name": "Branch_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Open_year",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Address_road",
+                    "Type": "text"
+                },
+                {
+                    "Name": "City",
+                    "Type": "text"
+                },
+                {
+                    "Name": "membership_amount",
+                    "Type": "integer"
+                }
+            ]
+        }
+    ]
+}

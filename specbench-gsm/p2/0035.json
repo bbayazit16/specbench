@@ -1,0 +1,21 @@
+{
+  "question": "{name} is raising money for a {days}-day {event}. Each day costs {cur}{hotel} for hotel, {cur}{food} for food, and {cur}{transport} for transportation. {name} only has {cur}{current}. His friends have chipped in and will cover the cost of all the food for the {event}. {name} has also applied for help from the {organization}, which has decided to cover a fraction {fraction} of the remaining cost of the {event}. How much money is {name} still missing?",
+  "types": {
+    "name": "str",
+    "event": "str",
+    "cur": "str",
+    "organization": "str",
+    "fraction": "float",
+    "current": "int",
+    "hotel": "int",
+    "food": "int",
+    "transport": "int",
+    "days": "int"
+  },
+  "answer": "int(days * (hotel + transport) * (1-fraction)) - current",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(days * (hotel + transport) * (1-fraction))",
+    "days * (hotel + transport) * (1-fraction) > current + 100"
+  ]
+}

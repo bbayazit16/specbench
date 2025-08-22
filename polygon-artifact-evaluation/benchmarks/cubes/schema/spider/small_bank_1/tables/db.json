@@ -1,0 +1,65 @@
+{
+    "Problem Number": "spider/small_bank_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "ACCOUNTS",
+            "PKeys": [
+                {
+                    "Name": "custid",
+                    "Type": "BIGINT"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "VARCHAR(64)"
+                }
+            ]
+        },
+        {
+            "TableName": "SAVINGS",
+            "PKeys": [
+                {
+                    "Name": "custid",
+                    "Type": "BIGINT"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "custid",
+                    "PName": "custid",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "balance",
+                    "Type": "FLOAT"
+                }
+            ]
+        },
+        {
+            "TableName": "CHECKING",
+            "PKeys": [
+                {
+                    "Name": "custid",
+                    "Type": "BIGINT"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "custid",
+                    "PName": "custid",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "balance",
+                    "Type": "FLOAT"
+                }
+            ]
+        }
+    ]
+}

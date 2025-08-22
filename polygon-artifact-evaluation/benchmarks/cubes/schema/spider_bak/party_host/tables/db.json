@@ -1,0 +1,92 @@
+{
+    "Problem Number": "spider_bak/party_host/tables/db",
+    "Tables": [
+        {
+            "TableName": "party",
+            "PKeys": [
+                {
+                    "Name": "Party_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Party_Theme",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "First_year",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Last_year",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Number_of_hosts",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "host",
+            "PKeys": [
+                {
+                    "Name": "Host_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Nationality",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "party_host",
+            "PKeys": [
+                {
+                    "Name": "Party_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Host_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Party_ID",
+                    "PName": "Party_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Host_ID",
+                    "PName": "Host_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Is_Main_in_Charge",
+                    "Type": "bool"
+                }
+            ]
+        }
+    ]
+}

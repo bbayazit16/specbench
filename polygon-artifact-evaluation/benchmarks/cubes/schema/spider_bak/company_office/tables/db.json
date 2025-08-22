@@ -1,0 +1,108 @@
+{
+    "Problem Number": "spider_bak/company_office/tables/db",
+    "Tables": [
+        {
+            "TableName": "buildings",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "City",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Height",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Stories",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Status",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "Companies",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Headquarters",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Industry",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Sales_billion",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Profits_billion",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Assets_billion",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Market_Value_billion",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "Office_locations",
+            "PKeys": [
+                {
+                    "Name": "building_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "company_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "company_id",
+                    "PName": "id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "building_id",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "move_in_year",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+{
+    "Problem Number": "spider_bak/film_rank/tables/db",
+    "Tables": [
+        {
+            "TableName": "film",
+            "PKeys": [
+                {
+                    "Name": "Film_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Title",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Studio",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Director",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Gross_in_dollar",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "market",
+            "PKeys": [
+                {
+                    "Name": "Market_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Number_cities",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "film_market_estimation",
+            "PKeys": [
+                {
+                    "Name": "Estimation_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Market_ID",
+                    "PName": "Market_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Film_ID",
+                    "PName": "Film_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Low_Estimate",
+                    "Type": "real"
+                },
+                {
+                    "Name": "High_Estimate",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Film_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Market_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

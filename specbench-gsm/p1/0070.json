@@ -1,0 +1,17 @@
+{
+  "question": "A {occupation} works for {w} weeks every month and {d} days every week. He gets paid {cur}{p} every day. How much does he earn in a year after paying {k}% in taxes?",
+  "types": {
+    "occupation": "str",
+    "cur": "str",
+    "w": "int",
+    "d": "int",
+    "p": "int",
+    "k": "int"
+  },
+  "answer": "int((w * d * p * 12) * (1-k/100))",
+  "constraints": [],
+  "private_constraints": [
+    "is_int((w * d * p * 12) * (1-k/100))",
+    "int((w * d * p * 12) * (1-k/100)) < 2000"
+  ]
+}

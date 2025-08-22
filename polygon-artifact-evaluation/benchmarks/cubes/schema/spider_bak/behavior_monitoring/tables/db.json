@@ -1,0 +1,418 @@
+{
+    "Problem Number": "spider_bak/behavior_monitoring/tables/db",
+    "Tables": [
+        {
+            "TableName": "Ref_Address_Types",
+            "PKeys": [
+                {
+                    "Name": "address_type_code",
+                    "Type": "VARCHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "address_type_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Detention_Type",
+            "PKeys": [
+                {
+                    "Name": "detention_type_code",
+                    "Type": "VARCHAR(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "detention_type_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Incident_Type",
+            "PKeys": [
+                {
+                    "Name": "incident_type_code",
+                    "Type": "VARCHAR(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "incident_type_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Students",
+            "PKeys": [
+                {
+                    "Name": "student_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "address_id",
+                    "PName": "address_id",
+                    "PTable": 9
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "middle_name",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "cell_mobile_number",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "email_address",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "date_first_rental",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_left_university",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "other_student_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Assessment_Notes",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "teacher_id",
+                    "PName": "teacher_id",
+                    "PTable": 10
+                },
+                {
+                    "FName": "student_id",
+                    "PName": "student_id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "notes_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "student_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "teacher_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_of_notes",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "text_of_notes",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Behavior_Incident",
+            "PKeys": [
+                {
+                    "Name": "incident_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "student_id",
+                    "PName": "student_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "incident_type_code",
+                    "PName": "incident_type_code",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "incident_type_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "student_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_incident_start",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_incident_end",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "incident_summary",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "recommendations",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Detention",
+            "PKeys": [
+                {
+                    "Name": "detention_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "teacher_id",
+                    "PName": "teacher_id",
+                    "PTable": 10
+                },
+                {
+                    "FName": "detention_type_code",
+                    "PName": "detention_type_code",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "detention_type_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "teacher_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "datetime_detention_start",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "datetime_detention_end",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "detention_summary",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Student_Addresses",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "student_id",
+                    "PName": "student_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "address_id",
+                    "PName": "address_id",
+                    "PTable": 9
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "student_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_address_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_address_to",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "monthly_rental",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Students_in_Detention",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "student_id",
+                    "PName": "student_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "detention_id",
+                    "PName": "detention_id",
+                    "PTable": 6
+                },
+                {
+                    "FName": "incident_id",
+                    "PName": "incident_id",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "student_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "detention_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "incident_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Addresses",
+            "PKeys": [
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "line_1",
+                    "Type": "VARCHAR(120)"
+                },
+                {
+                    "Name": "line_2",
+                    "Type": "VARCHAR(120)"
+                },
+                {
+                    "Name": "line_3",
+                    "Type": "VARCHAR(120)"
+                },
+                {
+                    "Name": "city",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "zip_postcode",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "state_province_county",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "country",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "other_address_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Teachers",
+            "PKeys": [
+                {
+                    "Name": "teacher_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "address_id",
+                    "PName": null,
+                    "PTable": 9
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "middle_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "gender",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "cell_mobile_number",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "email_address",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        }
+    ]
+}

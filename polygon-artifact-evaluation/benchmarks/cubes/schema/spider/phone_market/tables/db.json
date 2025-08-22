@@ -1,0 +1,92 @@
+{
+    "Problem Number": "spider/phone_market/tables/db",
+    "Tables": [
+        {
+            "TableName": "phone",
+            "PKeys": [
+                {
+                    "Name": "Phone_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Memory_in_G",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Carrier",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Price",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "market",
+            "PKeys": [
+                {
+                    "Name": "Market_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "District",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Num_of_employees",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Num_of_shops",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Ranking",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "phone_market",
+            "PKeys": [
+                {
+                    "Name": "Market_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Phone_ID",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Phone_ID",
+                    "PName": "Phone_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Market_ID",
+                    "PName": "Market_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Num_of_stock",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

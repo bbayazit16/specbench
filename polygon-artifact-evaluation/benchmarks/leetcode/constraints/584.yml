@@ -1,0 +1,4 @@
+row_dep: unique(Customer.id)
+col_dep: customer.referee_id <- customer.id;
+         customer.referee_id != customer.id
+col_val: customer.id -> {2}

@@ -1,0 +1,77 @@
+{
+    "Problem Number": "db2csv/network_1/tables/network_1",
+    "Tables": [
+        {
+            "TableName": "Highschooler",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "grade",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "Friend",
+            "PKeys": [
+                {
+                    "Name": "student_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "friend_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "friend_id",
+                    "PName": "ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "student_id",
+                    "PName": "ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "Likes",
+            "PKeys": [
+                {
+                    "Name": "student_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "liked_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "student_id",
+                    "PName": "ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "liked_id",
+                    "PName": "ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

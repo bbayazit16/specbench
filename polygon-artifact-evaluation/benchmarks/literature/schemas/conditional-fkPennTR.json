@@ -1,0 +1,53 @@
+{
+  "Tables": [
+    {
+      "TableName": "depts",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "DName",
+          "Type": "int"
+        },
+        {
+          "Name": "DProj",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "teams",
+      "PKeys": [],
+      "FKeys": [
+        {
+          "FName": "TMember",
+          "PName": "Empl",
+          "PTable": "2"
+      }
+      ],
+      "Others": [
+        {
+          "Name": "TProj",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "payroll",
+      "PKeys": [
+        {
+          "Name": "Empl",
+          "Type": "int"
+        }
+      ],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "PDept",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

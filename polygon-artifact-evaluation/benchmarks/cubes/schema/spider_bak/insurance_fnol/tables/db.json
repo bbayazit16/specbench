@@ -1,0 +1,188 @@
+{
+    "Problem Number": "spider_bak/insurance_fnol/tables/db",
+    "Tables": [
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "Customer_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Customer_name",
+                    "Type": "VARCHAR(40)"
+                }
+            ]
+        },
+        {
+            "TableName": "Services",
+            "PKeys": [
+                {
+                    "Name": "Service_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Service_name",
+                    "Type": "VARCHAR(40)"
+                }
+            ]
+        },
+        {
+            "TableName": "Available_Policies",
+            "PKeys": [
+                {
+                    "Name": "Policy_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "policy_type_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Customer_Phone",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customers_Policies",
+            "PKeys": [
+                {
+                    "Name": "Customer_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Policy_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Policy_ID",
+                    "PName": "Policy_ID",
+                    "PTable": 2
+                },
+                {
+                    "FName": "Customer_ID",
+                    "PName": "Customer_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Date_Opened",
+                    "Type": "DATE"
+                },
+                {
+                    "Name": "Date_Closed",
+                    "Type": "DATE"
+                }
+            ]
+        },
+        {
+            "TableName": "First_Notification_of_Loss",
+            "PKeys": [
+                {
+                    "Name": "FNOL_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Customer_ID",
+                    "PName": "Customer_ID",
+                    "PTable": 3
+                },
+                {
+                    "FName": "Policy_ID",
+                    "PName": "Policy_ID",
+                    "PTable": 3
+                },
+                {
+                    "FName": "Service_ID",
+                    "PName": "Service_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Customer_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Policy_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Service_ID",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Claims",
+            "PKeys": [
+                {
+                    "Name": "Claim_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "FNOL_ID",
+                    "PName": "FNOL_ID",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "FNOL_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Effective_Date",
+                    "Type": "DATE"
+                }
+            ]
+        },
+        {
+            "TableName": "Settlements",
+            "PKeys": [
+                {
+                    "Name": "Settlement_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Claim_ID",
+                    "PName": "Claim_ID",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Claim_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Effective_Date",
+                    "Type": "DATE"
+                },
+                {
+                    "Name": "Settlement_Amount",
+                    "Type": "REAL"
+                }
+            ]
+        }
+    ]
+}

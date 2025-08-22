@@ -1,0 +1,36 @@
+{
+    "Problem Number": "kaggle/tables/1_4_X_2",
+    "Tables": [
+        {
+            "TableName": "international_education_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "country_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "country_code",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "indicator_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "indicator_code",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "value",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "year",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

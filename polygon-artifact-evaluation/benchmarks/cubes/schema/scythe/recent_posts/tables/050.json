@@ -1,0 +1,66 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/050",
+    "Tables": [
+        {
+            "TableName": "050_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "role_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "role_type",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "company",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "ref_id",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "050_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "employee_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "employee_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "joining_date",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "050_3",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "org_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "org_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "org_max",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

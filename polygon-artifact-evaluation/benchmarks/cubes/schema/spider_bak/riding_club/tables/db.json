@@ -1,0 +1,176 @@
+{
+    "Problem Number": "spider_bak/riding_club/tables/db",
+    "Tables": [
+        {
+            "TableName": "player",
+            "PKeys": [
+                {
+                    "Name": "Player_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Sponsor_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Player_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Gender",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Residence",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Occupation",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Votes",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Rank",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "club",
+            "PKeys": [
+                {
+                    "Name": "Club_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Club_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Region",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Start_year",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "coach",
+            "PKeys": [
+                {
+                    "Name": "Coach_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Club_ID",
+                    "PName": "Club_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Coach_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Gender",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Club_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Rank",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "player_coach",
+            "PKeys": [
+                {
+                    "Name": "Player_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Coach_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Coach_ID",
+                    "PName": "Coach_ID",
+                    "PTable": 2
+                },
+                {
+                    "FName": "Player_ID",
+                    "PName": "Player_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Starting_year",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "match_result",
+            "PKeys": [
+                {
+                    "Name": "Rank",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Club_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Club_ID",
+                    "PName": "Club_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Gold",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Big_Silver",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Small_Silver",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Bronze",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Points",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

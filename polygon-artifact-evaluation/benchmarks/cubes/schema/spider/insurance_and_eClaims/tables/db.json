@@ -1,0 +1,215 @@
+{
+    "Problem Number": "spider/insurance_and_eClaims/tables/db",
+    "Tables": [
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "Customer_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Customer_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Staff",
+            "PKeys": [
+                {
+                    "Name": "Staff_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Staff_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Policies",
+            "PKeys": [
+                {
+                    "Name": "Policy_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Customer_ID",
+                    "PName": "Customer_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Customer_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Policy_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Start_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "End_Date",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Claim_Headers",
+            "PKeys": [
+                {
+                    "Name": "Claim_Header_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Policy_ID",
+                    "PName": "Policy_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Claim_Status_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Claim_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Policy_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Date_of_Claim",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Date_of_Settlement",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Amount_Claimed",
+                    "Type": "DECIMAL(20,4)"
+                },
+                {
+                    "Name": "Amount_Piad",
+                    "Type": "DECIMAL(20,4)"
+                }
+            ]
+        },
+        {
+            "TableName": "Claims_Documents",
+            "PKeys": [
+                {
+                    "Name": "Claim_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Document_Type_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Created_by_Staff_ID",
+                    "PName": "Staff_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Claim_ID",
+                    "PName": "Claim_Header_ID",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Created_by_Staff_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Created_Date",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Claims_Processing_Stages",
+            "PKeys": [
+                {
+                    "Name": "Claim_Stage_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Next_Claim_Stage_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Claim_Status_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Claim_Status_Description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Claims_Processing",
+            "PKeys": [
+                {
+                    "Name": "Claim_Processing_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Staff_ID",
+                    "PName": "Staff_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Claim_ID",
+                    "PName": "Claim_Header_ID",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Claim_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Claim_Outcome_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Claim_Stage_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Staff_ID",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

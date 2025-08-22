@@ -1,0 +1,19 @@
+{
+  "question": "A {container} of {liquid} is {vol} {unit} of {liquid}. {name} drinks {num} {container}s of {liquid} and adds {tsp} teaspoons of sugar to each {container}. Each teaspoon of sugar adds {cal2} calories. If the {liquid} has {cal} calories per {unit} how many calories did he consume?",
+  "types": {
+    "name": "str",
+    "container": "str",
+    "liquid": "str",
+    "unit": "str",
+    "vol": "int",
+    "num": "int",
+    "cal": "int",
+    "tsp": "int",
+    "cal2": "int"
+  },
+  "answer": "vol * num * cal + num * tsp * cal2",
+  "constraints": [
+    "unit in ['cc', 'mL', 'ounces']"
+  ],
+  "private_constraints": []
+}

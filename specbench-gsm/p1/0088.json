@@ -1,0 +1,23 @@
+{
+  "question": "{name} can run {mult_run} times faster than she can walk, but she can skip at a rate of speed that is a fraction of {frac_skip} as fast as she can run. If she can skip at {skip_speed} miles per hour, how many miles can she travel in {total_time} hours if she spends a fraction of {frac_run} of the time running, a fraction of {frac_skip} of the time skipping, and the remaining of the time walking?",
+  "types": {
+    "name": "str",
+    "mult_run": "float",
+    "frac_skip": "float",
+    "skip_speed": "int",
+    "total_time": "int",
+    "frac_run": "float",
+    "frac_walk": "float"
+  },
+  "answer": "int((total_time * frac_run * (skip_speed / frac_skip)) + (total_time * frac_walk * (skip_speed / frac_skip / mult_run)) + (total_time * frac_skip * skip_speed))",
+  "constraints": [],
+  "private_constraints": [
+    "frac_run + frac_walk + frac_skip == 1",
+    "skip_speed / frac_skip < 13",
+    "is_int(total_time * frac_walk * (skip_speed / frac_skip / mult_run))",
+    "is_int(skip_speed / frac_skip)",
+    "is_int(total_time * frac_run)",
+    "is_int(total_time * frac_walk)",
+    "is_int(total_time * frac_skip)"
+  ]
+}

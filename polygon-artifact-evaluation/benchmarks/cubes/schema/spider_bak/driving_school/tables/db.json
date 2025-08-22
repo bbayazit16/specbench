@@ -1,0 +1,247 @@
+{
+    "Problem Number": "spider_bak/driving_school/tables/db",
+    "Tables": [
+        {
+            "TableName": "Addresses",
+            "PKeys": [
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "line_1_number_building",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "city",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "zip_postcode",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "state_province_county",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "country",
+                    "Type": "VARCHAR(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "Staff",
+            "PKeys": [
+                {
+                    "Name": "staff_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "staff_address_id",
+                    "PName": "address_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "staff_address_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "nickname",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "middle_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "date_of_birth",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_joined_staff",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_left_staff",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Vehicles",
+            "PKeys": [
+                {
+                    "Name": "vehicle_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "vehicle_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_address_id",
+                    "PName": "address_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_address_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "customer_status_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "date_became_customer",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_of_birth",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "amount_outstanding",
+                    "Type": "DOUBLE"
+                },
+                {
+                    "Name": "email_address",
+                    "Type": "VARCHAR(250)"
+                },
+                {
+                    "Name": "phone_number",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "cell_mobile_phone_number",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer_Payments",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "datetime_payment",
+                    "Type": "DATETIME"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "payment_method_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "amount_payment",
+                    "Type": "DOUBLE"
+                }
+            ]
+        },
+        {
+            "TableName": "Lessons",
+            "PKeys": [
+                {
+                    "Name": "lesson_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "staff_id",
+                    "PName": "staff_id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "vehicle_id",
+                    "PName": "vehicle_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "lesson_status_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "staff_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "vehicle_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "lesson_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "lesson_time",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "price",
+                    "Type": "DOUBLE"
+                }
+            ]
+        }
+    ]
+}

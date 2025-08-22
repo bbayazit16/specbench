@@ -1,0 +1,125 @@
+{
+    "Problem Number": "spider/coffee_shop/tables/db",
+    "Tables": [
+        {
+            "TableName": "shop",
+            "PKeys": [
+                {
+                    "Name": "Shop_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Address",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Num_of_staff",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Score",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Open_Year",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "member",
+            "PKeys": [
+                {
+                    "Name": "Member_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Membership_card",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Time_of_purchase",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Level_of_membership",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Address",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "happy_hour",
+            "PKeys": [
+                {
+                    "Name": "HH_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Shop_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Month",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Shop_ID",
+                    "PName": "Shop_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Num_of_shaff_in_charge",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "happy_hour_member",
+            "PKeys": [
+                {
+                    "Name": "HH_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Member_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Member_ID",
+                    "PName": "Member_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Total_amount",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

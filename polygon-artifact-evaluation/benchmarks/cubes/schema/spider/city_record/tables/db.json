@@ -1,0 +1,162 @@
+{
+    "Problem Number": "spider/city_record/tables/db",
+    "Tables": [
+        {
+            "TableName": "city",
+            "PKeys": [
+                {
+                    "Name": "City_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "City",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Hanzi",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Hanyu_Pinyin",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Regional_Population",
+                    "Type": "int"
+                },
+                {
+                    "Name": "GDP",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "match",
+            "PKeys": [
+                {
+                    "Name": "Match_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Venue",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Score",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Result",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Competition",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "temperature",
+            "PKeys": [
+                {
+                    "Name": "City_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "City_ID",
+                    "PName": "City_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Jan",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Feb",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Mar",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Apr",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Jun",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Jul",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Aug",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Sep",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Oct",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Nov",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Dec",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "hosting_city",
+            "PKeys": [
+                {
+                    "Name": "Year",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Match_ID",
+                    "PName": "Match_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Host_City",
+                    "PName": "City_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Match_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Host_City",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

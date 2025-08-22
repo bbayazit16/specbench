@@ -1,0 +1,22 @@
+{
+  "question": "According to its nutritional info, a bag of {food} has {cal} calories per serving. If a {size} {unit} bag has {n} servings, how many {unit} can you eat if your daily calorie target is {total} and you have already consumed {spent} calories?",
+  "types": {
+    "food": "str",
+    "unit": "str",
+    "cal": "int",
+    "size": "int",
+    "n": "int",
+    "total": "int",
+    "spent": "int"
+  },
+  "answer": "size//n * Fraction(total-spent, cal)",
+  "constraints": [
+    "unit in ['grams', 'oz', 'ounces']"
+  ],
+  "private_constraints": [
+    "spent < total",
+    "is_int( 5 * (total - spent) / cal)",
+    "divides(size, n)",
+    "divides(size//n, Fraction(total-spent, cal))"
+  ]
+}

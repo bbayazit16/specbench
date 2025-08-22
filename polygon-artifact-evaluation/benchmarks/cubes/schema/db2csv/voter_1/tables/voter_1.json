@@ -1,0 +1,76 @@
+{
+    "Problem Number": "db2csv/voter_1/tables/voter_1",
+    "Tables": [
+        {
+            "TableName": "AREA_CODE_STATE",
+            "PKeys": [
+                {
+                    "Name": "area_code",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "state",
+                    "Type": "varchar(2)"
+                }
+            ]
+        },
+        {
+            "TableName": "CONTESTANTS",
+            "PKeys": [
+                {
+                    "Name": "contestant_number",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "contestant_name",
+                    "Type": "varchar(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "VOTES",
+            "PKeys": [
+                {
+                    "Name": "vote_id",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "contestant_number",
+                    "PName": "contestant_number",
+                    "PTable": 1
+                },
+                {
+                    "FName": "state",
+                    "PName": "state",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "phone_number",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "state",
+                    "Type": "varchar(2)"
+                },
+                {
+                    "Name": "contestant_number",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "created",
+                    "Type": "timestamp"
+                }
+            ]
+        }
+    ]
+}

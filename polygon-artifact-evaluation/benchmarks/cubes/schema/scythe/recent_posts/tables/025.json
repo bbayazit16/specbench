@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/025",
+    "Tables": [
+        {
+            "TableName": "025",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "gallery_id",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "path",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

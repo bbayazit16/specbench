@@ -1,0 +1,18 @@
+{
+  "question": "In a set of {item}'s cards, there are {n1} {c1} cards, and {p}% more {c2} cards. {c3} cards are as many as the sum of {c1} and {c2} cards. On average, how many cards per color are there?",
+  "types": {
+    "item": "str",
+    "c1": "str",
+    "c2": "str",
+    "c3": "str",
+    "n1": "int",
+    "p": "int"
+  },
+  "answer": "2*(n1+(n1+int(p/100*n1))) // 3",
+  "constraints": [],
+  "private_constraints": [
+    "p < 100",
+    "is_int(p/100 * n1)",
+    "divides(2*(n1+(n1+int(p/100*n1))), 3)"
+  ]
+}

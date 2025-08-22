@@ -1,0 +1,175 @@
+{
+    "Problem Number": "db2csv/car_1/tables/car_1",
+    "Tables": [
+        {
+            "TableName": "continents",
+            "PKeys": [
+                {
+                    "Name": "ContId",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Continent",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "countries",
+            "PKeys": [
+                {
+                    "Name": "CountryId",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Continent",
+                    "PName": "ContId",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "CountryName",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Continent",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "car_makers",
+            "PKeys": [
+                {
+                    "Name": "Id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Country",
+                    "PName": "CountryId",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Maker",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "FullName",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "model_list",
+            "PKeys": [
+                {
+                    "Name": "ModelId",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Maker",
+                    "PName": "Id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Maker",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Model",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "car_names",
+            "PKeys": [
+                {
+                    "Name": "MakeId",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Model",
+                    "PName": "Model",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Model",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Make",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "cars_data",
+            "PKeys": [
+                {
+                    "Name": "Id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Id",
+                    "PName": "MakeId",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "MPG",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Cylinders",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Edispl",
+                    "Type": "REAL"
+                },
+                {
+                    "Name": "Horsepower",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Weight",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Accelerate",
+                    "Type": "REAL"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

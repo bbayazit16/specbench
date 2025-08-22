@@ -1,0 +1,23 @@
+{
+  "question": "{name} has {cur}{initial_amount} and wants to buy {quantity} {item}s from a bin at the {store_type} store. {name} also needs {quantity2} {item2}s, each costing {cur}{unit_price2}. Each {item} costs {cur}{unit_price}. How much money does {name} have left after paying for the items?",
+  "types": {
+    "name": "str",
+    "cur": "str",
+    "item": "str",
+    "item2": "str",
+    "store_type": "str",
+    "quantity": "int",
+    "quantity2": "int",
+    "initial_amount": "float",
+    "unit_price": "float",
+    "unit_price2": "float"
+  },
+  "answer": "int(initial_amount - quantity * unit_price - quantity2 * unit_price2)",
+  "constraints": [],
+  "private_constraints": [
+    "initial_amount > quantity * unit_price + quantity2 * unit_price2",
+    "int(quantity * unit_price * 1000) % 10 == 0",
+    "int(quantity2 * unit_price2 * 1000) % 10 == 0",
+    "is_int((initial_amount - quantity * unit_price - quantity2 * unit_price2))"
+  ]
+}

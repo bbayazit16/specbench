@@ -1,0 +1,9 @@
+row_dep: unique(Customers.customer_id);
+         unique(Contacts.user_id, Contacts.contact_email);
+         unique(Invoices.invoice_id)
+col_val: Invoices.price>0
+col_dep: Contacts.user_id<-Customers.customer_id;
+         Invoices.user_id<-Customers.customer_id;
+         Customers.customer_name^Contacts.contact_name;
+         Customers.email^Contacts.contact_email;
+         Customers.customer_name=Contacts.contact_name => Customers.email=Contacts.contact_email

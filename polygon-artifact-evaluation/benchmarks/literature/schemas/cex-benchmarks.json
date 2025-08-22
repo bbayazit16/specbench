@@ -1,0 +1,178 @@
+{
+  "Tables": [
+    {
+      "TableName": "course",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "course_id",
+          "Type": "int"
+        },
+        {
+          "Name": "title",
+          "Type": "varchar"
+        },
+        {
+          "Name": "dept_name",
+          "Type": "varchar"
+        },
+        {
+          "Name": "credits",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "department",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "dept_name",
+          "Type": "varchar"
+        },
+        {
+          "Name": "building",
+          "Type": "int"
+        },
+        {
+          "Name": "budget",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "instructor",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "ID",
+          "Type": "int"
+        },
+        {
+          "Name": "name",
+          "Type": "varchar"
+        },
+        {
+          "Name": "salary",
+          "Type": "int"
+        },
+        {
+          "Name": "dept_name",
+          "Type": "varchar"
+        }
+      ]
+    },
+    {
+      "TableName": "teaches",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "ID",
+          "Type": "int"
+        },
+        {
+          "Name": "course_id",
+          "Type": "int"
+        },
+        {
+          "Name": "sec_id",
+          "Type": "int"
+        },
+        {
+          "Name": "year",
+          "Type": "int"
+        },
+        {
+          "Name": "instructor",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "section",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "course_id",
+          "Type": "int"
+        },
+        {
+          "Name": "sec_id",
+          "Type": "int"
+        },
+        {
+          "Name": "year",
+          "Type": "int"
+        },
+        {
+          "Name": "building",
+          "Type": "int"
+        },
+        {
+          "Name": "room_number",
+          "Type": "int"
+        },
+        {
+          "Name": "time_slot_id",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "takes",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "ID",
+          "Type": "int"
+        },
+        {
+          "Name": "course_id",
+          "Type": "int"
+        },
+        {
+          "Name": "sec_id",
+          "Type": "int"
+        },
+        {
+          "Name": "year",
+          "Type": "int"
+        },
+        {
+          "Name": "grade",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "student",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "ID",
+          "Type": "int"
+        },
+        {
+          "Name": "name",
+          "Type": "varchar"
+        },
+        {
+          "Name": "dept_name",
+          "Type": "varchar"
+        },
+        {
+          "Name": "tot_cred",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

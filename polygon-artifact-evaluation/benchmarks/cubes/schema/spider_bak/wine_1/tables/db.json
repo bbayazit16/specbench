@@ -1,0 +1,119 @@
+{
+    "Problem Number": "spider_bak/wine_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "grapes",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Grape",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Color",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "appellations",
+            "PKeys": [
+                {
+                    "Name": "No",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Appelation",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "County",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "State",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Area",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "isAVA",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "wine",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "Appelation",
+                    "PName": "Appelation",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Grape",
+                    "PName": "Grape",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "No",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Grape",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Winery",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Appelation",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "State",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Price",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Score",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Cases",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Drink",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

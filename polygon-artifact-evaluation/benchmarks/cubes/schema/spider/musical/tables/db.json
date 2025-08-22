@@ -1,0 +1,79 @@
+{
+    "Problem Number": "spider/musical/tables/db",
+    "Tables": [
+        {
+            "TableName": "musical",
+            "PKeys": [
+                {
+                    "Name": "Musical_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Award",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Category",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Nominee",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Result",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "actor",
+            "PKeys": [
+                {
+                    "Name": "Actor_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Musical_ID",
+                    "PName": "Actor_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Musical_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Character",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Duration",
+                    "Type": "text"
+                },
+                {
+                    "Name": "age",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

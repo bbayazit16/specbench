@@ -1,0 +1,17 @@
+{
+  "question": "{school} is holding graduation in its {venue} this year which has space for {total} people. After accounting for {graduates} seats for the graduates, {faculty} seats for the faculty attending, and reserving {extra} seats for the event's staff, how many tickets would each graduate receive to give to their friends and family if the tickets are split equally?",
+  "types": {
+    "school": "str",
+    "venue": "str",
+    "total": "int",
+    "graduates": "int",
+    "faculty": "int",
+    "extra": "int"
+  },
+  "answer": "(total - graduates - faculty-extra) // graduates",
+  "constraints": [],
+  "private_constraints": [
+    "total > graduates + faculty",
+    "is_int((total - graduates - faculty-extra) / graduates)"
+  ]
+}

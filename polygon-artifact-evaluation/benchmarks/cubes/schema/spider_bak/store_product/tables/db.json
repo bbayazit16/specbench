@@ -1,0 +1,154 @@
+{
+    "Problem Number": "spider_bak/store_product/tables/db",
+    "Tables": [
+        {
+            "TableName": "product",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "product",
+                    "Type": "text"
+                },
+                {
+                    "Name": "dimensions",
+                    "Type": "text"
+                },
+                {
+                    "Name": "dpi",
+                    "Type": "real"
+                },
+                {
+                    "Name": "pages_per_minute_color",
+                    "Type": "real"
+                },
+                {
+                    "Name": "max_page_size",
+                    "Type": "text"
+                },
+                {
+                    "Name": "interface",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "store",
+            "PKeys": [
+                {
+                    "Name": "Store_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Store_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Area_size",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Number_of_product_category",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Ranking",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "district",
+            "PKeys": [
+                {
+                    "Name": "District_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "District_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Headquartered_City",
+                    "Type": "text"
+                },
+                {
+                    "Name": "City_Population",
+                    "Type": "real"
+                },
+                {
+                    "Name": "City_Area",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "store_product",
+            "PKeys": [
+                {
+                    "Name": "Store_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Product_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Product_ID",
+                    "PName": "Product_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Store_ID",
+                    "PName": "Store_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "store_district",
+            "PKeys": [
+                {
+                    "Name": "Store_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "District_ID",
+                    "PName": "District_ID",
+                    "PTable": 2
+                },
+                {
+                    "FName": "Store_ID",
+                    "PName": "Store_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "District_ID",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

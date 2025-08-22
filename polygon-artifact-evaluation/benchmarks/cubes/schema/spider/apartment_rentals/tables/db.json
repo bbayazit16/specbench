@@ -1,0 +1,210 @@
+{
+    "Problem Number": "spider/apartment_rentals/tables/db",
+    "Tables": [
+        {
+            "TableName": "Apartment_Buildings",
+            "PKeys": [
+                {
+                    "Name": "building_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "building_short_name",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "building_full_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "building_description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "building_address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "building_manager",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "building_phone",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Apartments",
+            "PKeys": [
+                {
+                    "Name": "apt_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "building_id",
+                    "PName": "building_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "building_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "apt_type_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "apt_number",
+                    "Type": "CHAR(10)"
+                },
+                {
+                    "Name": "bathroom_count",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "bedroom_count",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "room_count",
+                    "Type": "CHAR(5)"
+                }
+            ]
+        },
+        {
+            "TableName": "Apartment_Facilities",
+            "PKeys": [
+                {
+                    "Name": "apt_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "facility_code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "apt_id",
+                    "PName": "apt_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "Guests",
+            "PKeys": [
+                {
+                    "Name": "guest_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "gender_code",
+                    "Type": "CHAR(1)"
+                },
+                {
+                    "Name": "guest_first_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "guest_last_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "date_of_birth",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Apartment_Bookings",
+            "PKeys": [
+                {
+                    "Name": "apt_booking_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "guest_id",
+                    "PName": "guest_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "apt_id",
+                    "PName": "apt_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "apt_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "guest_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "booking_status_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "booking_start_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "booking_end_date",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "View_Unit_Status",
+            "PKeys": [
+                {
+                    "Name": "status_date",
+                    "Type": "DATETIME"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "apt_booking_id",
+                    "PName": "apt_booking_id",
+                    "PTable": 4
+                },
+                {
+                    "FName": "apt_id",
+                    "PName": "apt_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "apt_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "apt_booking_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "available_yn",
+                    "Type": "BIT"
+                }
+            ]
+        }
+    ]
+}

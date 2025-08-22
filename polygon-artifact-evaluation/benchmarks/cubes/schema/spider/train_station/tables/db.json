@@ -1,0 +1,95 @@
+{
+    "Problem Number": "spider/train_station/tables/db",
+    "Tables": [
+        {
+            "TableName": "station",
+            "PKeys": [
+                {
+                    "Name": "Station_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Annual_entry_exit",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Annual_interchanges",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Total_Passengers",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Main_Services",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Number_of_Platforms",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "train",
+            "PKeys": [
+                {
+                    "Name": "Train_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Time",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Service",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "train_station",
+            "PKeys": [
+                {
+                    "Name": "Train_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Station_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Station_ID",
+                    "PName": "Station_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Train_ID",
+                    "PName": "Train_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

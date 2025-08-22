@@ -1,0 +1,19 @@
+{
+  "question": "It takes {name} {t1} minutes to finish a {game1} and {t2} minutes to finish a {game2}. {name} solved {n1} {game1}s and {n2} {game2}s over the course of {d} days. On average, how much time per day (in minutes) did she spend playing these games?",
+  "types": {
+    "name": "str",
+    "game1": "str",
+    "game2": "str",
+    "t1": "int",
+    "t2": "int",
+    "n1": "int",
+    "n2": "int",
+    "d": "int"
+  },
+  "answer": "(t1*n1 + t2*n2) // d",
+  "constraints": [],
+  "private_constraints": [
+    "t1 > t2",
+    "divides(t1*n1 + t2*n2, d)"
+  ]
+}

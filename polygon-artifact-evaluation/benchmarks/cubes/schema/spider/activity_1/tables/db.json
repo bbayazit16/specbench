@@ -1,0 +1,153 @@
+{
+    "Problem Number": "spider/activity_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Activity",
+            "PKeys": [
+                {
+                    "Name": "actid",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "activity_name",
+                    "Type": "varchar(25)"
+                }
+            ]
+        },
+        {
+            "TableName": "Participates_in",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "actid",
+                    "PName": "actid",
+                    "PTable": 0
+                },
+                {
+                    "FName": "stuid",
+                    "PName": "StuID",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "stuid",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "actid",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Faculty_Participates_in",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "actid",
+                    "PName": "actid",
+                    "PTable": 0
+                },
+                {
+                    "FName": "FacID",
+                    "PName": "FacID",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "FacID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "actid",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Student",
+            "PKeys": [
+                {
+                    "Name": "StuID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "LName",
+                    "Type": "VARCHAR(12)"
+                },
+                {
+                    "Name": "Fname",
+                    "Type": "VARCHAR(12)"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Sex",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "Major",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Advisor",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "city_code",
+                    "Type": "VARCHAR(3)"
+                }
+            ]
+        },
+        {
+            "TableName": "Faculty",
+            "PKeys": [
+                {
+                    "Name": "FacID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Lname",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "Fname",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "Rank",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "Sex",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "Phone",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Room",
+                    "Type": "VARCHAR(5)"
+                },
+                {
+                    "Name": "Building",
+                    "Type": "VARCHAR(13)"
+                }
+            ]
+        }
+    ]
+}

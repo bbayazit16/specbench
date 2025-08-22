@@ -1,0 +1,92 @@
+{
+    "Problem Number": "db2csv/flight_2/tables/flight_2",
+    "Tables": [
+        {
+            "TableName": "airlines",
+            "PKeys": [
+                {
+                    "Name": "uid",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Airline",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Abbreviation",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "airports",
+            "PKeys": [
+                {
+                    "Name": "AirportCode",
+                    "Type": "TEXT"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "City",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "AirportName",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "CountryAbbrev",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "flights",
+            "PKeys": [
+                {
+                    "Name": "Airline",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "FlightNo",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "DestAirport",
+                    "PName": "AirportCode",
+                    "PTable": 1
+                },
+                {
+                    "FName": "SourceAirport",
+                    "PName": "AirportCode",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "SourceAirport",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "DestAirport",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

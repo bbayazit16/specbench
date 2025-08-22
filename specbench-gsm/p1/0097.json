@@ -1,0 +1,18 @@
+{
+  "question": "{name1} operates the cash register exactly {mult} times as fast as her less-experienced colleague {name2}. {name3}, being more experienced than {name2} but less experienced than {name1}, operates at the same speed as the average of {name2} and {name1}. Daily, {name2} processes {n} customers. What is the total weekly production for the three if they work all days of the week?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "name3": "str",
+    "mult": "float",
+    "n": "int"
+  },
+  "answer": "(n + n * mult + (n+n*mult)//2) * 7",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * mult)",
+    "is_int((n + n * mult) * 7)",
+    "divides((n + n * mult), 2)",
+    "(n + n * mult + (n+n*mult)//2) * 7 < 2500"
+  ]
+}

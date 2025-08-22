@@ -1,0 +1,20 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/040",
+    "Tables": [
+        {
+            "TableName": "i040",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "group",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "subGroup",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

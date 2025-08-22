@@ -1,0 +1,24 @@
+{
+  "question": "{name} watches TV after he finishes his homework every night. On {d1} and {d2}, he watched {h1}-hour episodes of his favorite show each night. On {d3}, he watched a few episodes of a {m1}-minute show. On {d4}, he finished homework early and watched a {h2}-hour episode and a {m2}-minute show. On {d5}, he got to stay up late, so he watched {n2} {h3}-hour episodes. On {d6}, he watched {extra} episodes, each {extra_mins} minutes. If he watched {total} hours of TV in all, how many {m1}-minute episodes did he watch on {d3}?",
+  "types": {
+    "name": "str",
+    "d1": "str",
+    "d2": "str",
+    "d3": "str",
+    "d4": "str",
+    "d5": "str",
+    "d6": "str",
+    "total": "int",
+    "h1": "int",
+    "h3": "int",
+    "m1": "int",
+    "m2": "int",
+    "h2": "int",
+    "n2": "int",
+    "extra": "int",
+    "extra_mins": "int"
+  },
+  "answer": "(60 * total - 120 * h1 - 60 * h2 - 60 * n2 * h3 - m2 - extra * extra_mins) / m1",
+  "constraints": [],
+  "private_constraints": []
+}

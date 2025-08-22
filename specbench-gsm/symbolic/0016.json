@@ -1,0 +1,22 @@
+{
+  "question": "{name} is selling {food} and {fruit} pie for a fundraiser. On {d1}, he sold {n1} boxes of {food} and {m1} fewer boxes of {fruit} pie, than on {d2}. On {d2}, he sold {n2} more boxes of {food}s than on {d1} and {m2} boxes of {fruit} pie. If the {food} cost {cur}{cn} and the {fruit} pie cost {cur}{cm}, how much did {name} earn for two days?",
+  "types": {
+    "name": "str",
+    "fruit": "str",
+    "cur": "str",
+    "food": "str",
+    "d1": "str",
+    "d2": "str",
+    "n1": "int",
+    "n2": "int",
+    "m1": "int",
+    "m2": "int",
+    "cn": "int",
+    "cm": "int"
+  },
+  "answer": "(2*n1+n2)*cn + (2*m2-m1)*cm",
+  "constraints": [],
+  "private_constraints": [
+    "m1 < m2"
+  ]
+}

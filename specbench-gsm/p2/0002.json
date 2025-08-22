@@ -1,0 +1,12 @@
+{
+  "question": "{name} is rolling a {sides} die. How much more likely is it (expressed as a difference in percentage points) that he rolls a number greater than {target} twice in a row, than that he rolls four {z} numbers in a row?",
+  "types": {
+    "name": "str",
+    "sides": "int",
+    "target": "int",
+    "z": "str"
+  },
+  "answer": "(((sides-target)/sides)**2)*100 - 6.25",
+  "constraints": [],
+  "private_constraints": []
+}

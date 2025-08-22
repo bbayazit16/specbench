@@ -1,0 +1,23 @@
+{
+  "question": "{name} wants to make different sized ice cubes with {n} {unit}s of water. He can make giant cubes that use {w1} {unit}s per cube, medium cubes that use {w2} {unit}s, small cubes that use {w3} of {unit}, and tiny cubes that are half the size of small cubes. If he makes {n1} giant cubes, {n3} small cubes, {n2} medium cubes, and eight tiny cubes, how many {unit}s of water does he have left?",
+  "types": {
+    "name": "str",
+    "unit": "str",
+    "w1": "int",
+    "w2": "int",
+    "w3": "float",
+    "n1": "int",
+    "n2": "int",
+    "n3": "int",
+    "n": "int"
+  },
+  "answer": "n - (n1 * w1 + n2 * w2 + (n3 + 4) * w3)",
+  "constraints": [
+    "unit in ['milimeter', 'ounce']"
+  ],
+  "private_constraints": [
+    "w3 < w2 < w1",
+    "is_int(n3 * w3)",
+    "is_int(4*w3)"
+  ]
+}

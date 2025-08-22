@@ -1,0 +1,142 @@
+{
+    "Problem Number": "spider/railway/tables/db",
+    "Tables": [
+        {
+            "TableName": "railway",
+            "PKeys": [
+                {
+                    "Name": "Railway_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Railway",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Builder",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Built",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Wheels",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "ObjectNumber",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "train",
+            "PKeys": [
+                {
+                    "Name": "Train_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Railway_ID",
+                    "PName": "Railway_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Train_Num",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "From",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Arrival",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Railway_ID",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "manager",
+            "PKeys": [
+                {
+                    "Name": "Manager_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Working_year_starts",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Level",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "railway_manage",
+            "PKeys": [
+                {
+                    "Name": "Railway_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Manager_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Railway_ID",
+                    "PName": "Railway_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Manager_ID",
+                    "PName": "Manager_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "From_Year",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

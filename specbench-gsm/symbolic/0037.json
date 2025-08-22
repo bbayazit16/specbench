@@ -1,0 +1,19 @@
+{
+  "question": "A {item} has {n} {unit}. If {name1} can eat {x} {unit} a day while {name2} can eat {mult} times as much, how many days will the {item} last?",
+  "types": {
+    "item": "str",
+    "unit": "str",
+    "name1": "str",
+    "name2": "str",
+    "n": "int",
+    "x": "int",
+    "mult": "float"
+  },
+  "answer": "n // (x + x*mult)",
+  "constraints": [
+    "unit in ['pieces', 'portions', 'servings']"
+  ],
+  "private_constraints": [
+    "divides(n, x + x*mult)"
+  ]
+}

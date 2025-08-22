@@ -1,0 +1,208 @@
+{
+    "Problem Number": "spider_bak/e_learning/tables/db",
+    "Tables": [
+        {
+            "TableName": "Course_Authors_and_Tutors",
+            "PKeys": [
+                {
+                    "Name": "author_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "author_tutor_ATB",
+                    "Type": "VARCHAR(3)"
+                },
+                {
+                    "Name": "login_name",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "password",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "personal_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "middle_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "family_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "gender_mf",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "address_line_1",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Students",
+            "PKeys": [
+                {
+                    "Name": "student_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "date_of_registration",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_of_latest_logon",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "login_name",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "password",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "personal_name",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "middle_name",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "family_name",
+                    "Type": "VARCHAR(40)"
+                }
+            ]
+        },
+        {
+            "TableName": "Subjects",
+            "PKeys": [
+                {
+                    "Name": "subject_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "subject_name",
+                    "Type": "VARCHAR(120)"
+                }
+            ]
+        },
+        {
+            "TableName": "Courses",
+            "PKeys": [
+                {
+                    "Name": "course_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "subject_id",
+                    "PName": "subject_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "author_id",
+                    "PName": "author_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "author_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "subject_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "course_name",
+                    "Type": "VARCHAR(120)"
+                },
+                {
+                    "Name": "course_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Student_Course_Enrolment",
+            "PKeys": [
+                {
+                    "Name": "registration_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "student_id",
+                    "PName": "student_id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "course_id",
+                    "PName": "course_id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "student_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "course_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_of_enrolment",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_of_completion",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Student_Tests_Taken",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "registration_id",
+                    "PName": "registration_id",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "registration_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_test_taken",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "test_result",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        }
+    ]
+}

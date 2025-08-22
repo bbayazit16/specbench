@@ -1,0 +1,80 @@
+{
+    "Problem Number": "kaggle/tables/1_5_T_1",
+    "Tables": [
+        {
+            "TableName": "transactions",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "hash",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "size",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "virtual_size",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "version",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "lock_time",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "block_hash",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "block_number",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "block_timestamp",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "block_timestamp_month",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "input_count",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "output_count",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "input_value",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "output_value",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "is_coinbase",
+                    "Type": "BOOLEAN"
+                },
+                {
+                    "Name": "fee",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "inputs",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "outputs",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "Problem Number": "spider_bak/book_2/tables/db",
+    "Tables": [
+        {
+            "TableName": "publication",
+            "PKeys": [
+                {
+                    "Name": "Publication_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Book_ID",
+                    "PName": "Book_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Book_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Publisher",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Publication_Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Price",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "book",
+            "PKeys": [
+                {
+                    "Name": "Book_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Title",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Issues",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Writer",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+  "question": "{name1}, {name2}, and {name3} have {total} {unit} of fence between them. They agree to split it with {name2} getting {diff} {unit} more than {name1}, and {name3} getting {diff2} {unit} more than {name2}. How much is left over for {name1}?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "name3": "str",
+    "unit": "str",
+    "total": "int",
+    "diff": "int",
+    "diff2": "int"
+  },
+  "answer": "(total - 2*diff-diff2) // 3",
+  "constraints": [
+    "unit in ['feet', 'meters', 'yard']"
+  ],
+  "private_constraints": [
+    "total - 2*diff - diff2 > 10",
+    "divides((total - 2*diff-diff2) , 3)"
+  ]
+}

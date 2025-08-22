@@ -1,0 +1,19 @@
+{
+  "question": "{name} receives {n} emails a day. {p}% of those emails don't require any response. From the rest, {name} can only respond to {k} less than a fraction of {frac} of them. How many emails does {name} respond to in a {d}-day work week?",
+  "types": {
+    "name": "str",
+    "n": "int",
+    "p": "int",
+    "k": "int",
+    "frac": "float",
+    "d": "int"
+  },
+  "answer": "int(d * (((n * (100 - p) / 100) * frac)-k))",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * p / 100)",
+    "is_int(n * (100 - p) / 100)",
+    "(n * (100 - p) / 100) * (frac) > k + 7",
+    "is_int((n * (100 - p) / 100) * (frac))"
+  ]
+}

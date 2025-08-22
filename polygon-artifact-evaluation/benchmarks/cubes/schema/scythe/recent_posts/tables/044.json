@@ -1,0 +1,35 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/044",
+    "Tables": [
+        {
+            "TableName": "044_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "OriginalID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Area",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "044_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Part",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "OriginalID",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

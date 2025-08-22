@@ -1,0 +1,15 @@
+{
+  "question": "{name} makes {drink} using teaspoons of sugar and cups of water in the ratio of {m}:{n}. She also uses {p} tablespoons of milk for every {nn} cups of water. If she used a total of {x} teaspoons of sugar, cups of water, and tablespoons of milk, calculate the number of teaspoonfuls of sugar she used.",
+  "types": {
+    "name": "str",
+    "drink": "str",
+    "m": "int",
+    "n": "int",
+    "p": "int",
+    "nn": "int",
+    "x": "int"
+  },
+  "answer": "((m*x)//(m+n+p*(n/nn)))",
+  "constraints": [],
+  "private_constraints": []
+}

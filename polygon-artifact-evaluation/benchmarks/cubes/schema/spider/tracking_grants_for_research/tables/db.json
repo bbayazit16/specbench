@@ -1,0 +1,331 @@
+{
+    "Problem Number": "spider/tracking_grants_for_research/tables/db",
+    "Tables": [
+        {
+            "TableName": "Document_Types",
+            "PKeys": [
+                {
+                    "Name": "document_type_code",
+                    "Type": "VARCHAR(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "document_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Documents",
+            "PKeys": [
+                {
+                    "Name": "document_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "grant_id",
+                    "PName": "grant_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "document_type_code",
+                    "PName": "document_type_code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "document_type_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "grant_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "sent_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "response_received_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Grants",
+            "PKeys": [
+                {
+                    "Name": "grant_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "organisation_id",
+                    "PName": "organisation_id",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "organisation_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "grant_amount",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "grant_start_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "grant_end_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Organisation_Types",
+            "PKeys": [
+                {
+                    "Name": "organisation_type",
+                    "Type": "VARCHAR(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "organisation_type_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Organisations",
+            "PKeys": [
+                {
+                    "Name": "organisation_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "organisation_type",
+                    "PName": "organisation_type",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "organisation_type",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "organisation_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Project_Outcomes",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "outcome_code",
+                    "PName": "outcome_code",
+                    "PTable": 8
+                },
+                {
+                    "FName": "project_id",
+                    "PName": "project_id",
+                    "PTable": 7
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "project_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "outcome_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "outcome_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Project_Staff",
+            "PKeys": [
+                {
+                    "Name": "staff_id",
+                    "Type": "DOUBLE"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "role_code",
+                    "PName": "role_code",
+                    "PTable": 10
+                },
+                {
+                    "FName": "project_id",
+                    "PName": "project_id",
+                    "PTable": 7
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "project_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "role_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "date_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_to",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Projects",
+            "PKeys": [
+                {
+                    "Name": "project_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "organisation_id",
+                    "PName": "organisation_id",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "organisation_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "project_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Research_Outcomes",
+            "PKeys": [
+                {
+                    "Name": "outcome_code",
+                    "Type": "VARCHAR(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "outcome_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Research_Staff",
+            "PKeys": [
+                {
+                    "Name": "staff_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "employer_organisation_id",
+                    "PName": "organisation_id",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "employer_organisation_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "staff_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Staff_Roles",
+            "PKeys": [
+                {
+                    "Name": "role_code",
+                    "Type": "VARCHAR(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "role_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Tasks",
+            "PKeys": [
+                {
+                    "Name": "task_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "project_id",
+                    "PName": "project_id",
+                    "PTable": 7
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "project_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "task_details",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "eg Agree Objectives",
+                    "Type": "VARCHAR(1)"
+                }
+            ]
+        }
+    ]
+}

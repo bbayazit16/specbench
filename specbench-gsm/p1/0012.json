@@ -1,0 +1,20 @@
+{
+  "question": "{name} places {obj}s on the {surface} and {surface2}. Each {surface} can hold {x} {obj}s while each {surface2} can hold {mult} times that. {name} has {n} {obj}s, {k} {surface}s and {kk} {surface2}s. {name} then eats a third of the {obj}s. How many {obj}s won't he be able to place on the {surface}s or {surface2}s?",
+  "types": {
+    "name": "str",
+    "obj": "str",
+    "surface": "str",
+    "surface2": "str",
+    "x": "int",
+    "k": "int",
+    "kk": "int",
+    "n": "int",
+    "mult": "float"
+  },
+  "answer": "2*n//3 - k*x - (kk * mult * x)",
+  "constraints": [],
+  "private_constraints": [
+    "divides(n, 3)",
+    "k * x + (kk * mult * x)  < 2*n//3"
+  ]
+}

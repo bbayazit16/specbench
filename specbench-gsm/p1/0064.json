@@ -1,0 +1,20 @@
+{
+  "question": "{name} has {n} jars of {item} in her {location}. Each jar of {item} can decorate {m} {food}s. {name} wants to bake enough {food}s to use up all of her {item}. {name} has {count} {container}s, each can hold {k} {food}s. After using all her {item} to bake {food}s and putting them in {container}s, how many empty {container}s will {name} be left with?",
+  "types": {
+    "name": "str",
+    "item": "str",
+    "food": "str",
+    "location": "str",
+    "container": "str",
+    "count": "int",
+    "n": "int",
+    "m": "int",
+    "k": "int"
+  },
+  "answer": "count-(n*m)//k",
+  "constraints": [],
+  "private_constraints": [
+    "divides(n*m, k)",
+    "n * m // k < count"
+  ]
+}

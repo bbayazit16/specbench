@@ -1,0 +1,280 @@
+{
+    "Problem Number": "spider/student_assessment/tables/db",
+    "Tables": [
+        {
+            "TableName": "Addresses",
+            "PKeys": [
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "line_1",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "line_2",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "city",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "zip_postcode",
+                    "Type": "CHAR(20)"
+                },
+                {
+                    "Name": "state_province_county",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "country",
+                    "Type": "VARCHAR(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "People",
+            "PKeys": [
+                {
+                    "Name": "person_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "middle_name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "cell_mobile_number",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "email_address",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "login_name",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "password",
+                    "Type": "VARCHAR(40)"
+                }
+            ]
+        },
+        {
+            "TableName": "Students",
+            "PKeys": [
+                {
+                    "Name": "student_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "student_id",
+                    "PName": "person_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "student_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Courses",
+            "PKeys": [
+                {
+                    "Name": "course_id",
+                    "Type": "VARCHAR(100)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "course_name",
+                    "Type": "VARCHAR(120)"
+                },
+                {
+                    "Name": "course_description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "People_Addresses",
+            "PKeys": [
+                {
+                    "Name": "person_address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "address_id",
+                    "PName": "address_id",
+                    "PTable": 0
+                },
+                {
+                    "FName": "person_id",
+                    "PName": "person_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "person_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_to",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Student_Course_Registrations",
+            "PKeys": [
+                {
+                    "Name": "student_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "course_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "course_id",
+                    "PName": "course_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "student_id",
+                    "PName": "student_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "registration_date",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Student_Course_Attendance",
+            "PKeys": [
+                {
+                    "Name": "student_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "course_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "student_id",
+                    "PName": "student_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "course_id",
+                    "PName": "course_id",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "date_of_attendance",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Candidates",
+            "PKeys": [
+                {
+                    "Name": "candidate_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "candidate_id",
+                    "PName": "person_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "candidate_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Candidate_Assessments",
+            "PKeys": [
+                {
+                    "Name": "candidate_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "qualification",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "candidate_id",
+                    "PName": "candidate_id",
+                    "PTable": 7
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "assessment_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "asessment_outcome_code",
+                    "Type": "CHAR(15)"
+                }
+            ]
+        }
+    ]
+}

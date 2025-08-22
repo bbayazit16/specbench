@@ -1,0 +1,88 @@
+{
+    "Problem Number": "spider_bak/performance_attendance/tables/db",
+    "Tables": [
+        {
+            "TableName": "member",
+            "PKeys": [
+                {
+                    "Name": "Member_ID",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Nationality",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Role",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "performance",
+            "PKeys": [
+                {
+                    "Name": "Performance_ID",
+                    "Type": "real"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Host",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Attendance",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "member_attendance",
+            "PKeys": [
+                {
+                    "Name": "Member_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Performance_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Performance_ID",
+                    "PName": "Performance_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Member_ID",
+                    "PName": "Member_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Num_of_Pieces",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

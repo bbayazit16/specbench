@@ -1,0 +1,141 @@
+{
+    "Problem Number": "spider_bak/flight_4/tables/db",
+    "Tables": [
+        {
+            "TableName": "routes",
+            "PKeys": [
+                {
+                    "Name": "rid",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "alid",
+                    "PName": "alid",
+                    "PTable": 2
+                },
+                {
+                    "FName": "src_apid",
+                    "PName": "apid",
+                    "PTable": 1
+                },
+                {
+                    "FName": "dst_apid",
+                    "PName": "apid",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "dst_apid",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "dst_ap",
+                    "Type": "varchar(4)"
+                },
+                {
+                    "Name": "src_apid",
+                    "Type": "bigint"
+                },
+                {
+                    "Name": "src_ap",
+                    "Type": "varchar(4)"
+                },
+                {
+                    "Name": "alid",
+                    "Type": "bigint"
+                },
+                {
+                    "Name": "airline",
+                    "Type": "varchar(4)"
+                },
+                {
+                    "Name": "codeshare",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "airports",
+            "PKeys": [
+                {
+                    "Name": "apid",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "city",
+                    "Type": "text"
+                },
+                {
+                    "Name": "country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "x",
+                    "Type": "real"
+                },
+                {
+                    "Name": "y",
+                    "Type": "real"
+                },
+                {
+                    "Name": "elevation",
+                    "Type": "bigint"
+                },
+                {
+                    "Name": "iata",
+                    "Type": "character varchar(3)"
+                },
+                {
+                    "Name": "icao",
+                    "Type": "character varchar(4)"
+                }
+            ]
+        },
+        {
+            "TableName": "airlines",
+            "PKeys": [
+                {
+                    "Name": "alid",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "iata",
+                    "Type": "varchar(2)"
+                },
+                {
+                    "Name": "icao",
+                    "Type": "varchar(3)"
+                },
+                {
+                    "Name": "callsign",
+                    "Type": "text"
+                },
+                {
+                    "Name": "country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "active",
+                    "Type": "varchar(2)"
+                }
+            ]
+        }
+    ]
+}

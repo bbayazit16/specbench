@@ -1,0 +1,5 @@
+row_dep: inc(cinema.seat_id);
+         consec(cinema.seat_id);
+         unique(cinema.seat_id)
+col_val: cinema.seat_id->{1};
+         cinema.free<-{0,1}

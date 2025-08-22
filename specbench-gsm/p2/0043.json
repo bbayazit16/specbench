@@ -1,0 +1,23 @@
+{
+  "question": "{name} went to her {place} to pick some {fruit} and found a fraction of {frac} as many {insect1} as {insect2} in the {location}. {name} then found {extra} white animals, half of which were rabbits. In addition, she saw {i3} {insect3}, and {n} {insect2}. What percentage of animals in the {location} were rabbits?",
+  "types": {
+    "name": "str",
+    "place": "str",
+    "fruit": "str",
+    "location": "str",
+    "insect1": "str",
+    "insect2": "str",
+    "insect3": "str",
+    "frac": "float",
+    "i3": "int",
+    "n": "int",
+    "extra": "int"
+  },
+  "answer": "int((extra/2)/(extra+i3+int((n + int(n * frac))))*100)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * frac)",
+    "n * frac > 2",
+    "is_int((extra/2)/(extra+i3+int((n + int(n * frac))))*100)"
+  ]
+}

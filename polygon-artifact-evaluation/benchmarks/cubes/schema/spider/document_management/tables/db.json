@@ -1,0 +1,239 @@
+{
+    "Problem Number": "spider/document_management/tables/db",
+    "Tables": [
+        {
+            "TableName": "Roles",
+            "PKeys": [
+                {
+                    "Name": "role_code",
+                    "Type": "VARCHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "role_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Users",
+            "PKeys": [
+                {
+                    "Name": "user_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "role_code",
+                    "PName": "role_code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "role_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "user_name",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "user_login",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "password",
+                    "Type": "VARCHAR(40)"
+                }
+            ]
+        },
+        {
+            "TableName": "Document_Structures",
+            "PKeys": [
+                {
+                    "Name": "document_structure_code",
+                    "Type": "VARCHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "parent_document_structure_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "document_structure_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Functional_Areas",
+            "PKeys": [
+                {
+                    "Name": "functional_area_code",
+                    "Type": "VARCHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "parent_functional_area_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "functional_area_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Images",
+            "PKeys": [
+                {
+                    "Name": "image_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "image_alt_text",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "image_name",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "image_url",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Documents",
+            "PKeys": [
+                {
+                    "Name": "document_code",
+                    "Type": "VARCHAR(15)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "document_structure_code",
+                    "PName": "document_structure_code",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "document_structure_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "document_type_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "access_count",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "document_name",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Document_Functional_Areas",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "functional_area_code",
+                    "PName": "functional_area_code",
+                    "PTable": 3
+                },
+                {
+                    "FName": "document_code",
+                    "PName": "document_code",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "document_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "functional_area_code",
+                    "Type": "VARCHAR(15)"
+                }
+            ]
+        },
+        {
+            "TableName": "Document_Sections",
+            "PKeys": [
+                {
+                    "Name": "section_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "document_code",
+                    "PName": "document_code",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "document_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "section_sequence",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "section_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "section_title",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Document_Sections_Images",
+            "PKeys": [
+                {
+                    "Name": "section_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "image_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "image_id",
+                    "PName": "image_id",
+                    "PTable": 4
+                },
+                {
+                    "FName": "section_id",
+                    "PName": "section_id",
+                    "PTable": 7
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

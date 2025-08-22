@@ -1,0 +1,13 @@
+{
+  "question": "A fog bank rolls in from the ocean to cover a city. It takes {t} minutes to cover every {d} miles of the city. If the city is {y} miles across from the oceanfront to the opposite inland edge, how many minutes will it take for the fog bank to cover the whole city?",
+  "types": {
+    "t": "int",
+    "d": "int",
+    "y": "int"
+  },
+  "answer": "y//d*t",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(y/d)"
+  ]
+}

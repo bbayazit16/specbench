@@ -1,0 +1,19 @@
+{
+  "question": "{name} hires a {vehicle} from {start_time} PM to {end_time} PM. He gets {free_hours} hours free. The first paid hour is {cur}{first_hour_cost} and each hour after that is {multiplier} times the cost. How much did he pay?",
+  "types": {
+    "name": "str",
+    "vehicle": "str",
+    "start_time": "int",
+    "end_time": "int",
+    "free_hours": "int",
+    "cur": "str",
+    "first_hour_cost": "int",
+    "multiplier": "int"
+  },
+  "answer": "first_hour_cost + (end_time - start_time - free_hours - 1) * first_hour_cost * multiplier",
+  "constraints": [],
+  "private_constraints": [
+    "end_time - start_time > free_hours + 1",
+    "is_int((end_time - start_time - free_hours - 1) * first_hour_cost * multiplier)"
+  ]
+}

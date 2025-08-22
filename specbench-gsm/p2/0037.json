@@ -1,0 +1,23 @@
+{
+  "question": "A giant {item} has {n} {unit}. {name1} can eat {x} {unit} a day while {name2} can eat {mult} times as much and {name3} can eat {mult2} times as much as {name2}. After 2 days, {name3} decides to go on a diet and cut the consumption by half. How many days will it take for the {item} to be fully eaten?",
+  "types": {
+    "item": "str",
+    "unit": "str",
+    "name1": "str",
+    "name2": "str",
+    "name3": "str",
+    "n": "int",
+    "x": "int",
+    "mult": "float",
+    "mult2": "float"
+  },
+  "answer": "2+int((n - 2*(x+x*mult+x*mult*mult2))/(x + x*mult + x*mult*mult2//2))",
+  "constraints": [
+    "unit in ['pieces', 'portions', 'servings']"
+  ],
+  "private_constraints": [
+    "n > 2*(x+x*mult+x*mult*mult2)",
+    "divides(x*mult*mult2, 2)",
+    "divides(n - 2*(x+x*mult+x*mult*mult2), x + x*mult + x*mult*mult2//2)"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+    "Problem Number": "kaggle/tables/1_2_T_2",
+    "Tables": [
+        {
+            "TableName": "global_air_quality",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "location",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "city",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "country",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "pollutant",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "value",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "timestamp",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "unit",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "source_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "latitude",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "longitude",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "averaged_over_in_hours",
+                    "Type": "FLOAT"
+                }
+            ]
+        }
+    ]
+}

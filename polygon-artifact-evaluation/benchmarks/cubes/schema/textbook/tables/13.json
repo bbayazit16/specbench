@@ -1,0 +1,35 @@
+{
+    "Problem Number": "textbook/tables/13",
+    "Tables": [
+        {
+            "TableName": "13-1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "P_id",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "13-2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "P_id",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "P_name",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

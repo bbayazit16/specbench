@@ -1,0 +1,20 @@
+{
+  "Tables": [
+    {
+      "TableName": "dept",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "deptno",
+          "Type": "int"
+        },
+        {
+          "Name": "name",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

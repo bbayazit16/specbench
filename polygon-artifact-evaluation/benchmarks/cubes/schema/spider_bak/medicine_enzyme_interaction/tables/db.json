@@ -1,0 +1,96 @@
+{
+    "Problem Number": "spider_bak/medicine_enzyme_interaction/tables/db",
+    "Tables": [
+        {
+            "TableName": "medicine",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Trade_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "FDA_approved",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "enzyme",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Product",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Chromosome",
+                    "Type": "text"
+                },
+                {
+                    "Name": "OMIM",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Porphyria",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "medicine_enzyme_interaction",
+            "PKeys": [
+                {
+                    "Name": "enzyme_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "medicine_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "medicine_id",
+                    "PName": "id",
+                    "PTable": 0
+                },
+                {
+                    "FName": "enzyme_id",
+                    "PName": "id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "interaction_type",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

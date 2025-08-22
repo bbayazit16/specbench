@@ -1,0 +1,47 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/033",
+    "Tables": [
+        {
+            "TableName": "033_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "user_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "current_total_value",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "033_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "user_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "value_awarded",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "date",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/001",
+    "Tables": [
+        {
+            "TableName": "i001",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "SubjectID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "StudentName",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

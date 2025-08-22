@@ -1,0 +1,83 @@
+{
+    "Problem Number": "spider_bak/candidate_poll/tables/db",
+    "Tables": [
+        {
+            "TableName": "candidate",
+            "PKeys": [
+                {
+                    "Name": "Candidate_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "People_ID",
+                    "PName": "People_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Poll_Source",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Support_rate",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Consider_rate",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Oppose_rate",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Unsure_rate",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "people",
+            "PKeys": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Sex",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Date_of_Birth",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Height",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Weight",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

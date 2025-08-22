@@ -1,0 +1,20 @@
+{
+  "question": "The area of {name}'s rectangular {room_type} is {area} square {unit1}. If the length of his room is {length} {unit2}, what is the perimeter of the room in {unit1}?",
+  "types": {
+    "name": "str",
+    "room_type": "str",
+    "unit1": "str",
+    "unit2": "str",
+    "area": "int",
+    "length": "int"
+  },
+  "answer": "2 * (area // (length * 3) + length * 3) if unit1 == \"feet\" and unit2 == \"yards\" else 2 * (area // length + length)",
+  "constraints": [
+    "unit1 in ['meters', 'feet']",
+    "unit2 = 'meters' if unit1 == 'meters' else 'yards'"
+  ],
+  "private_constraints": [
+    "is_int(area / (length * 3))",
+    "area / (length * 3) > length * 3"
+  ]
+}

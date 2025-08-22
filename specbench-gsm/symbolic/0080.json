@@ -1,0 +1,22 @@
+{
+  "question": "The vending machines sell {item1} for {price1} cents and {item2} for {price2} cents. {name} spent {cur}{total} and got {n1} bags of {item1} and had {p}% of his money left in change. How many {item2} did he buy?",
+  "types": {
+    "name": "str",
+    "item1": "str",
+    "item2": "str",
+    "cur": "str",
+    "price1": "int",
+    "price2": "int",
+    "total": "int",
+    "n1": "int",
+    "p": "int"
+  },
+  "answer": "int((total * (100 - p) / 100 - n1 * price1 / 100) / (price2 / 100))",
+  "constraints": [],
+  "private_constraints": [
+    "price2 > price1",
+    "is_int(total * p /100)",
+    "is_int((total * (100 - p) / 100 - n1 * price1 / 100) / (price2 / 100))",
+    "(total * (100 - p) / 100 - n1 * price1 / 100) % (price2 / 100) == 0"
+  ]
+}

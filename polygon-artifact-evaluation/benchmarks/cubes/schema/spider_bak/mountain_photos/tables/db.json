@@ -1,0 +1,104 @@
+{
+    "Problem Number": "spider_bak/mountain_photos/tables/db",
+    "Tables": [
+        {
+            "TableName": "mountain",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Height",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Prominence",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Range",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "camera_lens",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "brand",
+                    "Type": "text"
+                },
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "focal_length_mm",
+                    "Type": "real"
+                },
+                {
+                    "Name": "max_aperture",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "photos",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "mountain_id",
+                    "PName": "id",
+                    "PTable": 0
+                },
+                {
+                    "FName": "camera_lens_id",
+                    "PName": "id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "camera_lens_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "mountain_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "color",
+                    "Type": "text"
+                },
+                {
+                    "Name": "name",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

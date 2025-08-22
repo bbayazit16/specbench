@@ -1,0 +1,22 @@
+{
+  "question": "{title} {name} sold his {property} for ${price}. He paid the {fee1_name} fees that amounted to {fee1_percent}% of the selling price and also paid a {fee2_name} fee that is {fee2_percent}% of the selling price. He also paid ${loan} for the remaining loan amount on the {property}, and ${extra} for closing costs. {title} {name} used the net proceeds from selling the {property} to invest in stocks. The stocks gained 10% each year for two years. How much were {title} {name}'s net proceeds after two years?",
+  "types": {
+    "title": "str",
+    "name": "str",
+    "property": "str",
+    "fee1_name": "str",
+    "fee2_name": "str",
+    "price": "int",
+    "fee1_percent": "int",
+    "fee2_percent": "int",
+    "loan": "int",
+    "extra": "int"
+  },
+  "answer": "int((price - (price * (fee1_percent + fee2_percent) / 100 + loan) - extra) * 1.1 * 1.1)",
+  "constraints": [],
+  "private_constraints": [
+    "price > loan",
+    "5000 <= price - (price * (fee1_percent + fee2_percent) / 100 + loan) - extra <= 250000",
+    "is_int((price - (price * (fee1_percent + fee2_percent) / 100 + loan) - extra) * 1.1 * 1.1)"
+  ]
+}

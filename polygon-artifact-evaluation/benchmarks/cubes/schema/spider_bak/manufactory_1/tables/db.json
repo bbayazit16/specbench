@@ -1,0 +1,63 @@
+{
+    "Problem Number": "spider_bak/manufactory_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Manufacturers",
+            "PKeys": [
+                {
+                    "Name": "Code",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Headquarter",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Founder",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Revenue",
+                    "Type": "REAL"
+                }
+            ]
+        },
+        {
+            "TableName": "Products",
+            "PKeys": [
+                {
+                    "Name": "Code",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Manufacturer",
+                    "PName": "Code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Price",
+                    "Type": "DECIMAL"
+                },
+                {
+                    "Name": "Manufacturer",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

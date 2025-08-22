@@ -1,0 +1,27 @@
+{
+  "question": "{name1} eats {n1} {food} per day, {name2} eats {n2} {food} per day, and their {relation} eats a fraction of {frac} of the combined number of {food} they eat per day. After one month, the family decides to go on a diet in the second month, reducing their food consumption by {p1}% for the first half of the month, and then by an additional {p2}% for the second half. How many {food} does this family eat in two months?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "relation": "str",
+    "food": "str",
+    "frac": "float",
+    "n1": "int",
+    "n2": "int",
+    "p1": "int",
+    "p2": "int"
+  },
+  "answer": "int(((n1 + n2) * (1+frac) ) * 30 + ((n1 + n2) * (1+frac)) * 15 * (100-p1) / 100 + ((n1 + n2) * (1+frac) - 1) * 15 * (100-p1) / 100 * (100 - p2) / 100)",
+  "constraints": [],
+  "private_constraints": [
+    "(n1 + n2) * frac > 2",
+    "is_int((n1 + n2) * frac)",
+    "is_int(n1 * p1 / 100)",
+    "is_int(n2 * p1 / 100)",
+    "is_int(((n1 + n2) * (frac)) * p1 / 100)",
+    "is_int(n1 * (100-p1) / 100 * p2 / 100)",
+    "is_int(n2 * (100-p1) / 100 * p2 / 100)",
+    "is_int(((n1 + n2) * (frac) ) * (100-p1) / 100 * p2 / 100)",
+    "is_int(((n1 + n2) * (frac+1) ) * (100-p1) / 100 * p2 / 100)"
+  ]
+}

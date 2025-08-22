@@ -1,0 +1,28 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/005",
+    "Tables": [
+        {
+            "TableName": "005",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "g_event_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "prim_cid",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "event_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "event_time",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

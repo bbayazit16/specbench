@@ -1,0 +1,50 @@
+{
+    "Problem Number": "1715",
+    "Tables": [
+      {
+        "TableName": "Chests",
+        "PKeys": [],
+        "FKeys": [],
+        "Others": [
+          {
+            "Name": "chest_id",
+            "Type": "int"
+          },
+          {
+            "Name": "apple_count",
+            "Type": "int"
+          },
+          {
+            "Name": "orange_count",
+            "Type": "int"
+          }
+        ]
+      },
+      {
+        "TableName": "Boxes",
+        "PKeys": [],
+        "FKeys": [
+          {
+            "FName": "chest_id",
+            "PName": "chest_id",
+            "PTable": "0"
+          }
+        ],
+        "Others": [
+          {
+            "Name": "box_id",
+            "Type": "int"
+          },
+          {
+            "Name": "apple_count",
+            "Type": "int"
+          },
+          {
+            "Name": "orange_count",
+            "Type": "int"
+          }
+        ]
+      }
+    ],
+    "Tuples": []
+  }

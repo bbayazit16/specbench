@@ -1,0 +1,17 @@
+{
+  "question": "The {event} team hid {total} {item}s. The {family} twins each found {n} {item}s. All the remaining {item}s except {m} were found by their friends. What percentage of the initially hidden {item}s did the friends find?",
+  "types": {
+    "event": "str",
+    "item": "str",
+    "family": "str",
+    "total": "int",
+    "n": "int",
+    "m": "int"
+  },
+  "answer": "int((total - 2*n - m)/total*100)",
+  "constraints": [],
+  "private_constraints": [
+    "2*n + m < total",
+    "is_int((total - 2*n - m) / total * 100)"
+  ]
+}

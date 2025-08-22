@@ -1,0 +1,79 @@
+{
+    "Problem Number": "db2csv/course_teach/tables/course_teach",
+    "Tables": [
+        {
+            "TableName": "course",
+            "PKeys": [
+                {
+                    "Name": "Course_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Staring_Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Course",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "teacher",
+            "PKeys": [
+                {
+                    "Name": "Teacher_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Hometown",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "course_arrange",
+            "PKeys": [
+                {
+                    "Name": "Course_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Teacher_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Grade",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Teacher_ID",
+                    "PName": "Teacher_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Course_ID",
+                    "PName": "Course_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

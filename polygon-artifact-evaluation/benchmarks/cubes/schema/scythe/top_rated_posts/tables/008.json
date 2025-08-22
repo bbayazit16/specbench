@@ -1,0 +1,47 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/008",
+    "Tables": [
+        {
+            "TableName": "i008_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "OrderID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "OrderGUID",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "OrderNumber",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "i008_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "LineItemGUID",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "OrderID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Quantity",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Description",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

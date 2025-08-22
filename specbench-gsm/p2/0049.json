@@ -1,0 +1,23 @@
+{
+  "question": "{name} collects garbage from {n} different apartment complexes. The first {n_first} have {a} apartments each and the last one is {p}% bigger than the other {n_first} combined. However, this week, {vacant} apartments from each of the first {n_first} complexes were vacant and did not require collection service. {name} collects garbage {f} times a week from each place and he gets paid {cur}{r} per collection for each apartment. He also earns an additional 10% in tips. How much money does he make in a week?",
+  "types": {
+    "name": "str",
+    "cur": "str",
+    "n": "int",
+    "n_first": "int",
+    "a": "int",
+    "p": "int",
+    "f": "int",
+    "r": "float",
+    "vacant": "int"
+  },
+  "answer": "int(((n-1)*(a-vacant) + (n-1)*a + (n-1)*a*p/100) * f * r * 1.1)",
+  "constraints": [],
+  "private_constraints": [
+    "n_first == n-1",
+    "vacant < a",
+    "is_int((n-1)*a*p/100)",
+    "is_int(((n-1)*(a-vacant) + (n-1)*a + (n-1)*a*p/100) * f * r * 1.1)",
+    "int(((n-1)*(a-vacant) + (n-1)*a + (n-1)*a*p/100) * f * r * 1.1) < 2000"
+  ]
+}

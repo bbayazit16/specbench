@@ -1,0 +1,9 @@
+ row_dep: unique(SalesPerson.sales_id);
+          unique(Orders.order_id);
+          unique(Company.com_id)
+ col_val: SalesPerson.salary>=0;
+          SalesPerson.commission_rate>=0;
+          Orders.amount>=0
+ col_dep: Orders.com_id<-Company.com_id;
+          Orders.sales_id<-SalesPerson.sales_id;
+          SalesPerson.sales_id=Orders.sales_id=>SalesPerson.hire_date<Orders.order_date

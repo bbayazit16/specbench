@@ -1,0 +1,93 @@
+{
+    "Problem Number": "spider/theme_gallery/tables/db",
+    "Tables": [
+        {
+            "TableName": "artist",
+            "PKeys": [
+                {
+                    "Name": "Artist_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Year_Join",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "exhibition",
+            "PKeys": [
+                {
+                    "Name": "Exhibition_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Artist_ID",
+                    "PName": "Artist_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Theme",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Artist_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Ticket_Price",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "exhibition_record",
+            "PKeys": [
+                {
+                    "Name": "Exhibition_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Exhibition_ID",
+                    "PName": "Exhibition_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Attendance",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

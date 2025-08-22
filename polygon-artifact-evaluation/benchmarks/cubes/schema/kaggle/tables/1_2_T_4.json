@@ -1,0 +1,68 @@
+{
+    "Problem Number": "kaggle/tables/1_2_T_4",
+    "Tables": [
+        {
+            "TableName": "hacker_news_full",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "title",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "url",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "text",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "dead",
+                    "Type": "BOOLEAN"
+                },
+                {
+                    "Name": "by",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "score",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "time",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "timestamp",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "type",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "parent",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "descendants",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "ranking",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "deleted",
+                    "Type": "FLOAT"
+                }
+            ]
+        }
+    ]
+}

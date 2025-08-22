@@ -1,0 +1,101 @@
+{
+    "Problem Number": "spider_bak/wedding/tables/db",
+    "Tables": [
+        {
+            "TableName": "people",
+            "PKeys": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Is_Male",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "church",
+            "PKeys": [
+                {
+                    "Name": "Church_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Organized_by",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Open_Date",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Continuation_of",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "wedding",
+            "PKeys": [
+                {
+                    "Name": "Church_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Male_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Female_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Female_ID",
+                    "PName": "People_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Male_ID",
+                    "PName": "People_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Church_ID",
+                    "PName": "Church_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Year",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

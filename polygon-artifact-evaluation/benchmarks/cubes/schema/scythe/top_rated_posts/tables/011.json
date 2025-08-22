@@ -1,0 +1,39 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/011",
+    "Tables": [
+        {
+            "TableName": "i011_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "VehicleID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "i011_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "LocationID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "VehicleID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "City",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

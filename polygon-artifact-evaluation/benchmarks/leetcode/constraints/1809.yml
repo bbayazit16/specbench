@@ -1,0 +1,4 @@
+row_dep: unique(Playback.session_id);
+         unique(Ads.ad_id)
+col_dep: Playback.start_time<=Playback.end_time;
+         Ads.customer_id<-Playback.customer_id

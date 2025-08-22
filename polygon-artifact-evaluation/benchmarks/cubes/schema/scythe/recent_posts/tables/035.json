@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/035",
+    "Tables": [
+        {
+            "TableName": "035",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "zoom",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "x",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "y",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "Problem Number": "spider/gymnast/tables/db",
+    "Tables": [
+        {
+            "TableName": "gymnast",
+            "PKeys": [
+                {
+                    "Name": "Gymnast_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Gymnast_ID",
+                    "PName": "People_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Floor_Exercise_Points",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Pommel_Horse_Points",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Rings_Points",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Vault_Points",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Parallel_Bars_Points",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Horizontal_Bar_Points",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Total_Points",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "people",
+            "PKeys": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Height",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Hometown",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

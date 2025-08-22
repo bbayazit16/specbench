@@ -1,0 +1,138 @@
+{
+    "Problem Number": "spider/match_season/tables/db",
+    "Tables": [
+        {
+            "TableName": "country",
+            "PKeys": [
+                {
+                    "Name": "Country_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Country_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Capital",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Official_native_language",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "team",
+            "PKeys": [
+                {
+                    "Name": "Team_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "match_season",
+            "PKeys": [
+                {
+                    "Name": "Season",
+                    "Type": "real"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Team",
+                    "PName": "Team_id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Country",
+                    "PName": "Country_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Player",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Position",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Team",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Draft_Pick_Number",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Draft_Class",
+                    "Type": "text"
+                },
+                {
+                    "Name": "College",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "player",
+            "PKeys": [
+                {
+                    "Name": "Player_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Team",
+                    "PName": "Team_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Player",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Years_Played",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Total_WL",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Singles_WL",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Doubles_WL",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Team",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

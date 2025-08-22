@@ -1,0 +1,19 @@
+{
+  "question": "There are {total} {grade}-graders at {school_name} School. {num_girls} of them are girls. On {day}, {absent_girls} {grade}-grade girls and {absent_boys} {grade}-grade boys were absent. How many {grade} grade boys were at {school_name} School on {day}?",
+  "types": {
+    "school_name": "str",
+    "grade": "str",
+    "day": "str",
+    "total": "int",
+    "num_girls": "int",
+    "absent_girls": "int",
+    "absent_boys": "int"
+  },
+  "answer": "total - num_girls - absent_boys",
+  "constraints": [],
+  "private_constraints": [
+    "num_girls < total",
+    "absent_girls < num_girls",
+    "absent_boys < (total - num_girls)"
+  ]
+}

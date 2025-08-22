@@ -1,0 +1,3 @@
+qid,mysql_groundtruth
+1715,"select sum(b.apple_count + ifnull(c.apple_count, 0)) as apple_count , sum(b.orange_count + ifnull(c.orange_count,0)) as orange_count from Boxes b left join Chests c on b.chest_id = c.chest_id "
+1715,"SELECT SUM(APPLE_COUNT) APPLE_COUNT, SUM(ORANGE_COUNT) ORANGE_COUNT FROM ( SELECT SUM(B.APPLE_COUNT) APPLE_COUNT, SUM(B.ORANGE_COUNT) ORANGE_COUNT FROM BOXES B UNION ALL SELECT SUM(C.APPLE_COUNT) APPLE_COUNT, SUM(C.ORANGE_COUNT)ORANGE_COUNT FROM CHESTS C INNER JOIN BOXES B ON B.CHEST_ID=C.CHEST_ID )X"

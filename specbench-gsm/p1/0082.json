@@ -1,0 +1,23 @@
+{
+  "question": "At the beginning of the {event}, there were {total} people, of which {m} were {group1}, and the rest were {group2}. After {t}, a fraction of {frac} of the total number of people left. How many {group2} have stayed at the {event}, if {m_left} {group1} remained?",
+  "types": {
+    "event": "str",
+    "group1": "str",
+    "group2": "str",
+    "t": "str",
+    "frac": "float",
+    "m": "int",
+    "w": "int",
+    "total": "int",
+    "m_left": "int"
+  },
+  "answer": "m + w - int((m + w) * frac) - m_left",
+  "constraints": [],
+  "private_constraints": [
+    "total == m + w",
+    "m_left < m",
+    "is_int((m + w) * frac)",
+    "(m + w) * (1-frac) > m_left",
+    "m + w - (m + w) * frac > m_left"
+  ]
+}

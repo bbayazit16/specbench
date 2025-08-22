@@ -1,0 +1,20 @@
+{
+  "question": "At {name}'s house, there are {mult} times as many {food1}s as {food2}s. He has a total of {n} {food2}s in his house. {name} then bought {m} more {food2}s at the store and {k} fewer {food1}s than the number of {food2}s. He later bought {extra1} {food1}s and {extra2} fewer than two times as many {food2}s. How many {food1}s and {food2}s does {name} have in the house combined?",
+  "types": {
+    "name": "str",
+    "food1": "str",
+    "food2": "str",
+    "mult": "float",
+    "n": "int",
+    "m": "int",
+    "k": "int",
+    "extra1": "int",
+    "extra2": "int"
+  },
+  "answer": "mult*n + n + m + (m-k) + extra1 + extra1 * 2 - extra2",
+  "constraints": [],
+  "private_constraints": [
+    "extra1 * 2 - extra2 > 1",
+    "m > k"
+  ]
+}

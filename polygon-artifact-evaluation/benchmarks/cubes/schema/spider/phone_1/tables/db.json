@@ -1,0 +1,124 @@
+{
+    "Problem Number": "spider/phone_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "chip_model",
+            "PKeys": [
+                {
+                    "Name": "Model_name",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Launch_year",
+                    "Type": "real"
+                },
+                {
+                    "Name": "RAM_MiB",
+                    "Type": "real"
+                },
+                {
+                    "Name": "ROM_MiB",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Slots",
+                    "Type": "text"
+                },
+                {
+                    "Name": "WiFi",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Bluetooth",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "screen_mode",
+            "PKeys": [
+                {
+                    "Name": "Graphics_mode",
+                    "Type": "real"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Char_cells",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Pixels",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Hardware_colours",
+                    "Type": "real"
+                },
+                {
+                    "Name": "used_kb",
+                    "Type": "real"
+                },
+                {
+                    "Name": "map",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Type",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "phone",
+            "PKeys": [
+                {
+                    "Name": "Hardware_Model_name",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "chip_model",
+                    "PName": "Model_name",
+                    "PTable": 0
+                },
+                {
+                    "FName": "screen_mode",
+                    "PName": "Graphics_mode",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Company_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Accreditation_type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Accreditation_level",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "chip_model",
+                    "Type": "text"
+                },
+                {
+                    "Name": "screen_mode",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

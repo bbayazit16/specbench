@@ -1,0 +1,39 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/045",
+    "Tables": [
+        {
+            "TableName": "045_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Menu_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "045_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Quantity",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Menu_id",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

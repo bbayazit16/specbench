@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/034",
+    "Tables": [
+        {
+            "TableName": "i034",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Train",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Dest",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Time",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

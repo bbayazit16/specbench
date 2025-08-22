@@ -1,0 +1,3 @@
+col_val: Actions.action_date <= 2019-07-05;
+         Actions.action <- {'view', 'like', 'reaction', 'comment', 'report', 'share'};
+         Actions.extra | varchar+null

@@ -1,0 +1,28 @@
+{
+  "question": "A farmer is buying feed for his {animals}. He buys a variety of {o1}, {o2}, {o3} and {o4}. Since {o4} are a rare treat, he only buys {n4} {w4}-{unit} boxes of them for the whole stable. He only wants enough {o3} to feed the {animals} while the vegetables are fresh, so he buys {n3} {w3}-{unit} bags. {o1} are the main diet of his {animals}, so he buys {n1} {w1}-{unit} packs. {o2} are a staple to supplement the {o1}, so he buys {n2} {w2}-{unit} sacks. Finally, he buys 43 {unit}s of grocery, and 27 {unit}s of tools. A farm truck can carry {total} {unit}s at a time. How many trips does the farmer need to transport all the items, if he has three trucks?",
+  "types": {
+    "animals": "str",
+    "unit": "str",
+    "o1": "str",
+    "o2": "str",
+    "o4": "str",
+    "o3": "str",
+    "n4": "int",
+    "n3": "int",
+    "n2": "int",
+    "n1": "int",
+    "w4": "int",
+    "w3": "int",
+    "w2": "int",
+    "w1": "int",
+    "total": "int"
+  },
+  "answer": "(n1*w1 + n2*w2 + n3*w3 + n4*w4+70)//(3*total)",
+  "constraints": [
+    "unit in ['pound', 'kg']"
+  ],
+  "private_constraints": [
+    "w4*n4 < w3*n3 < w2*n2 < w1 * n1",
+    "divides(n1*w1 + n2*w2 + n3*w3 + n4*w4+70, 3*total)"
+  ]
+}

@@ -1,0 +1,109 @@
+{
+    "Problem Number": "spider_bak/architecture/tables/db",
+    "Tables": [
+        {
+            "TableName": "architect",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "nationality",
+                    "Type": "text"
+                },
+                {
+                    "Name": "gender",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "bridge",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "architect_id",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "architect_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "length_meters",
+                    "Type": "real"
+                },
+                {
+                    "Name": "length_feet",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "mill",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "architect_id",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "architect_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "built_year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "notes",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "Problem Number": "spider/ship_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "captain",
+            "PKeys": [
+                {
+                    "Name": "Captain_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Ship_ID",
+                    "PName": "Ship_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Ship_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "age",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Class",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Rank",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "Ship",
+            "PKeys": [
+                {
+                    "Name": "Ship_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Built_Year",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Class",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Flag",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

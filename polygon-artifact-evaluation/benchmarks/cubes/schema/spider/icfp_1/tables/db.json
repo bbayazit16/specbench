@@ -1,0 +1,101 @@
+{
+    "Problem Number": "spider/icfp_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Inst",
+            "PKeys": [
+                {
+                    "Name": "instID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "country",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "Authors",
+            "PKeys": [
+                {
+                    "Name": "authID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "lname",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "fname",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "Papers",
+            "PKeys": [
+                {
+                    "Name": "paperID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "title",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "Authorship",
+            "PKeys": [
+                {
+                    "Name": "authID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "instID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "paperID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "paperID",
+                    "PName": "paperID",
+                    "PTable": 2
+                },
+                {
+                    "FName": "instID",
+                    "PName": "instID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "authID",
+                    "PName": "authID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "authOrder",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

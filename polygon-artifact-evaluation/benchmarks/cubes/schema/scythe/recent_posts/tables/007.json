@@ -1,0 +1,28 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/007",
+    "Tables": [
+        {
+            "TableName": "007",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Employee",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "FromDate",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "ToDate",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Code",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

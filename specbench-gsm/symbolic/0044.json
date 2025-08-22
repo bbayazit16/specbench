@@ -1,0 +1,14 @@
+{
+  "question": "There are {n} girls in the {place}. If there are {mult} times the number of boys in the {place}, how many kids are in the {place}?",
+  "types": {
+    "place": "str",
+    "n": "int",
+    "mult": "float"
+  },
+  "answer": "n * (mult + 1)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * mult + 1)",
+    "n * (mult + 1) <= 200"
+  ]
+}

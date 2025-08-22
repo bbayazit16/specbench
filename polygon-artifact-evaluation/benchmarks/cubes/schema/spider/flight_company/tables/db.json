@@ -1,0 +1,120 @@
+{
+    "Problem Number": "spider/flight_company/tables/db",
+    "Tables": [
+        {
+            "TableName": "airport",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "City",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "IATA",
+                    "Type": "text"
+                },
+                {
+                    "Name": "ICAO",
+                    "Type": "text"
+                },
+                {
+                    "Name": "name",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "operate_company",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Principal_activities",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Incorporated_in",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Group_Equity_Shareholding",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "flight",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "company_id",
+                    "PName": "id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "airport_id",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Vehicle_Flight_number",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Pilot",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Velocity",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Altitude",
+                    "Type": "real"
+                },
+                {
+                    "Name": "airport_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "company_id",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

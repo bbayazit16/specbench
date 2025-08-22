@@ -1,0 +1,122 @@
+{
+    "Problem Number": "db2csv/employee_hire_evaluation/tables/employee_hire_evaluation",
+    "Tables": [
+        {
+            "TableName": "employee",
+            "PKeys": [
+                {
+                    "Name": "Employee_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                },
+                {
+                    "Name": "City",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "shop",
+            "PKeys": [
+                {
+                    "Name": "Shop_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "District",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Number_products",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Manager_name",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "hiring",
+            "PKeys": [
+                {
+                    "Name": "Employee_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Employee_ID",
+                    "PName": "Employee_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Shop_ID",
+                    "PName": "Shop_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Shop_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Start_from",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Is_full_time",
+                    "Type": "bool"
+                }
+            ]
+        },
+        {
+            "TableName": "evaluation",
+            "PKeys": [
+                {
+                    "Name": "Employee_ID",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Year_awarded",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Employee_ID",
+                    "PName": "Employee_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Bonus",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

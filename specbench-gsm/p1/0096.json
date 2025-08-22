@@ -1,0 +1,23 @@
+{
+  "question": "{name}'s {parent} said that she had {cur}{budget} budgeted for her birthday party. She wants to make sure she and her friends each get to play one round of {activity1}, have {cur}{tokens} in {activity2} tokens, and get to ride the {activity3} {times}. A round of {activity1} is {cur}{cost1}. The {activity3} costs {cur}{cost2} per ride. For the transportation of the birthday party guests, {name} needs to rent a bus for the day, which costs {cur}{extra}. How many friends can she invite?",
+  "types": {
+    "name": "str",
+    "parent": "str",
+    "activity1": "str",
+    "activity2": "str",
+    "activity3": "str",
+    "cur": "str",
+    "times": "float",
+    "budget": "int",
+    "tokens": "int",
+    "extra": "int",
+    "cost1": "int",
+    "cost2": "int"
+  },
+  "answer": "(budget-extra) // (tokens + cost1 + cost2 * times) - 1",
+  "constraints": [],
+  "private_constraints": [
+    "(budget-extra) % (tokens + cost1 + cost2 * times) == 0",
+    "(budget-extra) // (tokens + cost1 + cost2 * times) > 1"
+  ]
+}

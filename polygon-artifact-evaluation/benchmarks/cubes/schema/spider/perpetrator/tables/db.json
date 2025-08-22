@@ -1,0 +1,79 @@
+{
+    "Problem Number": "spider/perpetrator/tables/db",
+    "Tables": [
+        {
+            "TableName": "perpetrator",
+            "PKeys": [
+                {
+                    "Name": "Perpetrator_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "People_ID",
+                    "PName": "People_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Killed",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Injured",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "people",
+            "PKeys": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Height",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Weight",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Home Town",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

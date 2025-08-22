@@ -1,0 +1,14 @@
+{
+  "question": "{name1} and {name2} are currently {age_diff} years apart in age. If {name1}, who is younger than {name2}, is {age1} years old, what's the average of their ages?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "age_diff": "int",
+    "age1": "int"
+  },
+  "answer": "(2*age1 + age_diff) // 2",
+  "constraints": [],
+  "private_constraints": [
+    "is_int((2*age1 + age_diff) / 2)"
+  ]
+}

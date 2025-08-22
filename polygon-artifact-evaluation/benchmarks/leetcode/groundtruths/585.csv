@@ -1,0 +1,3 @@
+qid,mysql_groundtruth
+585,"SELECT ROUND(SUM(TIV_2016),2) TIV_2016 FROM INSURANCE WHERE TIV_2015 IN (SELECT TIV_2015 FROM INSURANCE GROUP BY TIV_2015 HAVING COUNT(*)>1) AND (LAT,LON) IN (SELECT LAT,LON FROM INSURANCE GROUP BY LAT,LON HAVING COUNT(*)=1)"
+585,"select round(sum(tiv_2016),2) tiv_2016 from Insurance where tiv_2015 in (select tiv_2015 from Insurance group by tiv_2015 having count(*)>1) and (lat,lon) in (select lat,lon from Insurance where lat is not null and lon is not null group by lat,lon having count(*)=1) "

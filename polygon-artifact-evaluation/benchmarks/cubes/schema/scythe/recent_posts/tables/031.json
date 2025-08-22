@@ -1,0 +1,43 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/031",
+    "Tables": [
+        {
+            "TableName": "031_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "channelID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "accountID",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "role",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "031_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "channelID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "channelName",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "type",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

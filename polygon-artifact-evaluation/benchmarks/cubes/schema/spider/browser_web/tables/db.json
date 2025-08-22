@@ -1,0 +1,84 @@
+{
+    "Problem Number": "spider/browser_web/tables/db",
+    "Tables": [
+        {
+            "TableName": "Web_client_accelerator",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Operating_system",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Client",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Connection",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "browser",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "market_share",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "accelerator_compatible_browser",
+            "PKeys": [
+                {
+                    "Name": "accelerator_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "browser_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "browser_id",
+                    "PName": "id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "accelerator_id",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "compatible_since_year",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

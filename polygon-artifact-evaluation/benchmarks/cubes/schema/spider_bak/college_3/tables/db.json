@@ -1,0 +1,271 @@
+{
+    "Problem Number": "spider_bak/college_3/tables/db",
+    "Tables": [
+        {
+            "TableName": "Student",
+            "PKeys": [
+                {
+                    "Name": "StuID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "LName",
+                    "Type": "VARCHAR(12)"
+                },
+                {
+                    "Name": "Fname",
+                    "Type": "VARCHAR(12)"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Sex",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "Major",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Advisor",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "city_code",
+                    "Type": "VARCHAR(3)"
+                }
+            ]
+        },
+        {
+            "TableName": "Faculty",
+            "PKeys": [
+                {
+                    "Name": "FacID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Lname",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "Fname",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "Rank",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "Sex",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "Phone",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Room",
+                    "Type": "VARCHAR(5)"
+                },
+                {
+                    "Name": "Building",
+                    "Type": "VARCHAR(13)"
+                }
+            ]
+        },
+        {
+            "TableName": "Department",
+            "PKeys": [
+                {
+                    "Name": "DNO",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Division",
+                    "Type": "VARCHAR(2)"
+                },
+                {
+                    "Name": "DName",
+                    "Type": "VARCHAR(25)"
+                },
+                {
+                    "Name": "Room",
+                    "Type": "VARCHAR(5)"
+                },
+                {
+                    "Name": "Building",
+                    "Type": "VARCHAR(13)"
+                },
+                {
+                    "Name": "DPhone",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Member_of",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "DNO",
+                    "PName": "DNO",
+                    "PTable": 2
+                },
+                {
+                    "FName": "FacID",
+                    "PName": "FacID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "FacID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "DNO",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Appt_Type",
+                    "Type": "VARCHAR(15)"
+                }
+            ]
+        },
+        {
+            "TableName": "Course",
+            "PKeys": [
+                {
+                    "Name": "CID",
+                    "Type": "VARCHAR(7)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "DNO",
+                    "PName": "DNO",
+                    "PTable": 2
+                },
+                {
+                    "FName": "Instructor",
+                    "PName": "FacID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "CName",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "Credits",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Instructor",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Days",
+                    "Type": "VARCHAR(5)"
+                },
+                {
+                    "Name": "Hours",
+                    "Type": "VARCHAR(11)"
+                },
+                {
+                    "Name": "DNO",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Minor_in",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "DNO",
+                    "PName": "DNO",
+                    "PTable": 2
+                },
+                {
+                    "FName": "StuID",
+                    "PName": "StuID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "StuID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "DNO",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Enrolled_in",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "Grade",
+                    "PName": "lettergrade",
+                    "PTable": 7
+                },
+                {
+                    "FName": "CID",
+                    "PName": "CID",
+                    "PTable": 4
+                },
+                {
+                    "FName": "StuID",
+                    "PName": "StuID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "StuID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "CID",
+                    "Type": "VARCHAR(7)"
+                },
+                {
+                    "Name": "Grade",
+                    "Type": "VARCHAR(2)"
+                }
+            ]
+        },
+        {
+            "TableName": "Gradeconversion",
+            "PKeys": [
+                {
+                    "Name": "lettergrade",
+                    "Type": "VARCHAR(2)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "gradepoint",
+                    "Type": "FLOAT"
+                }
+            ]
+        }
+    ]
+}

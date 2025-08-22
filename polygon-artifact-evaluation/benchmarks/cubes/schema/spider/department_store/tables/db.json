@@ -1,0 +1,414 @@
+{
+    "Problem Number": "spider/department_store/tables/db",
+    "Tables": [
+        {
+            "TableName": "Addresses",
+            "PKeys": [
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "address_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Staff",
+            "PKeys": [
+                {
+                    "Name": "staff_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "staff_gender",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "staff_name",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Suppliers",
+            "PKeys": [
+                {
+                    "Name": "supplier_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "supplier_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "supplier_phone",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Department_Store_Chain",
+            "PKeys": [
+                {
+                    "Name": "dept_store_chain_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "dept_store_chain_name",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "payment_method_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "customer_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "customer_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "customer_address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "customer_phone",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "customer_email",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Products",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "product_type_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "product_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "product_price",
+                    "Type": "DECIMAL(19,4)"
+                }
+            ]
+        },
+        {
+            "TableName": "Supplier_Addresses",
+            "PKeys": [
+                {
+                    "Name": "supplier_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "supplier_id",
+                    "PName": "supplier_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "address_id",
+                    "PName": "address_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "date_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_to",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer_Addresses",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 4
+                },
+                {
+                    "FName": "address_id",
+                    "PName": "address_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "date_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_to",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer_Orders",
+            "PKeys": [
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "order_status_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "order_date",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Department_Stores",
+            "PKeys": [
+                {
+                    "Name": "dept_store_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "dept_store_chain_id",
+                    "PName": "dept_store_chain_id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "dept_store_chain_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "store_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "store_address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "store_phone",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "store_email",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Departments",
+            "PKeys": [
+                {
+                    "Name": "department_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "dept_store_id",
+                    "PName": "dept_store_id",
+                    "PTable": 9
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "dept_store_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "department_name",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Order_Items",
+            "PKeys": [
+                {
+                    "Name": "order_item_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "order_id",
+                    "PName": "order_id",
+                    "PTable": 8
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Product_Suppliers",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "supplier_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "supplier_id",
+                    "PName": "supplier_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "date_supplied_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_supplied_to",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "total_amount_purchased",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "total_value_purchased",
+                    "Type": "DECIMAL(19,4)"
+                }
+            ]
+        },
+        {
+            "TableName": "Staff_Department_Assignments",
+            "PKeys": [
+                {
+                    "Name": "staff_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "department_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "staff_id",
+                    "PName": "staff_id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "department_id",
+                    "PName": "department_id",
+                    "PTable": 10
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "date_assigned_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "job_title_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "date_assigned_to",
+                    "Type": "DATETIME"
+                }
+            ]
+        }
+    ]
+}

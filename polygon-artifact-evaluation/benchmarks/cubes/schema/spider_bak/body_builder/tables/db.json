@@ -1,0 +1,71 @@
+{
+    "Problem Number": "spider_bak/body_builder/tables/db",
+    "Tables": [
+        {
+            "TableName": "body_builder",
+            "PKeys": [
+                {
+                    "Name": "Body_Builder_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "People_ID",
+                    "PName": "People_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Snatch",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Clean_Jerk",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Total",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "people",
+            "PKeys": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Height",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Weight",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Birth_Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Birth_Place",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

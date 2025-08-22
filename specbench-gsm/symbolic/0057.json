@@ -1,0 +1,19 @@
+{
+  "question": "{name1} has {n1} tubes of {color1} paint and {n2} tubes of {color2} paint. {name2} has a fraction of {frac1} as many tubes of {color1} paint as {name1}, and {mult1} times as many tubes of {color2} paint as {name1}. How many tubes of paint does {name2} have?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "color1": "str",
+    "color2": "str",
+    "n1": "int",
+    "n2": "int",
+    "frac1": "float",
+    "mult1": "float"
+  },
+  "answer": "int(n1 * frac1 + n2 * mult1)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n1 * frac1)",
+    "is_int(n2 * mult1)"
+  ]
+}

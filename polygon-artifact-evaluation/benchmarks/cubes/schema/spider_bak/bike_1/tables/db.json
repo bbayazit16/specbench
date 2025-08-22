@@ -1,0 +1,225 @@
+{
+    "Problem Number": "spider_bak/bike_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "station",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "lat",
+                    "Type": "NUMERIC"
+                },
+                {
+                    "Name": "long",
+                    "Type": "NUMERIC"
+                },
+                {
+                    "Name": "dock_count",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "city",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "installation_date",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "status",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "station_id",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "station_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "bikes_available",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "docks_available",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "time",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "trip",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "duration",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "start_date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "start_station_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "start_station_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "end_date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "end_station_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "end_station_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "bike_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "subscription_type",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "zip_code",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "weather",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "max_temperature_f",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "mean_temperature_f",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "min_temperature_f",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "max_dew_point_f",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "mean_dew_point_f",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "min_dew_point_f",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "max_humidity",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "mean_humidity",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "min_humidity",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "max_sea_level_pressure_inches",
+                    "Type": "NUMERIC"
+                },
+                {
+                    "Name": "mean_sea_level_pressure_inches",
+                    "Type": "NUMERIC"
+                },
+                {
+                    "Name": "min_sea_level_pressure_inches",
+                    "Type": "NUMERIC"
+                },
+                {
+                    "Name": "max_visibility_miles",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "mean_visibility_miles",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "min_visibility_miles",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "max_wind_Speed_mph",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "mean_wind_speed_mph",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "max_gust_speed_mph",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "precipitation_inches",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "cloud_cover",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "events",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "wind_dir_degrees",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "zip_code",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/016",
+    "Tables": [
+        {
+            "TableName": "016_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "CustomerId",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "ReportDt",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

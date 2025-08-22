@@ -1,0 +1,39 @@
+{
+    "Problem Number": "textbook/tables/25",
+    "Tables": [
+        {
+            "TableName": "aircraft",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "aid",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "aname",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "crusingrange",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "certified",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "eid",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "aid",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+  "question": "{name} receives {n} emails a day. {p}% of those emails don't require any response. {name} responds to the rest of them. How many emails does {name} respond to in a {d} day work week?",
+  "types": {
+    "name": "str",
+    "n": "int",
+    "p": "int",
+    "d": "int"
+  },
+  "answer": "d * (n * (100 - p) / 100)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * p / 100)",
+    "is_int(n * (100 - p) / 100)"
+  ]
+}

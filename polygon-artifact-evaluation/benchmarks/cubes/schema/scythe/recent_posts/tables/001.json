@@ -1,0 +1,28 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/001",
+    "Tables": [
+        {
+            "TableName": "001",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id_invitation",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "id_demand",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "partner_company",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "concurrent_company",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

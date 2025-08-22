@@ -1,0 +1,25 @@
+{
+  "question": "{name} qualified for a spot on the {sport} team, so she went shopping for some athletic gear. She bought a {item1} for {cur}{p1}, a pair of {sport} {item2} for {cur}{p2} more than the {item1} cost, and a pair of {item3} that were originally {cur}{p3} but were on sale for a fraction of {frac} price. She had a coupon for {cur}{d} off the package of {cur}{p4} athletic {item4} that she also bought. How much did she spend on athletic gear?",
+  "types": {
+    "name": "str",
+    "sport": "str",
+    "item1": "str",
+    "item2": "str",
+    "item3": "str",
+    "item4": "str",
+    "cur": "str",
+    "frac": "float",
+    "p1": "int",
+    "p2": "int",
+    "p3": "int",
+    "p4": "int",
+    "d": "int"
+  },
+  "answer": "p1 + (p1 + p2) + (p3 * frac) + (p4 - d)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(p3*frac)",
+    "p3 % 2 == 0",
+    "p4 > d"
+  ]
+}

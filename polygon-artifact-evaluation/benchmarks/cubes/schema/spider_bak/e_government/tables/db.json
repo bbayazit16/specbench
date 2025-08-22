@@ -1,0 +1,334 @@
+{
+    "Problem Number": "spider_bak/e_government/tables/db",
+    "Tables": [
+        {
+            "TableName": "Addresses",
+            "PKeys": [
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "line_1_number_building",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "town_city",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "zip_postcode",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "state_province_county",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "country",
+                    "Type": "VARCHAR(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "Services",
+            "PKeys": [
+                {
+                    "Name": "service_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "service_type_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "service_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "service_descriptio",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Forms",
+            "PKeys": [
+                {
+                    "Name": "form_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "service_id",
+                    "PName": "service_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "form_type_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "service_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "form_number",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "form_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "form_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Individuals",
+            "PKeys": [
+                {
+                    "Name": "individual_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "individual_first_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "individual_middle_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "inidividual_phone",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "individual_email",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "individual_address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "individual_last_name",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Organizations",
+            "PKeys": [
+                {
+                    "Name": "organization_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "date_formed",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "organization_name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "uk_vat_number",
+                    "Type": "VARCHAR(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "Parties",
+            "PKeys": [
+                {
+                    "Name": "party_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "payment_method_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "party_phone",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "party_email",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Organization_Contact_Individuals",
+            "PKeys": [
+                {
+                    "Name": "individual_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "organization_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "individual_id",
+                    "PName": "individual_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "organization_id",
+                    "PName": "organization_id",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "date_contact_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_contact_to",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Party_Addresses",
+            "PKeys": [
+                {
+                    "Name": "party_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "party_id",
+                    "PName": "party_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "address_id",
+                    "PName": "address_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "date_address_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "address_type_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "date_address_to",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Party_Forms",
+            "PKeys": [
+                {
+                    "Name": "party_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "form_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "form_id",
+                    "PName": "form_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "party_id",
+                    "PName": "party_id",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "date_completion_started",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "form_status_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "date_fully_completed",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Party_Services",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "party_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "service_id",
+                    "PName": "service_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "booking_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "service_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "service_datetime",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "booking_made_date",
+                    "Type": "DATETIME"
+                }
+            ]
+        }
+    ]
+}

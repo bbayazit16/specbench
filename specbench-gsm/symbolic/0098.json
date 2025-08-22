@@ -1,0 +1,14 @@
+{
+  "question": "A new {disease} infects {n0} people. Every day, each infected person infects {r} others. How many people are infected after {d} days?",
+  "types": {
+    "disease": "str",
+    "n0": "int",
+    "r": "int",
+    "d": "int"
+  },
+  "answer": "n0 * (r + 1)**d",
+  "constraints": [],
+  "private_constraints": [
+    "n0 * (r + 1)**d < 20000"
+  ]
+}

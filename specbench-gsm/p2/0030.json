@@ -1,0 +1,35 @@
+{
+  "question": "{name1} and {name2} went to a construction supply store. {name2} is a member, but {name1} is not. {name1} has {cur}{initial_1} and wants to buy {n1} {item1}s from a bin at the store. She also needs {n2} {item2}s, each costing {cur}{p2}. Each {item1} costs {cur}{p1}. Additionally, {name1} picks up {n3} gallons of paint. {name2} starts with {cur}{initial_2} and wants {n33} gallons of paint, each priced at {cur}{p3}, and {n44} carpenter pencils, each costing {cur}{p4}. The store offers a 10% discount on paint for members. How much more money does {name1} have left than {name2} after they leave the store?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "cur": "str",
+    "item1": "str",
+    "item2": "str",
+    "store_type": "str",
+    "initial_1": "float",
+    "n1": "int",
+    "p1": "float",
+    "n2": "int",
+    "p2": "float",
+    "initial_2": "int",
+    "p3": "float",
+    "n3": "int",
+    "n33": "int",
+    "n44": "int",
+    "p4": "int"
+  },
+  "answer": "int((initial_1 - (n1 * p1 + n2 * p2 + n3 * p3)) - (initial_2 - (n33 * p3 * 0.9 + n44 * p4)))",
+  "constraints": [],
+  "private_constraints": [
+    "initial_1 > n1 * p1 + n2 * p2 + n3 * p3",
+    "initial_2 > n33 * p3 + n44 * p4",
+    "is_int(n3 * p3)",
+    "is_int( n33 * p3 * 0.9)",
+    "initial_1 - (n1 * p1 + n2 * p2 + n3 * p3) > initial_2 - (n33 * p3 * 0.9 + n44 * p4)",
+    "int(n1 * p1 * 1000) % 10 == 0",
+    "int(n2 * p2 * 1000) % 10 == 0",
+    "is_int(initial_1 - (n1 * p1 + n2 * p2 + n3 * p3))",
+    "is_int(initial_2 - (n33 * p3 * 0.9 + n44 * p4))"
+  ]
+}

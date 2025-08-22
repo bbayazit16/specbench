@@ -1,0 +1,35 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/038",
+    "Tables": [
+        {
+            "TableName": "038_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Date",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "Sold",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "038_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Date",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "Tapped",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

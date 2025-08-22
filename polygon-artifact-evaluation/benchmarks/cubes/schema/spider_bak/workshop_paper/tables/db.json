@@ -1,0 +1,84 @@
+{
+    "Problem Number": "spider_bak/workshop_paper/tables/db",
+    "Tables": [
+        {
+            "TableName": "workshop",
+            "PKeys": [
+                {
+                    "Name": "Workshop_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Venue",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "submission",
+            "PKeys": [
+                {
+                    "Name": "Submission_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Scores",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Author",
+                    "Type": "text"
+                },
+                {
+                    "Name": "College",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "Acceptance",
+            "PKeys": [
+                {
+                    "Name": "Submission_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Workshop_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Workshop_ID",
+                    "PName": "Workshop_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Submission_ID",
+                    "PName": "Submission_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Result",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

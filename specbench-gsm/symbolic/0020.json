@@ -1,0 +1,16 @@
+{
+  "question": "{name} picks {n1} {fruit}s on {d1}. Then he picks {n2} {fruit}s on {d2}. On {d3}, he picks {mult} times the number of {fruit}s he did on {d1}. How many {fruit}s does {name} have?",
+  "types": {
+    "name": "str",
+    "d1": "str",
+    "d2": "str",
+    "d3": "str",
+    "fruit": "str",
+    "n1": "int",
+    "n2": "int",
+    "mult": "int"
+  },
+  "answer": "n1 + n2 + mult * n1",
+  "constraints": [],
+  "private_constraints": []
+}

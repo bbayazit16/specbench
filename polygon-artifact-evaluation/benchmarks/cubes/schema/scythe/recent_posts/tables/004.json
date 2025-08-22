@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/004",
+    "Tables": [
+        {
+            "TableName": "004",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "call_ref",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "job_num",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

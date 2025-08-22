@@ -1,0 +1,5 @@
+row_dep: unique(Sales.sale_id, Sales.year);
+  unique(Product.product_id)
+col_dep: Sales.product_id <- Product.product_id
+col_val: Sales.price > 0;
+  Sales.quantity > 0

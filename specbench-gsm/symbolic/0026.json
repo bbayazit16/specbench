@@ -1,0 +1,19 @@
+{
+  "question": "{name1} eats {n1} {food} per {time_unit}, {name2} eats {n2} {food} per {time_unit}, and their {relation} eats {n3} {food} per {time_unit}. How many {food} does this family eat in one {time_period}?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "relation": "str",
+    "food": "str",
+    "time_unit": "str",
+    "time_period": "str",
+    "n1": "int",
+    "n2": "int",
+    "n3": "int"
+  },
+  "answer": "(n1 + n2 + n3) * (7 if time_period == \"week\" else 30)",
+  "constraints": [
+    "time_period in ['week', 'month']"
+  ],
+  "private_constraints": []
+}

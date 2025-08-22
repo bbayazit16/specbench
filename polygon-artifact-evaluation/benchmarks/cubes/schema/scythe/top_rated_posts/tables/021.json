@@ -1,0 +1,28 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/021",
+    "Tables": [
+        {
+            "TableName": "i021",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "CHARGEID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "CHARGETYPE",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "SERVICEMONTH",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

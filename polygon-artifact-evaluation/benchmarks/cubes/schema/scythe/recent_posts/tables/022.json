@@ -1,0 +1,20 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/022",
+    "Tables": [
+        {
+            "TableName": "022_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "c1",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "c2",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

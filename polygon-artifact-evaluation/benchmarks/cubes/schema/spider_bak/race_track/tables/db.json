@@ -1,0 +1,67 @@
+{
+    "Problem Number": "spider_bak/race_track/tables/db",
+    "Tables": [
+        {
+            "TableName": "race",
+            "PKeys": [
+                {
+                    "Name": "Race_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Track_ID",
+                    "PName": "Track_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Class",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Track_ID",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "track",
+            "PKeys": [
+                {
+                    "Name": "Track_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Seating",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Year_Opened",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

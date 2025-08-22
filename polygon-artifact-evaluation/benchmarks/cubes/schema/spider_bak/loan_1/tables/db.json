@@ -1,0 +1,118 @@
+{
+    "Problem Number": "spider_bak/loan_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "bank",
+            "PKeys": [
+                {
+                    "Name": "branch_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "bname",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "no_of_customers",
+                    "Type": "int"
+                },
+                {
+                    "Name": "city",
+                    "Type": "varchar(10)"
+                },
+                {
+                    "Name": "state",
+                    "Type": "varchar(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "customer",
+            "PKeys": [
+                {
+                    "Name": "cust_ID",
+                    "Type": "varchar(3)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "branch_ID",
+                    "PName": "branch_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "cust_name",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "acc_type",
+                    "Type": "char(1)"
+                },
+                {
+                    "Name": "acc_bal",
+                    "Type": "int"
+                },
+                {
+                    "Name": "no_of_loans",
+                    "Type": "int"
+                },
+                {
+                    "Name": "credit_score",
+                    "Type": "int"
+                },
+                {
+                    "Name": "branch_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "state",
+                    "Type": "varchar(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "loan",
+            "PKeys": [
+                {
+                    "Name": "loan_ID",
+                    "Type": "varchar(3)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "cust_ID",
+                    "PName": "Cust_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "branch_ID",
+                    "PName": "branch_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "loan_type",
+                    "Type": "varchar(15)"
+                },
+                {
+                    "Name": "cust_ID",
+                    "Type": "varchar(3)"
+                },
+                {
+                    "Name": "branch_ID",
+                    "Type": "varchar(3)"
+                },
+                {
+                    "Name": "amount",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

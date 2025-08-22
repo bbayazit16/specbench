@@ -1,0 +1,99 @@
+{
+    "Problem Number": "spider_bak/county_public_safety/tables/db",
+    "Tables": [
+        {
+            "TableName": "county_public_safety",
+            "PKeys": [
+                {
+                    "Name": "County_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Population",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Police_officers",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Residents_per_officer",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Case_burden",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Crime_rate",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Police_force",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "city",
+            "PKeys": [
+                {
+                    "Name": "City_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "County_ID",
+                    "PName": "County_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "County_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "White",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Black",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Amerindian",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Asian",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Multiracial",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Hispanic",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

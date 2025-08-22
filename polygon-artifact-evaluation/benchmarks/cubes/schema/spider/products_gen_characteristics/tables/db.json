@@ -1,0 +1,172 @@
+{
+    "Problem Number": "spider/products_gen_characteristics/tables/db",
+    "Tables": [
+        {
+            "TableName": "Ref_Characteristic_Types",
+            "PKeys": [
+                {
+                    "Name": "characteristic_type_code",
+                    "Type": "VARCHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "characteristic_type_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Colors",
+            "PKeys": [
+                {
+                    "Name": "color_code",
+                    "Type": "VARCHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "color_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Product_Categories",
+            "PKeys": [
+                {
+                    "Name": "product_category_code",
+                    "Type": "VARCHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "product_category_description",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "unit_of_measure",
+                    "Type": "VARCHAR(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "Characteristics",
+            "PKeys": [
+                {
+                    "Name": "characteristic_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "characteristic_type_code",
+                    "PName": "characteristic_type_code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "characteristic_type_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "characteristic_data_type",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "characteristic_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "other_characteristic_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Products",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "color_code",
+                    "PName": "color_code",
+                    "PTable": 1
+                },
+                {
+                    "FName": "product_category_code",
+                    "PName": "product_category_code",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "color_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "product_category_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "product_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "typical_buying_price",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "typical_selling_price",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "product_description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_product_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Product_Characteristics",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 4
+                },
+                {
+                    "FName": "characteristic_id",
+                    "PName": "characteristic_id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "characteristic_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_characteristic_value",
+                    "Type": "VARCHAR(50)"
+                }
+            ]
+        }
+    ]
+}

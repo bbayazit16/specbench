@@ -1,0 +1,65 @@
+ID,?Refuted,Time,Counterexample,#Iters,#Backtracking,%Backtracking Type 2,Unsat core size,%unsat core,solving times
+0,False,,,,,,,,
+1,True,57.524998,"{'r1': [['a', 'b'], [34, 33]], 'r2': [['a', 'b'], [34, None]]}",1,0,,,,[]
+2,False,,,,,,,,
+3,False,,,,,,,,
+4,False,,,,,,,,
+5,False,,,,,,,,
+6,False,,,,,,,,
+7,False,,,,,,,,
+8,True,0.192019,"{'r': [['a', 'b', 'c'], [10, 11, 11], [853, 11, 11], [-900, 11, 1]]}",10,0,,,,[]
+9,False,,,,,,,,
+10,False,,,,,,,,
+11,False,,,,,,,,
+12,False,,,,,,,,
+13,True,0.072159,"{'emp': [['name', 'dept', 'emp'], [19, 19, 19]], 'dept': [['dept', 'loc', 'mgr'], [19, 16, 19], [19, 17, 19], [19, 18, 19]]}",2,0,,,,[]
+14,False,,,,,,,,
+15,True,0.182469,"{'a': [['x', 'ya', 'yx'], [13, 13, 'HELLO10'], [13, 13, 'HELLO HI11'], [13, 12, 'HELLO HI']]}",10,0,,,,[]
+16,False,,,,,,,,
+17,False,,,,,,,,
+18,False,,,,,,,,
+19,True,0.4262,"{'r': [['a'], [None]]}",19,0,,,,[]
+20,True,0.495802,"{'r': [['a1', 'a2'], [13, None]]}",19,0,,,,[]
+21,False,1.076647,,64,0,,,,[]
+22,False,,,,,,,,
+23,False,,,,,,,,
+24,True,0.055662,"{'r': [['a', 'b'], [1, None]]}",4,0,,,,[]
+25,False,,,,,,,,
+26,False,,,,,,,,
+27,False,,,,,,,,
+28,True,10.952434,"{'a': [['c'], [None]]}",514,0,,,,[]
+29,False,,,,,,,,
+30,False,,,,,,,,
+31,False,,,,,,,,
+32,False,,,,,,,,
+33,False,,,,,,,,
+34,False,,,,,,,,
+35,False,,,,,,,,
+36,False,0.922049,,64,0,,,,[]
+37,False,,,,,,,,
+38,False,,,,,,,,
+39,False,,,,,,,,
+40,False,,,,,,,,
+41,False,,,,,,,,
+42,False,,,,,,,,
+43,False,,,,,,,,
+44,False,,,,,,,,
+45,False,,,,,,,,
+46,False,,,,,,,,
+47,False,,,,,,,,
+48,False,,,,,,,,
+49,False,,,,,,,,
+50,False,,,,,,,,
+51,False,,,,,,,,
+52,False,,,,,,,,
+53,False,,,,,,,,
+54,False,,,,,,,,
+55,False,,,,,,,,
+56,False,,,,,,,,
+57,False,,,,,,,,
+58,False,,,,,,,,
+59,True,1.250686,"{'course': [['course_id', 'title', 'dept_name', 'credits'], [4, 5, 4, -550]], 'department': [['dept_name', 'building', 'budget']], 'instructor': [['id', 'name', 'salary', 'dept_name']], 'teaches': [['id', 'course_id', 'sec_id', 'year', 'semester', 'instructor']], 'section': [['course_id', 'sec_id', 'year', 'building', 'room_number', 'time_slot_id']], 'takes': [['id', 'course_id', 'sec_id', 'year', 'grade']], 'student': [['id', 'name', 'dept_name', 'tot_cred']]}",65,0,,,,[]
+60,True,0.076603,"{'course': [['course_id', 'title', 'dept_name', 'credits'], [726, 21, 15, 16]], 'department': [['dept_name', 'building', 'budget']], 'instructor': [['id', 'name', 'salary', 'dept_name']], 'teaches': [['id', 'course_id', 'sec_id', 'year', 'semester', 'instructor'], [None, 725, 17, 2010, 18, 19]], 'section': [['course_id', 'sec_id', 'year', 'building', 'room_number', 'time_slot_id']], 'takes': [['id', 'course_id', 'sec_id', 'year', 'grade']], 'student': [['id', 'name', 'dept_name', 'tot_cred']]}",1,0,,,,[]
+61,True,0.0843,"{'course': [['course_id', 'title', 'dept_name', 'credits']], 'department': [['dept_name', 'building', 'budget']], 'instructor': [['id', 'name', 'salary', 'dept_name'], [-3, 21, 19, 20]], 'teaches': [['id', 'course_id', 'sec_id', 'year', 'semester', 'instructor'], [-463, 22, 14, 15, 16, 17]], 'section': [['course_id', 'sec_id', 'year', 'building', 'room_number', 'time_slot_id']], 'takes': [['id', 'course_id', 'sec_id', 'year', 'grade']], 'student': [['id', 'name', 'dept_name', 'tot_cred']]}",1,0,,,,[]
+62,False,,,,,,,,
+63,False,,,,,,,,

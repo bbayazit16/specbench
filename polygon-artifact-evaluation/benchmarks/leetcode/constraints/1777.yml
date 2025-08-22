@@ -1,0 +1,3 @@
+row_dep: unique(Products.product_id, Products.store)
+col_val: Products.store <- {'store1', 'store2', 'store3'};
+         Products.price > 0

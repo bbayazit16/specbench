@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/048",
+    "Tables": [
+        {
+            "TableName": "i048",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "CName",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "AddressID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "AddressLine",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

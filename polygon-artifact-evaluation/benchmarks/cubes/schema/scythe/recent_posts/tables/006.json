@@ -1,0 +1,36 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/006",
+    "Tables": [
+        {
+            "TableName": "006",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "code",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "product_variants_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "product_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "variants",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "variants_value",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

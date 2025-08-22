@@ -1,0 +1,50 @@
+{
+    "Problem Number": "textbook/tables/14",
+    "Tables": [
+        {
+            "TableName": "14-1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "P_id",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "14-2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "P_id",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "color",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "14-3",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "S_name",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

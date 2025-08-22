@@ -1,0 +1,18 @@
+{
+  "question": "{n} saw a {x}-foot {big_fish} with {k} {y}-inch remoras attached to it. What percentage of the {big_fish}'s body length is the combined length of the remoras?",
+  "types": {
+    "n": "str",
+    "big_fish": "str",
+    "x": "int",
+    "k": "int",
+    "y": "int"
+  },
+  "answer": "int((k * y)/ (x * 12) * 100)",
+  "constraints": [],
+  "private_constraints": [
+    "k * y < x * 12",
+    "divides(k*y,12)",
+    "divides(x * 12, k*y)",
+    "divides(100, x * 12 / (k*y))"
+  ]
+}

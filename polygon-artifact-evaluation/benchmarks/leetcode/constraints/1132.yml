@@ -1,0 +1,6 @@
+row_dep: unique(Removals.post_id)
+col_val: Actions.action <- {'view', 'like', 'reaction', 'comment', 'report', 'share'};
+         Actions.extra | varchar+null
+col_dep: Removals.post_id <- Actions.post_id;
+         Actions.action='report' => Actions.extra!='null';
+         Removals.post_id=Actions.post_id => Actions.action='report'

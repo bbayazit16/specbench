@@ -1,0 +1,18 @@
+{
+  "question": "If {name} eats {n1} eggs a day for {d1} days and then increases it to {n2} eggs a day for {d2} days, how many dozens of eggs will {name} need for {d3} days?",
+  "types": {
+    "name": "str",
+    "n1": "int",
+    "n2": "int",
+    "d1": "int",
+    "d2": "int",
+    "d3": "int"
+  },
+  "answer": "(n1*d1 + n2*d2) // 12",
+  "constraints": [],
+  "private_constraints": [
+    "d3 == d1 + d2",
+    "n2 > n1",
+    "divides(n1*d1 + n2*d2, 12)"
+  ]
+}

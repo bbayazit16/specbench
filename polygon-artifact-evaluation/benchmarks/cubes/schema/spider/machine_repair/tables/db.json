@@ -1,0 +1,128 @@
+{
+    "Problem Number": "spider/machine_repair/tables/db",
+    "Tables": [
+        {
+            "TableName": "repair",
+            "PKeys": [
+                {
+                    "Name": "repair_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Launch_Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Notes",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "machine",
+            "PKeys": [
+                {
+                    "Name": "Machine_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Making_Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Class",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Team",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Machine_series",
+                    "Type": "text"
+                },
+                {
+                    "Name": "value_points",
+                    "Type": "real"
+                },
+                {
+                    "Name": "quality_rank",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "technician",
+            "PKeys": [
+                {
+                    "Name": "technician_id",
+                    "Type": "real"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Team",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Starting_Year",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "repair_assignment",
+            "PKeys": [
+                {
+                    "Name": "technician_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "repair_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Machine_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Machine_ID",
+                    "PName": "Machine_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "repair_ID",
+                    "PName": "repair_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "technician_id",
+                    "PName": "technician_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

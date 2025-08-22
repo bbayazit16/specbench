@@ -1,0 +1,141 @@
+{
+    "Problem Number": "db2csv/tvshow/tables/tvshow",
+    "Tables": [
+        {
+            "TableName": "TV_Channel",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "series_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Language",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Content",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Pixel_aspect_ratio_PAR",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Hight_definition_TV",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Pay_per_view_PPV",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Package_Option",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "TV_series",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "real"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Channel",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Episode",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Air_Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Rating",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Share",
+                    "Type": "real"
+                },
+                {
+                    "Name": "18_49_Rating_Share",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Viewers_m",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Weekly_Rank",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Channel",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "Cartoon",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "real"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Channel",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Title",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Directed_by",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Written_by",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Original_air_date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Production_code",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Channel",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

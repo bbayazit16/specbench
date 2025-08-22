@@ -1,0 +1,150 @@
+{
+    "Problem Number": "spider_bak/farm/tables/db",
+    "Tables": [
+        {
+            "TableName": "city",
+            "PKeys": [
+                {
+                    "Name": "City_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Official_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Status",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Area_km_2",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Population",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Census_Ranking",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "farm",
+            "PKeys": [
+                {
+                    "Name": "Farm_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Total_Horses",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Working_Horses",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Total_Cattle",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Oxen",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Bulls",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Cows",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Pigs",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Sheep_and_Goats",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "farm_competition",
+            "PKeys": [
+                {
+                    "Name": "Competition_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Host_city_ID",
+                    "PName": "City_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Theme",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Host_city_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Hosts",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "competition_record",
+            "PKeys": [
+                {
+                    "Name": "Competition_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Farm_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Farm_ID",
+                    "PName": "Farm_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Competition_ID",
+                    "PName": "Competition_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Rank",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,140 @@
+{
+    "Problem Number": "spider_bak/party_people/tables/db",
+    "Tables": [
+        {
+            "TableName": "region",
+            "PKeys": [
+                {
+                    "Name": "Region_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Region_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Label",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Format",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Catalogue",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "party",
+            "PKeys": [
+                {
+                    "Name": "Party_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Region_ID",
+                    "PName": "Region_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Minister",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Took_office",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Left_office",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Region_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Party_name",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "member",
+            "PKeys": [
+                {
+                    "Name": "Member_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Party_ID",
+                    "PName": "Party_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Member_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Party_ID",
+                    "Type": "text"
+                },
+                {
+                    "Name": "In_office",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "party_events",
+            "PKeys": [
+                {
+                    "Name": "Event_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Member_in_charge_ID",
+                    "PName": "Member_ID",
+                    "PTable": 2
+                },
+                {
+                    "FName": "Party_ID",
+                    "PName": "Party_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Event_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Party_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Member_in_charge_ID",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/020",
+    "Tables": [
+        {
+            "TableName": "020",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "uid",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "timestamp",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "action",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

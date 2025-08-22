@@ -1,0 +1,71 @@
+{
+    "Problem Number": "db2csv/poker_player/tables/poker_player",
+    "Tables": [
+        {
+            "TableName": "poker_player",
+            "PKeys": [
+                {
+                    "Name": "Poker_Player_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "People_ID",
+                    "PName": "People_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Final_Table_Made",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Best_Finish",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Money_Rank",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Earnings",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "people",
+            "PKeys": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Nationality",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Birth_Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Height",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

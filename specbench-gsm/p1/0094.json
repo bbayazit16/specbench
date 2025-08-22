@@ -1,0 +1,19 @@
+{
+  "question": "{n} people apply for a job at {company}. Of the people that apply, only {p1}% receive interviews. Of those who receive interviews, {p2}% receive a job offer. Of those who receive a job offer, a fraction of {frac} of the people accept the position. Of those who accept the position, a fraction of {frac2} of the people will relocate. How many people relocate?",
+  "types": {
+    "company": "str",
+    "n": "int",
+    "p1": "int",
+    "p2": "int",
+    "frac": "float",
+    "frac2": "float"
+  },
+  "answer": "int(n * (p1/100) * (p2/100) * frac * frac2)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * (p1/100))",
+    "is_int(n * (p1/100) * (p2/100))",
+    "is_int(n * (p1/100) * (p2/100) * frac)",
+    "is_int(n * (p1/100) * (p2/100) * frac * frac2)"
+  ]
+}

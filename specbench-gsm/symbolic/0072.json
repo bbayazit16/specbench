@@ -1,0 +1,17 @@
+{
+  "question": "{name} was a pen pal with {n1} people. He stopped being penpals with {n2} of them. They each send {l} letters a week that are {p} pages long. He responds in kind. He can write a page every {t} minutes. How many hours does he spend writing a week?",
+  "types": {
+    "name": "str",
+    "n1": "int",
+    "n2": "int",
+    "l": "int",
+    "p": "int",
+    "t": "int"
+  },
+  "answer": "((n1 - n2) * l * p * t) // 60",
+  "constraints": [],
+  "private_constraints": [
+    "n2 < n1",
+    "is_int(((n1 - n2) * l * p * t) / 60)"
+  ]
+}

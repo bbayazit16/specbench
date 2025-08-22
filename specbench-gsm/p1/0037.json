@@ -1,0 +1,22 @@
+{
+  "question": "A giant {item} has {n} {unit}. {name1} can eat {x} {unit} a day while {name2} can eat {mult} times as much and {name3} can eat {mult2} times as much as {name2}. How many days will the {item} last?",
+  "types": {
+    "item": "str",
+    "unit": "str",
+    "name1": "str",
+    "name2": "str",
+    "name3": "str",
+    "n": "int",
+    "x": "int",
+    "mult": "float",
+    "mult2": "float"
+  },
+  "answer": "n // (x + x*mult + x * mult * mult2)",
+  "constraints": [
+    "unit in ['pieces', 'portions', 'servings']"
+  ],
+  "private_constraints": [
+    "divides(n, x + x*mult + x * mult * mult2)",
+    "n // (x + x*mult + x * mult * mult2) > 2"
+  ]
+}

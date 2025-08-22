@@ -1,0 +1,88 @@
+{
+    "Problem Number": "spider/storm_record/tables/db",
+    "Tables": [
+        {
+            "TableName": "storm",
+            "PKeys": [
+                {
+                    "Name": "Storm_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Dates_active",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Max_speed",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Damage_millions_USD",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Number_Deaths",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "region",
+            "PKeys": [
+                {
+                    "Name": "Region_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Region_code",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Region_name",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "affected_region",
+            "PKeys": [
+                {
+                    "Name": "Region_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Storm_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Storm_ID",
+                    "PName": "Storm_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Region_id",
+                    "PName": "Region_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Number_city_affected",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

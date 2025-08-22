@@ -1,0 +1,56 @@
+{
+    "Problem Number": "kaggle/tables/2_2_T_2",
+    "Tables": [
+        {
+            "TableName": "bikeshare_trips_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "trip_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "duration_sec",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "start_date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "start_station_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "start_station_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "end_date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "end_station_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "end_station_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "bike_number",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "zip_code",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "subscriber_type",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

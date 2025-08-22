@@ -1,0 +1,240 @@
+{
+    "Problem Number": "spider/hr_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "regions",
+            "PKeys": [
+                {
+                    "Name": "REGION_ID",
+                    "Type": "decimal(5,0)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "REGION_NAME",
+                    "Type": "varchar(25)"
+                }
+            ]
+        },
+        {
+            "TableName": "countries",
+            "PKeys": [
+                {
+                    "Name": "COUNTRY_ID",
+                    "Type": "varchar(2)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "REGION_ID",
+                    "PName": "REGION_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "COUNTRY_NAME",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "REGION_ID",
+                    "Type": "decimal(10,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "departments",
+            "PKeys": [
+                {
+                    "Name": "DEPARTMENT_ID",
+                    "Type": "decimal(4,0)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "DEPARTMENT_NAME",
+                    "Type": "varchar(30)"
+                },
+                {
+                    "Name": "MANAGER_ID",
+                    "Type": "decimal(6,0)"
+                },
+                {
+                    "Name": "LOCATION_ID",
+                    "Type": "decimal(4,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "jobs",
+            "PKeys": [
+                {
+                    "Name": "JOB_ID",
+                    "Type": "varchar(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "JOB_TITLE",
+                    "Type": "varchar(35)"
+                },
+                {
+                    "Name": "MIN_SALARY",
+                    "Type": "decimal(6,0)"
+                },
+                {
+                    "Name": "MAX_SALARY",
+                    "Type": "decimal(6,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "employees",
+            "PKeys": [
+                {
+                    "Name": "EMPLOYEE_ID",
+                    "Type": "decimal(6,0)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "JOB_ID",
+                    "PName": "JOB_ID",
+                    "PTable": 3
+                },
+                {
+                    "FName": "DEPARTMENT_ID",
+                    "PName": "DEPARTMENT_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "FIRST_NAME",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "LAST_NAME",
+                    "Type": "varchar(25)"
+                },
+                {
+                    "Name": "EMAIL",
+                    "Type": "varchar(25)"
+                },
+                {
+                    "Name": "PHONE_NUMBER",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "HIRE_DATE",
+                    "Type": "date"
+                },
+                {
+                    "Name": "JOB_ID",
+                    "Type": "varchar(10)"
+                },
+                {
+                    "Name": "SALARY",
+                    "Type": "decimal(8,2)"
+                },
+                {
+                    "Name": "COMMISSION_PCT",
+                    "Type": "decimal(2,2)"
+                },
+                {
+                    "Name": "MANAGER_ID",
+                    "Type": "decimal(6,0)"
+                },
+                {
+                    "Name": "DEPARTMENT_ID",
+                    "Type": "decimal(4,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "job_history",
+            "PKeys": [
+                {
+                    "Name": "EMPLOYEE_ID",
+                    "Type": "decimal(6,0)"
+                },
+                {
+                    "Name": "START_DATE",
+                    "Type": "date"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "JOB_ID",
+                    "PName": "JOB_ID",
+                    "PTable": 3
+                },
+                {
+                    "FName": "DEPARTMENT_ID",
+                    "PName": "DEPARTMENT_ID",
+                    "PTable": 2
+                },
+                {
+                    "FName": "EMPLOYEE_ID",
+                    "PName": "EMPLOYEE_ID",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "END_DATE",
+                    "Type": "date"
+                },
+                {
+                    "Name": "JOB_ID",
+                    "Type": "varchar(10)"
+                },
+                {
+                    "Name": "DEPARTMENT_ID",
+                    "Type": "decimal(4,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "locations",
+            "PKeys": [
+                {
+                    "Name": "LOCATION_ID",
+                    "Type": "decimal(4,0)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "COUNTRY_ID",
+                    "PName": "COUNTRY_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "STREET_ADDRESS",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "POSTAL_CODE",
+                    "Type": "varchar(12)"
+                },
+                {
+                    "Name": "CITY",
+                    "Type": "varchar(30)"
+                },
+                {
+                    "Name": "STATE_PROVINCE",
+                    "Type": "varchar(25)"
+                },
+                {
+                    "Name": "COUNTRY_ID",
+                    "Type": "varchar(2)"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "Problem Number": "db2csv/cre_Doc_Template_Mgt/tables/cre_Doc_Template_Mgt",
+    "Tables": [
+        {
+            "TableName": "Ref_Template_Types",
+            "PKeys": [
+                {
+                    "Name": "Template_Type_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Template_Type_Description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Templates",
+            "PKeys": [
+                {
+                    "Name": "Template_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Template_Type_Code",
+                    "PName": "Template_Type_Code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Version_Number",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Template_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Date_Effective_From",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Date_Effective_To",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Template_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Documents",
+            "PKeys": [
+                {
+                    "Name": "Document_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Template_ID",
+                    "PName": "Template_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Template_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Document_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Document_Description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Paragraphs",
+            "PKeys": [
+                {
+                    "Name": "Paragraph_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Document_ID",
+                    "PName": "Document_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Document_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Paragraph_Text",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        }
+    ]
+}

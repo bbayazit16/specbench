@@ -1,0 +1,32 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/007",
+    "Tables": [
+        {
+            "TableName": "i007",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "home",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "datetime",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "player",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "resource",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+  "question": "There are {n1} students playing {sport1} and {mult} times that number playing {sport2}. There are {n2} boys and {n3} girls playing {sport3}. The number of students playing {sport4} is {mult2} times the combined number of students who play other sports. If each student only participates in one sport, how many students are there in total?",
+  "types": {
+    "sport1": "str",
+    "sport2": "str",
+    "sport3": "str",
+    "sport4": "str",
+    "mult": "float",
+    "mult2": "float",
+    "n1": "int",
+    "n2": "int",
+    "n3": "int"
+  },
+  "answer": "(n1 + n1 * mult + n2 + n3) * (mult2 + 1)",
+  "constraints": [],
+  "private_constraints": [
+    "n1 * mult + n2 + n3 <= 250"
+  ]
+}

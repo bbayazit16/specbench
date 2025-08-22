@@ -1,0 +1,27 @@
+{
+  "question": "To make a call from a {dev}, you must pay {currency}{frac1} for each minute of your call. After {t} minutes, the price drops to {currency}{frac2} per minute. After {t2} minutes from the start of the call, the price drops even more to {currency}{frac3} per two minutes. If your total bill is more than {currency}{limit}, you get a {disc}% discount on your total bill. How much would a {total}-minute call cost?",
+  "types": {
+    "dev": "str",
+    "currency": "str",
+    "frac1": "float",
+    "frac2": "float",
+    "frac3": "float",
+    "t": "int",
+    "t2": "int",
+    "total": "int",
+    "disc": "int",
+    "limit": "int"
+  },
+  "answer": "int(int((frac1 * t) + frac2*(t2-t) + frac3 * (total-t2) * 0.5 )* (1-disc/100))",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(frac1 * t)",
+    "is_int((t2-t) * frac2)",
+    "is_int((total-t2) / 2 * frac3)",
+    "t + 10 < t2 < total",
+    "divides(total-t2,2)",
+    "frac3 < frac2 < frac1",
+    "int((frac1 * t) + frac2*(t2-t) + frac3 * (total-t2) * 0.5 ) > limit",
+    "is_int(int((frac1 * t) + frac2*(t2-t) + frac3 * (total-t2) * 0.5 ) * (disc / 100))"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "question": "There are {n} girls in the {place}. If there are {mult} times the number of boys in the {place}, what percentage of the kids in the {place} are girls?",
+  "types": {
+    "place": "str",
+    "n": "int",
+    "mult": "float"
+  },
+  "answer": "int( 100 / (mult + 1))",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * mult + 1)",
+    "n * (mult + 1) <= 200",
+    "is_int( 100 / (mult + 1))",
+    "int( 100 / (mult + 1)) < 100"
+  ]
+}

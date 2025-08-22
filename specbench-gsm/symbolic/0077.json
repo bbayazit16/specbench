@@ -1,0 +1,15 @@
+{
+  "question": "{name} is required to submit a {n}-page {document}. She already finished writing a fraction of {frac} of the {document}. How many pages does she have left to write?",
+  "types": {
+    "name": "str",
+    "document": "str",
+    "n": "int",
+    "frac": "float"
+  },
+  "answer": "n - int(n * frac)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * frac)",
+    "n * frac < n"
+  ]
+}

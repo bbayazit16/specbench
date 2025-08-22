@@ -1,0 +1,20 @@
+{
+  "question": "The {family} family is busy making {item}s. So far, they've made {total} {item}s. They have {n1} {flavor1} {item}s, {n2} {flavor2} {item}s, and some {flavor3} {item}s. What percentage of the {item}s they have made are {flavor3} {item}s?",
+  "types": {
+    "family": "str",
+    "item": "str",
+    "flavor1": "str",
+    "flavor2": "str",
+    "flavor3": "str",
+    "total": "int",
+    "n1": "int",
+    "n2": "int"
+  },
+  "answer": "int((total - (n1 + n2))/total*100)",
+  "constraints": [],
+  "private_constraints": [
+    "n1 + n2 < total",
+    "is_int((total - (n1 + n2))/total*100)",
+    "divides(int((total - (n1 + n2))/total*100), 5)"
+  ]
+}

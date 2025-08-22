@@ -1,0 +1,286 @@
+{
+    "Problem Number": "spider/products_for_hire/tables/db",
+    "Tables": [
+        {
+            "TableName": "Discount_Coupons",
+            "PKeys": [
+                {
+                    "Name": "coupon_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "date_issued",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "coupon_amount",
+                    "Type": "DECIMAL(19,4)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "coupon_id",
+                    "PName": "coupon_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "coupon_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "good_or_bad_customer",
+                    "Type": "VARCHAR(4)"
+                },
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "gender_mf",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "date_became_customer",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_last_hire",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Bookings",
+            "PKeys": [
+                {
+                    "Name": "booking_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "booking_status_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "returned_damaged_yn",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "booking_start_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "booking_end_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "count_hired",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "amount_payable",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "amount_of_discount",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "amount_outstanding",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "amount_of_refund",
+                    "Type": "DECIMAL(19,4)"
+                }
+            ]
+        },
+        {
+            "TableName": "Products_for_Hire",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "product_type_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "daily_hire_cost",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "product_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "product_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Payments",
+            "PKeys": [
+                {
+                    "Name": "payment_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "booking_id",
+                    "PName": "booking_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "booking_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "payment_type_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "amount_paid_in_full_yn",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "payment_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "amount_due",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "amount_paid",
+                    "Type": "DECIMAL(19,4)"
+                }
+            ]
+        },
+        {
+            "TableName": "Products_Booked",
+            "PKeys": [
+                {
+                    "Name": "booking_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "booking_id",
+                    "PName": "booking_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "returned_yn",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "returned_late_yn",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "booked_count",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "booked_amount",
+                    "Type": "FLOAT"
+                }
+            ]
+        },
+        {
+            "TableName": "View_Product_Availability",
+            "PKeys": [
+                {
+                    "Name": "status_date",
+                    "Type": "DATETIME"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "booking_id",
+                    "PName": "booking_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "booking_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "available_yn",
+                    "Type": "VARCHAR(1)"
+                }
+            ]
+        }
+    ]
+}

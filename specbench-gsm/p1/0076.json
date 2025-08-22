@@ -1,0 +1,23 @@
+{
+  "question": "{name} caught {n} {fish}s last {day}, the first {fish} he caught weighs {w1} {unit}s, the second {fish} he caught weighs {w2} {unit}s, and each of the rest {fish} he caught weighs {diff} {unit}s more than the second one. If a {unit} of {fish} costs {cur}{price}, how much will he earn after selling all the {fish}s to the market?",
+  "types": {
+    "name": "str",
+    "fish": "str",
+    "day": "str",
+    "unit": "str",
+    "cur": "str",
+    "n": "int",
+    "w1": "int",
+    "w2": "int",
+    "diff": "int",
+    "price": "float"
+  },
+  "answer": "int((w1 + w2 + (n-2)*(w2+diff)) * price)",
+  "constraints": [
+    "unit in ['pounds', 'kilograms', 'kgs']"
+  ],
+  "private_constraints": [
+    "price != 1.0",
+    "is_int((w1 + 2*w2 + diff) * price)"
+  ]
+}

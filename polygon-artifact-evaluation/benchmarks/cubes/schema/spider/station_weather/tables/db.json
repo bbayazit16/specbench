@@ -1,0 +1,129 @@
+{
+    "Problem Number": "spider/station_weather/tables/db",
+    "Tables": [
+        {
+            "TableName": "train",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "train_number",
+                    "Type": "int"
+                },
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "origin",
+                    "Type": "text"
+                },
+                {
+                    "Name": "destination",
+                    "Type": "text"
+                },
+                {
+                    "Name": "time",
+                    "Type": "text"
+                },
+                {
+                    "Name": "interval",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "station",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "network_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "services",
+                    "Type": "text"
+                },
+                {
+                    "Name": "local_authority",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "route",
+            "PKeys": [
+                {
+                    "Name": "train_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "station_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "station_id",
+                    "PName": "id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "train_id",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "weekly_weather",
+            "PKeys": [
+                {
+                    "Name": "station_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "day_of_week",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "station_id",
+                    "PName": "id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "high_temperature",
+                    "Type": "int"
+                },
+                {
+                    "Name": "low_temperature",
+                    "Type": "int"
+                },
+                {
+                    "Name": "precipitation",
+                    "Type": "real"
+                },
+                {
+                    "Name": "wind_speed_mph",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

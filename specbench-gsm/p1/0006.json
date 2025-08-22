@@ -1,0 +1,20 @@
+{
+  "question": "{name} has {x} {area}s of {fruit} field. There are {k} {fruit}s per a fraction of {frac} a {area}. {name} can harvest his {fruit}s every {n} months. How many {fruit}s can {name} harvest in {year} years?",
+  "types": {
+    "name": "str",
+    "fruit": "str",
+    "area": "str",
+    "x": "int",
+    "k": "int",
+    "n": "int",
+    "year": "int",
+    "frac": "float"
+  },
+  "answer": "x * k * (12//n) * 1.0/frac * year",
+  "constraints": [
+    "area in ['square meters', 'hectares']"
+  ],
+  "private_constraints": [
+    "x * k * (12//n) * 1.0/frac * year < 10000"
+  ]
+}

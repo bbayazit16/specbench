@@ -1,0 +1,19 @@
+{
+  "question": "On {day3}, {name} wants to exercise for {mult} times the amount of time he did on {day2} and {day1} combined. On {day1} he exercised for {t1} minutes. On {day2} he exercised for {t2} minutes. How many hours does he have to exercise on {day3} to reach his goal?",
+  "types": {
+    "name": "str",
+    "day1": "str",
+    "day2": "str",
+    "day3": "str",
+    "t1": "int",
+    "t2": "int",
+    "mult": "float"
+  },
+  "answer": "(t1 + t2) * mult // 60",
+  "constraints": [],
+  "private_constraints": [
+    "t1 + t2 > 0",
+    "(t1 + t2) * mult / 60 < 14",
+    "divides((t1 + t2) * mult, 60)"
+  ]
+}

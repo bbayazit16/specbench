@@ -1,0 +1,410 @@
+{
+    "Problem Number": "spider/chinook_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Album",
+            "PKeys": [
+                {
+                    "Name": "AlbumId",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "ArtistId",
+                    "PName": "ArtistId",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Title",
+                    "Type": "varchar(160)"
+                },
+                {
+                    "Name": "ArtistId",
+                    "Type": "integer"
+                }
+            ]
+        },
+        {
+            "TableName": "Artist",
+            "PKeys": [
+                {
+                    "Name": "ArtistId",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "varchar(120)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer",
+            "PKeys": [
+                {
+                    "Name": "CustomerId",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "SupportRepId",
+                    "PName": "EmployeeId",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "FirstName",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "LastName",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "Company",
+                    "Type": "varchar(80)"
+                },
+                {
+                    "Name": "Address",
+                    "Type": "varchar(70)"
+                },
+                {
+                    "Name": "City",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "State",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "PostalCode",
+                    "Type": "varchar(10)"
+                },
+                {
+                    "Name": "Phone",
+                    "Type": "varchar(24)"
+                },
+                {
+                    "Name": "Fax",
+                    "Type": "varchar(24)"
+                },
+                {
+                    "Name": "Email",
+                    "Type": "varchar(60)"
+                },
+                {
+                    "Name": "SupportRepId",
+                    "Type": "integer"
+                }
+            ]
+        },
+        {
+            "TableName": "Employee",
+            "PKeys": [
+                {
+                    "Name": "EmployeeId",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "ReportsTo",
+                    "PName": "EmployeeId",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "LastName",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "FirstName",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "Title",
+                    "Type": "varchar(30)"
+                },
+                {
+                    "Name": "ReportsTo",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "BirthDate",
+                    "Type": "datetime"
+                },
+                {
+                    "Name": "HireDate",
+                    "Type": "datetime"
+                },
+                {
+                    "Name": "Address",
+                    "Type": "varchar(70)"
+                },
+                {
+                    "Name": "City",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "State",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "PostalCode",
+                    "Type": "varchar(10)"
+                },
+                {
+                    "Name": "Phone",
+                    "Type": "varchar(24)"
+                },
+                {
+                    "Name": "Fax",
+                    "Type": "varchar(24)"
+                },
+                {
+                    "Name": "Email",
+                    "Type": "varchar(60)"
+                }
+            ]
+        },
+        {
+            "TableName": "Genre",
+            "PKeys": [
+                {
+                    "Name": "GenreId",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "varchar(120)"
+                }
+            ]
+        },
+        {
+            "TableName": "Invoice",
+            "PKeys": [
+                {
+                    "Name": "InvoiceId",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "CustomerId",
+                    "PName": "CustomerId",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "CustomerId",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "InvoiceDate",
+                    "Type": "datetime"
+                },
+                {
+                    "Name": "BillingAddress",
+                    "Type": "varchar(70)"
+                },
+                {
+                    "Name": "BillingCity",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "BillingState",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "BillingCountry",
+                    "Type": "varchar(40)"
+                },
+                {
+                    "Name": "BillingPostalCode",
+                    "Type": "varchar(10)"
+                },
+                {
+                    "Name": "Total",
+                    "Type": "decimal(10,2)"
+                }
+            ]
+        },
+        {
+            "TableName": "InvoiceLine",
+            "PKeys": [
+                {
+                    "Name": "InvoiceLineId",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "TrackId",
+                    "PName": "TrackId",
+                    "PTable": 10
+                },
+                {
+                    "FName": "InvoiceId",
+                    "PName": "InvoiceId",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "InvoiceId",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "TrackId",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "UnitPrice",
+                    "Type": "decimal(10,2)"
+                },
+                {
+                    "Name": "Quantity",
+                    "Type": "integer"
+                }
+            ]
+        },
+        {
+            "TableName": "MediaType",
+            "PKeys": [
+                {
+                    "Name": "MediaTypeId",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "varchar(120)"
+                }
+            ]
+        },
+        {
+            "TableName": "Playlist",
+            "PKeys": [
+                {
+                    "Name": "PlaylistId",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "varchar(120)"
+                }
+            ]
+        },
+        {
+            "TableName": "PlaylistTrack",
+            "PKeys": [
+                {
+                    "Name": "PlaylistId",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "TrackId",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "TrackId",
+                    "PName": "TrackId",
+                    "PTable": 10
+                },
+                {
+                    "FName": "PlaylistId",
+                    "PName": "PlaylistId",
+                    "PTable": 8
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "Track",
+            "PKeys": [
+                {
+                    "Name": "TrackId",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "MediaTypeId",
+                    "PName": "MediaTypeId",
+                    "PTable": 7
+                },
+                {
+                    "FName": "GenreId",
+                    "PName": "GenreId",
+                    "PTable": 4
+                },
+                {
+                    "FName": "AlbumId",
+                    "PName": "AlbumId",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "varchar(200)"
+                },
+                {
+                    "Name": "AlbumId",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "MediaTypeId",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "GenreId",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "Composer",
+                    "Type": "varchar(220)"
+                },
+                {
+                    "Name": "Milliseconds",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "Bytes",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "UnitPrice",
+                    "Type": "decimal(10,2)"
+                }
+            ]
+        }
+    ]
+}

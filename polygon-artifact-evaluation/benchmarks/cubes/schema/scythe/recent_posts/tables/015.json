@@ -1,0 +1,28 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/015",
+    "Tables": [
+        {
+            "TableName": "015",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "CriteriaID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "KSB_Requirement",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "ModuleID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Module_Title",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

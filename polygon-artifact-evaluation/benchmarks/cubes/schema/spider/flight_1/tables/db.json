@@ -1,0 +1,117 @@
+{
+    "Problem Number": "spider/flight_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "flight",
+            "PKeys": [
+                {
+                    "Name": "flno",
+                    "Type": "number(4,0)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "aid",
+                    "PName": "aid",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "origin",
+                    "Type": "varchar2(20)"
+                },
+                {
+                    "Name": "destination",
+                    "Type": "varchar2(20)"
+                },
+                {
+                    "Name": "distance",
+                    "Type": "number(6,0)"
+                },
+                {
+                    "Name": "departure_date",
+                    "Type": "date"
+                },
+                {
+                    "Name": "arrival_date",
+                    "Type": "date"
+                },
+                {
+                    "Name": "price",
+                    "Type": "number(7,2)"
+                },
+                {
+                    "Name": "aid",
+                    "Type": "number(9,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "aircraft",
+            "PKeys": [
+                {
+                    "Name": "aid",
+                    "Type": "number(9,0)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "varchar2(30)"
+                },
+                {
+                    "Name": "distance",
+                    "Type": "number(6,0)"
+                }
+            ]
+        },
+        {
+            "TableName": "employee",
+            "PKeys": [
+                {
+                    "Name": "eid",
+                    "Type": "number(9,0)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "varchar2(30)"
+                },
+                {
+                    "Name": "salary",
+                    "Type": "number(10,2)"
+                }
+            ]
+        },
+        {
+            "TableName": "certificate",
+            "PKeys": [
+                {
+                    "Name": "eid",
+                    "Type": "number(9,0)"
+                },
+                {
+                    "Name": "aid",
+                    "Type": "number(9,0)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "aid",
+                    "PName": "aid",
+                    "PTable": 1
+                },
+                {
+                    "FName": "eid",
+                    "PName": "eid",
+                    "PTable": 2
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

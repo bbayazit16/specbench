@@ -1,0 +1,4 @@
+row_dep: unique(Users.account);
+         unique(Users.name);
+         unique(Transactions.trans_id)
+col_dep: Transactions.account <- Users.account

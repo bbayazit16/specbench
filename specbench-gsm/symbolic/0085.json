@@ -1,0 +1,18 @@
+{
+  "question": "If {name1} and {name2} have {total} {unit} of fence between them, and they agree to split it with {name2} getting {diff} {unit} more than {name1}, how much is left over for {name1}?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "unit": "str",
+    "total": "int",
+    "diff": "int"
+  },
+  "answer": "(total - diff) // 2",
+  "constraints": [
+    "unit in ['feet', 'meters', 'yard']"
+  ],
+  "private_constraints": [
+    "total - diff > 10",
+    "is_int((total - diff) / 2)"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+    "Problem Number": "spider_bak/university_basketball/tables/db",
+    "Tables": [
+        {
+            "TableName": "basketball_match",
+            "PKeys": [
+                {
+                    "Name": "Team_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "School_ID",
+                    "PName": "School_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "School_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Team_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "ACC_Regular_Season",
+                    "Type": "text"
+                },
+                {
+                    "Name": "ACC_Percent",
+                    "Type": "text"
+                },
+                {
+                    "Name": "ACC_Home",
+                    "Type": "text"
+                },
+                {
+                    "Name": "ACC_Road",
+                    "Type": "text"
+                },
+                {
+                    "Name": "All_Games",
+                    "Type": "text"
+                },
+                {
+                    "Name": "All_Games_Percent",
+                    "Type": "int"
+                },
+                {
+                    "Name": "All_Home",
+                    "Type": "text"
+                },
+                {
+                    "Name": "All_Road",
+                    "Type": "text"
+                },
+                {
+                    "Name": "All_Neutral",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "university",
+            "PKeys": [
+                {
+                    "Name": "School_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "School",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Founded",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Affiliation",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Enrollment",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Nickname",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Primary_conference",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

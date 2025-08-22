@@ -1,0 +1,4 @@
+row_dep: unique(Employees.employee_id)
+col_dep: Employees.reports_to <- Employees.employee_id
+col_val: Employees.reports_to | int+null;
+         Employees.age > 0

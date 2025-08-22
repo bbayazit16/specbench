@@ -1,0 +1,530 @@
+{
+    "Problem Number": "spider/hospital_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Physician",
+            "PKeys": [
+                {
+                    "Name": "EmployeeID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "Position",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "SSN",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Department",
+            "PKeys": [
+                {
+                    "Name": "DepartmentID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Head",
+                    "PName": "EmployeeID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "Head",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Affiliated_With",
+            "PKeys": [
+                {
+                    "Name": "Physician",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Department",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Department",
+                    "PName": "DepartmentID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Physician",
+                    "PName": "EmployeeID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "PrimaryAffiliation",
+                    "Type": "BOOLEAN"
+                }
+            ]
+        },
+        {
+            "TableName": "Procedures",
+            "PKeys": [
+                {
+                    "Name": "Code",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "Cost",
+                    "Type": "REAL"
+                }
+            ]
+        },
+        {
+            "TableName": "Trained_In",
+            "PKeys": [
+                {
+                    "Name": "Physician",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Treatment",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Treatment",
+                    "PName": "Code",
+                    "PTable": 3
+                },
+                {
+                    "FName": "Physician",
+                    "PName": "EmployeeID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "CertificationDate",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "CertificationExpires",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Patient",
+            "PKeys": [
+                {
+                    "Name": "SSN",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "PCP",
+                    "PName": "EmployeeID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "Address",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "Phone",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "InsuranceID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "PCP",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Nurse",
+            "PKeys": [
+                {
+                    "Name": "EmployeeID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "Position",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "Registered",
+                    "Type": "BOOLEAN"
+                },
+                {
+                    "Name": "SSN",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Appointment",
+            "PKeys": [
+                {
+                    "Name": "AppointmentID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Physician",
+                    "PName": "EmployeeID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "PrepNurse",
+                    "PName": "EmployeeID",
+                    "PTable": 6
+                },
+                {
+                    "FName": "Patient",
+                    "PName": "SSN",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Patient",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "PrepNurse",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Physician",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Start",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "End",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "ExaminationRoom",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "Medication",
+            "PKeys": [
+                {
+                    "Name": "Code",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "Brand",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "Description",
+                    "Type": "VARCHAR(30)"
+                }
+            ]
+        },
+        {
+            "TableName": "Prescribes",
+            "PKeys": [
+                {
+                    "Name": "Physician",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Patient",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Medication",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "DATETIME"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Appointment",
+                    "PName": "AppointmentID",
+                    "PTable": 7
+                },
+                {
+                    "FName": "Medication",
+                    "PName": "Code",
+                    "PTable": 8
+                },
+                {
+                    "FName": "Patient",
+                    "PName": "SSN",
+                    "PTable": 5
+                },
+                {
+                    "FName": "Physician",
+                    "PName": "EmployeeID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Appointment",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Dose",
+                    "Type": "VARCHAR(30)"
+                }
+            ]
+        },
+        {
+            "TableName": "Block",
+            "PKeys": [
+                {
+                    "Name": "BlockFloor",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "BlockCode",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": []
+        },
+        {
+            "TableName": "Room",
+            "PKeys": [
+                {
+                    "Name": "RoomNumber",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "BlockFloor",
+                    "PName": "BlockFloor",
+                    "PTable": 10
+                },
+                {
+                    "FName": "BlockCode",
+                    "PName": "BlockCode",
+                    "PTable": 10
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "RoomType",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "BlockFloor",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "BlockCode",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Unavailable",
+                    "Type": "BOOLEAN"
+                }
+            ]
+        },
+        {
+            "TableName": "On_Call",
+            "PKeys": [
+                {
+                    "Name": "Nurse",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "BlockFloor",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "BlockCode",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "OnCallStart",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "OnCallEnd",
+                    "Type": "DATETIME"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "BlockFloor",
+                    "PName": "BlockFloor",
+                    "PTable": 10
+                },
+                {
+                    "FName": "BlockCode",
+                    "PName": "BlockCode",
+                    "PTable": 10
+                },
+                {
+                    "FName": "Nurse",
+                    "PName": "EmployeeID",
+                    "PTable": 6
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "Stay",
+            "PKeys": [
+                {
+                    "Name": "StayID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Room",
+                    "PName": "RoomNumber",
+                    "PTable": 11
+                },
+                {
+                    "FName": "Patient",
+                    "PName": "SSN",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Patient",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Room",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "StayStart",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "StayEnd",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Undergoes",
+            "PKeys": [
+                {
+                    "Name": "Patient",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Procedures",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Stay",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "DateUndergoes",
+                    "Type": "DATETIME"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "AssistingNurse",
+                    "PName": "EmployeeID",
+                    "PTable": 6
+                },
+                {
+                    "FName": "Physician",
+                    "PName": "EmployeeID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Stay",
+                    "PName": "StayID",
+                    "PTable": 13
+                },
+                {
+                    "FName": "Procedures",
+                    "PName": "Code",
+                    "PTable": 3
+                },
+                {
+                    "FName": "Patient",
+                    "PName": "SSN",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Physician",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "AssistingNurse",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

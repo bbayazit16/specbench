@@ -1,0 +1,17 @@
+{
+  "question": "{name} buys {n} shares of a stock for {cur}{p} each. The stock price increases {r1}% the first year {name} holds it, then decreases {r2}% in the second year. What is the final value of all {name}'s shares?",
+  "types": {
+    "name": "str",
+    "cur": "str",
+    "n": "int",
+    "p": "int",
+    "r1": "int",
+    "r2": "int"
+  },
+  "answer": "int(n * p * (1 + r1/100) * (1 - r2/100))",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * p * r1/100)",
+    "is_int(n * p * (1 + r1/100) * (1 - r2/100))"
+  ]
+}

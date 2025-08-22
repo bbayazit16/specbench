@@ -1,0 +1,5 @@
+row_dep: unique(Prices.product_id, Prices.start_date, Prices.end_date)
+col_dep: Prices.start_date <= Prices.end_date;
+         UnitsSold.product_id<-Prices.product_id
+col_val: UnitsSold.units > 0;
+         Prices.price > 0

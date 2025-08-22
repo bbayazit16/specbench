@@ -1,0 +1,18 @@
+{
+  "question": "Comet {comet_name} orbits the sun every {orbit_period} years. {name}'s {relative} saw the Comet when he was {relative_age} years old. {name} saw the comet a second time when he was {multiple} the age his {relative} was when he saw the Comet. How old was {name} when he saw the Comet for the first time?",
+  "types": {
+    "comet_name": "str",
+    "name": "str",
+    "relative": "str",
+    "orbit_period": "int",
+    "relative_age": "int",
+    "multiple": "float"
+  },
+  "answer": "multiple * relative_age - orbit_period",
+  "constraints": [],
+  "private_constraints": [
+    "multiple * relative_age < 100",
+    "multiple * relative_age > orbit_period",
+    "is_int(multiple * relative_age - orbit_period)"
+  ]
+}

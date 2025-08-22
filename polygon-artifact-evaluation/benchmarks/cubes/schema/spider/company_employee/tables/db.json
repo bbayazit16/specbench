@@ -1,0 +1,104 @@
+{
+    "Problem Number": "spider/company_employee/tables/db",
+    "Tables": [
+        {
+            "TableName": "people",
+            "PKeys": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Nationality",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Graduation_College",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "company",
+            "PKeys": [
+                {
+                    "Name": "Company_ID",
+                    "Type": "real"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Headquarters",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Industry",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Sales_in_Billion",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Profits_in_Billion",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Assets_in_Billion",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Market_Value_in_Billion",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "employment",
+            "PKeys": [
+                {
+                    "Name": "Company_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "People_ID",
+                    "PName": "People_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Company_ID",
+                    "PName": "Company_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Year_working",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

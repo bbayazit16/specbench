@@ -1,0 +1,3 @@
+qid,mysql_groundtruth
+603,"SELECT O1.SEAT_ID FROM CINEMA O1 WHERE O1.FREE = 1 AND ((SELECT FREE FROM CINEMA O2 WHERE O2.SEAT_ID = O1.SEAT_ID - 1) = 1 OR (SELECT FREE FROM CINEMA O2 WHERE O2.SEAT_ID = O1.SEAT_ID + 1) = 1)"
+603,"select distinct a.seat_id from cinema a join cinema b on abs(a.seat_id - b.seat_id) = 1 and a.free = true and b.free = true order by a.seat_id  "

@@ -1,0 +1,28 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/018",
+    "Tables": [
+        {
+            "TableName": "018",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "OrderID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "CustomerID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Course",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

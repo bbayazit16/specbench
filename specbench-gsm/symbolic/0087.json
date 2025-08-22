@@ -1,0 +1,22 @@
+{
+  "question": "The biggest waterslide at {park_name} is {l1} {unit} long, and people slide down at {s1} {unit}/minute. The second biggest waterslide is {l2} {unit} long, but steeper, so people slide down at {s2} {unit}/minute. How much longer does it take to ride the biggest slide compared to the second biggest slide?",
+  "types": {
+    "park_name": "str",
+    "unit": "str",
+    "l1": "int",
+    "l2": "int",
+    "s1": "int",
+    "s2": "int"
+  },
+  "answer": "l1/s1 - l2/s2",
+  "constraints": [
+    "unit in ['yards', 'meters']"
+  ],
+  "private_constraints": [
+    "l1 > l2",
+    "s2 > s1",
+    "is_int(l1/s1)",
+    "is_int(l2/s2)",
+    "l1/s1 > l2/s2"
+  ]
+}

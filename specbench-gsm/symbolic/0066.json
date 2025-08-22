@@ -1,0 +1,17 @@
+{
+  "question": "{name} has {n1} light {c1} spools of thread, {n2} dark {c1} spools of thread, {n3} light {c2} spools of thread, and {n4} dark {c2} spools of thread. What percent of the spools are {c1}?",
+  "types": {
+    "name": "str",
+    "c1": "str",
+    "c2": "str",
+    "n1": "int",
+    "n2": "int",
+    "n3": "int",
+    "n4": "int"
+  },
+  "answer": "int(100 * (n1 + n2) / (n1 + n2 + n3 + n4))",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(100 * (n1 + n2) / (n1 + n2 + n3 + n4))"
+  ]
+}

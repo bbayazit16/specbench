@@ -1,0 +1,116 @@
+{
+    "Problem Number": "spider/culture_company/tables/db",
+    "Tables": [
+        {
+            "TableName": "book_club",
+            "PKeys": [
+                {
+                    "Name": "book_club_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Author_or_Editor",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Book_Title",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Publisher",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Category",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Result",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "movie",
+            "PKeys": [
+                {
+                    "Name": "movie_id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Title",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Director",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Budget_million",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Gross_worldwide",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "culture_company",
+            "PKeys": [
+                {
+                    "Name": "Company_name",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "movie_id",
+                    "PName": "movie_id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "book_club_id",
+                    "PName": "book_club_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Incorporated_in",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Group_Equity_Shareholding",
+                    "Type": "real"
+                },
+                {
+                    "Name": "book_club_id",
+                    "Type": "text"
+                },
+                {
+                    "Name": "movie_id",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

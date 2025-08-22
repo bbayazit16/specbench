@@ -1,0 +1,22 @@
+{
+  "question": "{name}'s {vehicle} breaks down. The {vehicle} weighs {weight_vehicle} {unit} and he has {item} in it weighing {weight_item} {unit}. He also has his {num_passengers} young {passenger_type} who weigh {weight_passenger} {unit} each in it. If the force to move the {vehicle} is {force_percent}% of the weight, how much force does he need to push the {vehicle}?",
+  "types": {
+    "name": "str",
+    "vehicle": "str",
+    "item": "str",
+    "passenger_type": "str",
+    "unit": "str",
+    "weight_vehicle": "int",
+    "weight_item": "int",
+    "weight_passenger": "int",
+    "num_passengers": "int",
+    "force_percent": "int"
+  },
+  "answer": "int((weight_vehicle + weight_item + num_passengers * weight_passenger) * force_percent / 100)",
+  "constraints": [
+    "unit in ['kilograms', 'pounds']"
+  ],
+  "private_constraints": [
+    "is_int((weight_vehicle + weight_item + num_passengers * weight_passenger) * force_percent / 100)"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/030",
+    "Tables": [
+        {
+            "TableName": "030_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id_type",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "item_id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "qty_sold",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "price_extended",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "date_effective",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "030_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "type",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "sort_order",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "attribute",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "value",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

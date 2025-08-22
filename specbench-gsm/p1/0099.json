@@ -1,0 +1,19 @@
+{
+  "question": "If {name} eats {n1} {food} a day for {d1} days and then increases it to {n2} {food} a day for the rest of the days, how many dozens of {food} will {name} need for {k} weeks?",
+  "types": {
+    "name": "str",
+    "food": "str",
+    "n1": "int",
+    "n2": "int",
+    "d1": "int",
+    "d2": "int",
+    "k": "int"
+  },
+  "answer": "(n1*d1 + n2*d2) // 12",
+  "constraints": [],
+  "private_constraints": [
+    "k * 7 == d1 + d2",
+    "n2 > n1",
+    "divides(n1*d1 + n2*d2, 12)"
+  ]
+}

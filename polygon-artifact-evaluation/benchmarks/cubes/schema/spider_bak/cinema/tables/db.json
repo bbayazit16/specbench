@@ -1,0 +1,108 @@
+{
+    "Problem Number": "spider_bak/cinema/tables/db",
+    "Tables": [
+        {
+            "TableName": "film",
+            "PKeys": [
+                {
+                    "Name": "Film_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Rank_in_series",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Number_in_season",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Title",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Directed_by",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Original_air_date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Production_code",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "cinema",
+            "PKeys": [
+                {
+                    "Name": "Cinema_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Openning_year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Capacity",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "schedule",
+            "PKeys": [
+                {
+                    "Name": "Cinema_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Film_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Cinema_ID",
+                    "PName": "Cinema_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Film_ID",
+                    "PName": "Film_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Show_times_per_day",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Price",
+                    "Type": "float"
+                }
+            ]
+        }
+    ]
+}

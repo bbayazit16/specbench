@@ -1,0 +1,21 @@
+{
+  "question": "{name} goes to the store to buy some {item}. The normal brand of {item} he buys costs {cur}{price} per {unit}. He had to buy a more expensive brand that costs {percent}% more since his favorite brand was sold out. He decides to buy a week's worth of {item} and he uses {usage} {unit}s of {item} per day. He also decided to buy himself a {extra_item} for {cur}{extra_price}. Since he shopped more than {cur}50, he received a {cur}{discount} discount. How much does {name} have to pay?",
+  "types": {
+    "name": "str",
+    "item": "str",
+    "cur": "str",
+    "unit": "str",
+    "extra_item": "str",
+    "price": "int",
+    "percent": "int",
+    "usage": "int",
+    "extra_price": "int",
+    "discount": "int"
+  },
+  "answer": "(price + price * percent / 100) * 7 * usage + extra_price - discount",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(price * percent / 100)",
+    "((price + price * percent / 100) * 7 * usage + extra_price) > 50"
+  ]
+}

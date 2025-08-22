@@ -1,0 +1,8 @@
+.DS_Store
+*.aux
+*.vok
+*.vo
+*.cache
+*.vos
+*.glob
+**/.env

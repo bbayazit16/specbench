@@ -1,0 +1,361 @@
+{
+    "Problem Number": "spider/customers_and_invoices/tables/db",
+    "Tables": [
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "customer_first_name",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "customer_middle_initial",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "customer_last_name",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "gender",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "email_address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "login_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "login_password",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "phone_number",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "town_city",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "state_county_province",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "country",
+                    "Type": "VARCHAR(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "Orders",
+            "PKeys": [
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_order_placed",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "order_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Invoices",
+            "PKeys": [
+                {
+                    "Name": "invoice_number",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "order_id",
+                    "PName": "order_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "invoice_date",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Accounts",
+            "PKeys": [
+                {
+                    "Name": "account_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_account_opened",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "account_name",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "other_account_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Product_Categories",
+            "PKeys": [
+                {
+                    "Name": "production_type_code",
+                    "Type": "VARCHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "product_type_description",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "vat_rating",
+                    "Type": "DECIMAL(19,4)"
+                }
+            ]
+        },
+        {
+            "TableName": "Products",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "production_type_code",
+                    "PName": "production_type_code",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "parent_product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "production_type_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "unit_price",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "product_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "product_color",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "product_size",
+                    "Type": "VARCHAR(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "Financial_Transactions",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "account_id",
+                    "PName": "account_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "invoice_number",
+                    "PName": "invoice_number",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "transaction_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "account_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "invoice_number",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "transaction_type",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "transaction_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "transaction_amount",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "transaction_comment",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_transaction_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Order_Items",
+            "PKeys": [
+                {
+                    "Name": "order_item_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "order_id",
+                    "PName": "order_id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_quantity",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "other_order_item_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Invoice_Line_Items",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "invoice_number",
+                    "PName": "invoice_number",
+                    "PTable": 2
+                },
+                {
+                    "FName": "order_item_id",
+                    "PName": "order_item_id",
+                    "PTable": 7
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "order_item_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "invoice_number",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_title",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "product_quantity",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "product_price",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "derived_product_cost",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "derived_vat_payable",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "derived_total_cost",
+                    "Type": "DECIMAL(19,4)"
+                }
+            ]
+        }
+    ]
+}

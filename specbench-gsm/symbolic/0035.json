@@ -1,0 +1,19 @@
+{
+  "question": "{name} is raising money for a {event}. He has applied for help from the {organization}, which has decided to cover a fraction of {fraction} of the cost of the {event}. How much money is {name} missing if he has {cur}{current} and the {event} costs {cur}{total}?",
+  "types": {
+    "name": "str",
+    "event": "str",
+    "cur": "str",
+    "organization": "str",
+    "fraction": "float",
+    "current": "int",
+    "total": "int"
+  },
+  "answer": "total - (total * Fraction(fraction) + current)",
+  "constraints": [],
+  "private_constraints": [
+    "total > current",
+    "is_int(total * Fraction(fraction))",
+    "is_int(total - (total * Fraction(fraction) + current))"
+  ]
+}

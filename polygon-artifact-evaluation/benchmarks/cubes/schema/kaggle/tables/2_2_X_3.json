@@ -1,0 +1,104 @@
+{
+    "Problem Number": "kaggle/tables/2_2_X_3",
+    "Tables": [
+        {
+            "TableName": "taxi_trips_5",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "unique_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "taxi_id",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "trip_start_timestamp",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "trip_end_timestamp",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "trip_seconds",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "trip_miles",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "pickup_census_tract",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "dropoff_census_tract",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "pickup_community_area",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "dropoff_community_area",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "fare",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "tips",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "tolls",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "extras",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "trip_total",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "payment_type",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "company",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "pickup_latitude",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "pickup_longitude",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "pickup_location",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "dropoff_latitude",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "dropoff_longitude",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "dropoff_location",
+                    "Type": "FLOAT"
+                }
+            ]
+        }
+    ]
+}

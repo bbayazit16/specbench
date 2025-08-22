@@ -1,0 +1,67 @@
+{
+    "Problem Number": "spider/entrepreneur/tables/db",
+    "Tables": [
+        {
+            "TableName": "entrepreneur",
+            "PKeys": [
+                {
+                    "Name": "Entrepreneur_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "People_ID",
+                    "PName": "People_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Company",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Money_Requested",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Investor",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "people",
+            "PKeys": [
+                {
+                    "Name": "People_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Height",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Weight",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Date_of_Birth",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

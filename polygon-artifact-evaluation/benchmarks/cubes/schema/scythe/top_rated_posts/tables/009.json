@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/009",
+    "Tables": [
+        {
+            "TableName": "i009",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "username",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "ip",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "time_stamp",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+row_dep: unique(Spending.user_id, Spending.spend_date, Spending.platform);
+col_val: Spending.amount>0;
+         Spending.platform<-{'desktop','mobile'}

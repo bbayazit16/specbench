@@ -1,0 +1,121 @@
+{
+    "Problem Number": "spider/game_injury/tables/db",
+    "Tables": [
+        {
+            "TableName": "stadium",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Home_Games",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Average_Attendance",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Total_Attendance",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Capacity_Percentage",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "game",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "stadium_id",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "stadium_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Season",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Home_team",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Away_team",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Score",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Competition",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "injury_accident",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "game_id",
+                    "PName": "id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "game_id",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Player",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Injury",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Number_of_matches",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Source",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

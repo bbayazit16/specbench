@@ -1,0 +1,25 @@
+{
+  "question": "{name} is looking for a new {property_type} that will not go beyond her ${budget} budget. She saw a property that has a selling price of ${price}. On top of that, the buyer has to pay a brokerage fee which is {brokerage_fee}% of the selling price, and also the transfer fee that is {transfer_fee}% of the selling price. If {name} can get {discount}% discount on the selling price, how much more will be the total cost than {name}'s budget?",
+  "types": {
+    "name": "str",
+    "property_type": "str",
+    "discount": "int",
+    "budget": "int",
+    "price": "int",
+    "brokerage_fee": "int",
+    "transfer_fee": "int"
+  },
+  "answer": "int(price * (100-discount)/100 * (1 + brokerage_fee/100 + transfer_fee/100) - budget)",
+  "constraints": [],
+  "private_constraints": [
+    "brokerage_fee < 100",
+    "transfer_fee < 100",
+    "is_int(price * (100-discount) / 100)",
+    "price * (100-discount) / 100 % 1000 == 0",
+    "price * (100-discount)/100 * (1 + brokerage_fee/100 + transfer_fee/100) % 100 == 0",
+    "price * (100-discount)/100 * (1 + brokerage_fee/100 + transfer_fee/100) > budget + 1",
+    "is_int(price * (100-discount)/100 * brokerage_fee / 100)",
+    "is_int(price * (100-discount)/100 * transfer_fee / 100)",
+    "int(price * (100-discount)/100 * (1 + brokerage_fee/100 + transfer_fee/100) - budget) < 150000"
+  ]
+}

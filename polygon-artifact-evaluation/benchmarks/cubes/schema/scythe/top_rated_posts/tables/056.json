@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/056",
+    "Tables": [
+        {
+            "TableName": "i056",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "col1",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "col2",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "col3",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/014",
+    "Tables": [
+        {
+            "TableName": "014_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "NAME",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "PARENT_ID",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "014_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "NAME",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "UNIQUE_ID",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

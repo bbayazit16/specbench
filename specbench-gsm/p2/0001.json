@@ -1,0 +1,17 @@
+{
+  "question": "A fog bank rolls in from the ocean to cover a city. It takes {t} minutes to cover every {d} miles of the city. However, we know that the wind speed is going to be halved in one hour. If the city is {y} miles across from the oceanfront to the opposite inland edge, how many minutes will it take for the fog bank to cover a fraction of {frac} of the city?",
+  "types": {
+    "t": "int",
+    "d": "int",
+    "y": "int",
+    "frac": "float"
+  },
+  "answer": "(int(y*frac - (60*d//t)) // d * 2*t) + 60",
+  "constraints": [],
+  "private_constraints": [
+    "divides(60*d,t)",
+    "is_int(y*frac)",
+    "int(y*frac - (60*d//t)) > 9",
+    "divides(int(y*frac - (60*d//t)), d)"
+  ]
+}

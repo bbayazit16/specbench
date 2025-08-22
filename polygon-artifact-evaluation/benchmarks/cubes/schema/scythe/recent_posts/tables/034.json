@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/034",
+    "Tables": [
+        {
+            "TableName": "034",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "MATERIAL",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "DISCO_DATE",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "DATE_UPDATE",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+  "Tables": [
+    {
+      "TableName": "payroll",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "ssno",
+          "Type": "int"
+        },
+        {
+          "Name": "deptno",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "applicant",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "ssno",
+          "Type": "int"
+        },
+        {
+          "Name": "jobtitile",
+          "Type": "int"
+        },
+        {
+          "Name": "officeno",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

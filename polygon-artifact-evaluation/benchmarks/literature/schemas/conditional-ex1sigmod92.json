@@ -1,0 +1,55 @@
+{
+  "Tables": [
+    {
+      "TableName": "itp",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "itemn",
+          "Type": "int"
+        },
+        {
+          "Name": "ponum",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "itm",
+      "PKeys": [
+        {
+          "Name": "itemn",
+          "Type": "int"
+        }
+      ],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "type",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "pur",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "ponum",
+          "Type": "int"
+        },
+        {
+          "Name": "odate",
+          "Type": "int"
+        },
+        {
+          "Name": "vendn",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

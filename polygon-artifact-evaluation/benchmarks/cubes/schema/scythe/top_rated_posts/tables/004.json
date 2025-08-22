@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/004",
+    "Tables": [
+        {
+            "TableName": "i004",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "rev",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "content",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

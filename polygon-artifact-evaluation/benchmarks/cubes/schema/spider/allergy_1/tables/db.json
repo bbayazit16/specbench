@@ -1,0 +1,87 @@
+{
+    "Problem Number": "spider/allergy_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Allergy_Type",
+            "PKeys": [
+                {
+                    "Name": "Allergy",
+                    "Type": "VARCHAR(20)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "AllergyType",
+                    "Type": "VARCHAR(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "Has_Allergy",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "Allergy",
+                    "PName": "Allergy",
+                    "PTable": 0
+                },
+                {
+                    "FName": "StuID",
+                    "PName": "StuID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "StuID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Allergy",
+                    "Type": "VARCHAR(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "Student",
+            "PKeys": [
+                {
+                    "Name": "StuID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "LName",
+                    "Type": "VARCHAR(12)"
+                },
+                {
+                    "Name": "Fname",
+                    "Type": "VARCHAR(12)"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Sex",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "Major",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Advisor",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "city_code",
+                    "Type": "VARCHAR(3)"
+                }
+            ]
+        }
+    ]
+}

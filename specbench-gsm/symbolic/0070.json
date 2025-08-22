@@ -1,0 +1,13 @@
+{
+  "question": "A {occupation} works for {w} weeks every month and for {d} days every week. If he gets paid {cur}{p} every day, how much does he earn if he works for a year?",
+  "types": {
+    "occupation": "str",
+    "cur": "str",
+    "w": "int",
+    "d": "int",
+    "p": "int"
+  },
+  "answer": "w * d * p * 12",
+  "constraints": [],
+  "private_constraints": []
+}

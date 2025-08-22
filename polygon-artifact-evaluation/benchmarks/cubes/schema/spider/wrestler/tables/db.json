@@ -1,0 +1,75 @@
+{
+    "Problem Number": "spider/wrestler/tables/db",
+    "Tables": [
+        {
+            "TableName": "wrestler",
+            "PKeys": [
+                {
+                    "Name": "Wrestler_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Reign",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Days_held",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Event",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "Elimination",
+            "PKeys": [
+                {
+                    "Name": "Elimination_ID",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Wrestler_ID",
+                    "PName": "Wrestler_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Wrestler_ID",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Team",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Eliminated_By",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Elimination_Move",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Time",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+row_dep: unique(Products.product_id)
+col_val: Pruducts.store1|int+null;
+         Products.store2|int+null;
+         Products.store3|int+null

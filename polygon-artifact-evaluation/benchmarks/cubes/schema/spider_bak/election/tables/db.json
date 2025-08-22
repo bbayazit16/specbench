@@ -1,0 +1,116 @@
+{
+    "Problem Number": "spider_bak/election/tables/db",
+    "Tables": [
+        {
+            "TableName": "county",
+            "PKeys": [
+                {
+                    "Name": "County_Id",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "County_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Population",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Zip_code",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "party",
+            "PKeys": [
+                {
+                    "Name": "Party_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Year",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Party",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Governor",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Lieutenant_Governor",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Comptroller",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Attorney_General",
+                    "Type": "text"
+                },
+                {
+                    "Name": "US_Senate",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "election",
+            "PKeys": [
+                {
+                    "Name": "Election_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "District",
+                    "PName": "County_Id",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Party",
+                    "PName": "Party_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Counties_Represented",
+                    "Type": "text"
+                },
+                {
+                    "Name": "District",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Delegate",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Party",
+                    "Type": "int"
+                },
+                {
+                    "Name": "First_Elected",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Committee",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

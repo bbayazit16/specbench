@@ -1,0 +1,43 @@
+{
+  "Tables": [
+    {
+      "TableName": "emp",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "name",
+          "Type": "int"
+        },
+        {
+          "Name": "dept",
+          "Type": "int"
+        },
+        {
+          "Name": "emp",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "dept",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "dept",
+          "Type": "int"
+        },
+        {
+          "Name": "loc",
+          "Type": "int"
+        },
+        {
+          "Name": "mgr",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

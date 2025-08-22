@@ -1,0 +1,183 @@
+{
+    "Problem Number": "spider/cre_Docs_and_Epenses/tables/db",
+    "Tables": [
+        {
+            "TableName": "Ref_Document_Types",
+            "PKeys": [
+                {
+                    "Name": "Document_Type_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Document_Type_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Document_Type_Description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Budget_Codes",
+            "PKeys": [
+                {
+                    "Name": "Budget_Type_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Budget_Type_Description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Projects",
+            "PKeys": [
+                {
+                    "Name": "Project_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Project_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Documents",
+            "PKeys": [
+                {
+                    "Name": "Document_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Project_ID",
+                    "PName": "Project_ID",
+                    "PTable": 2
+                },
+                {
+                    "FName": "Document_Type_Code",
+                    "PName": "Document_Type_Code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Document_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Project_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Document_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Document_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Document_Description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Statements",
+            "PKeys": [
+                {
+                    "Name": "Statement_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Statement_ID",
+                    "PName": "Document_ID",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Statement_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Documents_with_Expenses",
+            "PKeys": [
+                {
+                    "Name": "Document_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Document_ID",
+                    "PName": "Document_ID",
+                    "PTable": 3
+                },
+                {
+                    "FName": "Budget_Type_Code",
+                    "PName": "Budget_Type_Code",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Budget_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Document_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Accounts",
+            "PKeys": [
+                {
+                    "Name": "Account_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Statement_ID",
+                    "PName": "Statement_ID",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Statement_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Account_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        }
+    ]
+}

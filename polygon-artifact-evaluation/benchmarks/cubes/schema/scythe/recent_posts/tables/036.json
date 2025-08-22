@@ -1,0 +1,39 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/036",
+    "Tables": [
+        {
+            "TableName": "036_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Account",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Sen1",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Sen2",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "036_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

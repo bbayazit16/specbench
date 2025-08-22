@@ -1,0 +1,23 @@
+{
+  "question": "{name} has a flower bed that is {length} {unit_length} long. {name} wants to fill her flower bed with plants. {name}'s flowers grow {plant_width} {unit_length} wide so she needs to leave {space} {unit_length} between every plant. {name} already owns {owned} flowers. Each flowering plant costs {cur}{cost} at the store, how much money will {name} spend at the store to fill up her flower bed?",
+  "types": {
+    "name": "str",
+    "unit_length": "str",
+    "cur": "str",
+    "length": "int",
+    "plant_width": "int",
+    "space": "float",
+    "owned": "int",
+    "cost": "int"
+  },
+  "answer": "int((length / space - owned) * cost)",
+  "constraints": [
+    "unit_length in ['feet', 'meters']"
+  ],
+  "private_constraints": [
+    "plant_width * 3 < length",
+    "plant_width < space",
+    "is_int(length / space)",
+    "length / space > owned"
+  ]
+}

@@ -1,0 +1,282 @@
+{
+    "Problem Number": "spider/college_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "CLASS",
+            "PKeys": [
+                {
+                    "Name": "CLASS_CODE",
+                    "Type": "varchar(5)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "PROF_NUM",
+                    "PName": "EMP_NUM",
+                    "PTable": 3
+                },
+                {
+                    "FName": "CRS_CODE",
+                    "PName": "CRS_CODE",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "CRS_CODE",
+                    "Type": "varchar(10)"
+                },
+                {
+                    "Name": "CLASS_SECTION",
+                    "Type": "varchar(2)"
+                },
+                {
+                    "Name": "CLASS_TIME",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "CLASS_ROOM",
+                    "Type": "varchar(8)"
+                },
+                {
+                    "Name": "PROF_NUM",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "COURSE",
+            "PKeys": [
+                {
+                    "Name": "CRS_CODE",
+                    "Type": "varchar(10)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "DEPT_CODE",
+                    "PName": "DEPT_CODE",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "DEPT_CODE",
+                    "Type": "varchar(10)"
+                },
+                {
+                    "Name": "CRS_DESCRIPTION",
+                    "Type": "varchar(35)"
+                },
+                {
+                    "Name": "CRS_CREDIT",
+                    "Type": "float(8)"
+                }
+            ]
+        },
+        {
+            "TableName": "DEPARTMENT",
+            "PKeys": [
+                {
+                    "Name": "DEPT_CODE",
+                    "Type": "varchar(10)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "EMP_NUM",
+                    "PName": "EMP_NUM",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "DEPT_NAME",
+                    "Type": "varchar(30)"
+                },
+                {
+                    "Name": "SCHOOL_CODE",
+                    "Type": "varchar(8)"
+                },
+                {
+                    "Name": "EMP_NUM",
+                    "Type": "int"
+                },
+                {
+                    "Name": "DEPT_ADDRESS",
+                    "Type": "varchar(20)"
+                },
+                {
+                    "Name": "DEPT_EXTENSION",
+                    "Type": "varchar(4)"
+                }
+            ]
+        },
+        {
+            "TableName": "EMPLOYEE",
+            "PKeys": [
+                {
+                    "Name": "EMP_NUM",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "EMP_LNAME",
+                    "Type": "varchar(15)"
+                },
+                {
+                    "Name": "EMP_FNAME",
+                    "Type": "varchar(12)"
+                },
+                {
+                    "Name": "EMP_INITIAL",
+                    "Type": "varchar(1)"
+                },
+                {
+                    "Name": "EMP_JOBCODE",
+                    "Type": "varchar(5)"
+                },
+                {
+                    "Name": "EMP_HIREDATE",
+                    "Type": "datetime"
+                },
+                {
+                    "Name": "EMP_DOB",
+                    "Type": "datetime"
+                }
+            ]
+        },
+        {
+            "TableName": "ENROLL",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "STU_NUM",
+                    "PName": "STU_NUM",
+                    "PTable": 6
+                },
+                {
+                    "FName": "CLASS_CODE",
+                    "PName": "CLASS_CODE",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "CLASS_CODE",
+                    "Type": "varchar(5)"
+                },
+                {
+                    "Name": "STU_NUM",
+                    "Type": "int"
+                },
+                {
+                    "Name": "ENROLL_GRADE",
+                    "Type": "varchar(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "PROFESSOR",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "DEPT_CODE",
+                    "PName": "DEPT_CODE",
+                    "PTable": 2
+                },
+                {
+                    "FName": "EMP_NUM",
+                    "PName": "EMP_NUM",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "EMP_NUM",
+                    "Type": "int"
+                },
+                {
+                    "Name": "DEPT_CODE",
+                    "Type": "varchar(10)"
+                },
+                {
+                    "Name": "PROF_OFFICE",
+                    "Type": "varchar(50)"
+                },
+                {
+                    "Name": "PROF_EXTENSION",
+                    "Type": "varchar(4)"
+                },
+                {
+                    "Name": "PROF_HIGH_DEGREE",
+                    "Type": "varchar(5)"
+                }
+            ]
+        },
+        {
+            "TableName": "STUDENT",
+            "PKeys": [
+                {
+                    "Name": "STU_NUM",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "DEPT_CODE",
+                    "PName": "DEPT_CODE",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "STU_LNAME",
+                    "Type": "varchar(15)"
+                },
+                {
+                    "Name": "STU_FNAME",
+                    "Type": "varchar(15)"
+                },
+                {
+                    "Name": "STU_INIT",
+                    "Type": "varchar(1)"
+                },
+                {
+                    "Name": "STU_DOB",
+                    "Type": "datetime"
+                },
+                {
+                    "Name": "STU_HRS",
+                    "Type": "int"
+                },
+                {
+                    "Name": "STU_CLASS",
+                    "Type": "varchar(2)"
+                },
+                {
+                    "Name": "STU_GPA",
+                    "Type": "float(8)"
+                },
+                {
+                    "Name": "STU_TRANSFER",
+                    "Type": "numeric"
+                },
+                {
+                    "Name": "DEPT_CODE",
+                    "Type": "varchar(18)"
+                },
+                {
+                    "Name": "STU_PHONE",
+                    "Type": "varchar(4)"
+                },
+                {
+                    "Name": "PROF_NUM",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

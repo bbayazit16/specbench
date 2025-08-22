@@ -1,0 +1,28 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/035",
+    "Tables": [
+        {
+            "TableName": "i035",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Maths",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Science",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "English",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

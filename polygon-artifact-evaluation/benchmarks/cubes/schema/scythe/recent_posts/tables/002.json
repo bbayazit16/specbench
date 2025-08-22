@@ -1,0 +1,20 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/002",
+    "Tables": [
+        {
+            "TableName": "002",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Start",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "End",
+                    "Type": "FLOAT"
+                }
+            ]
+        }
+    ]
+}

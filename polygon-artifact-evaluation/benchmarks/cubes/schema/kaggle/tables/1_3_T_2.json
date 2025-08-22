@@ -1,0 +1,52 @@
+{
+    "Problem Number": "kaggle/tables/1_3_T_2",
+    "Tables": [
+        {
+            "TableName": "comments",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "id",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "by",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "author",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "time",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "time_ts",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "text",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "parent",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "deleted",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "dead",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "ranking",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

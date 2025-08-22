@@ -1,0 +1,25 @@
+{
+  "question": "{name} went to buy some school supplies. He bought {n1} {obj1} which cost {cur}{c1} each, {n2} {obj2} which cost {cur}{c2} each, and a rim of bond paper which cost {cur}{c3}. He also bought {n4} {obj3} which cost {cur}{c4} each. How much did {name} spend on everything if he receives {disc}% discount on all purchases?",
+  "types": {
+    "name": "str",
+    "obj1": "str",
+    "obj2": "str",
+    "obj3": "str",
+    "cur": "str",
+    "n1": "int",
+    "c1": "float",
+    "n2": "int",
+    "c2": "float",
+    "c3": "int",
+    "n4": "int",
+    "c4": "int",
+    "disc": "int"
+  },
+  "answer": "int((n1*c1 + n2*c2 + c3+n4*c4)*(1-disc/100))",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n1 * c1)",
+    "is_int(n2 * c2)",
+    "is_int((n1*c1 + n2*c2 + c3+n4*c4)*(1-disc/100))"
+  ]
+}

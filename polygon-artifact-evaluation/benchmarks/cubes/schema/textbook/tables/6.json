@@ -1,0 +1,50 @@
+{
+    "Problem Number": "textbook/tables/6",
+    "Tables": [
+        {
+            "TableName": "6-1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "C_name",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "6-2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "C_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "F_key",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "6-3",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "F_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "F_name",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

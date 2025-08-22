@@ -1,0 +1,18 @@
+{
+  "question": "{name1} has {mult1} times as many {platform} friends as {name2}. {name3} has {mult2} times as many friends on {platform} as {name2}. If {name1} has {n} friends on {platform}, how many {platform} friends does {name3} have?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "name3": "str",
+    "platform": "str",
+    "mult1": "float",
+    "mult2": "float",
+    "n": "int"
+  },
+  "answer": "int((n / mult1) * mult2)",
+  "constraints": [],
+  "private_constraints": [
+    "mult2 != mult1",
+    "is_int(n / mult1)"
+  ]
+}

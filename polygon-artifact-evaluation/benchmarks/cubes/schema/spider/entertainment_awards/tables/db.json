@@ -1,0 +1,88 @@
+{
+    "Problem Number": "spider/entertainment_awards/tables/db",
+    "Tables": [
+        {
+            "TableName": "festival_detail",
+            "PKeys": [
+                {
+                    "Name": "Festival_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Festival_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Chair_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Num_of_Audience",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "artwork",
+            "PKeys": [
+                {
+                    "Name": "Artwork_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "nomination",
+            "PKeys": [
+                {
+                    "Name": "Artwork_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Festival_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Festival_ID",
+                    "PName": "Festival_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Artwork_ID",
+                    "PName": "Artwork_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Result",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

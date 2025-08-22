@@ -1,0 +1,26 @@
+{
+  "question": "A loaf of {item1} at the {shop} costs {currency}{price1}. The cost of a {item2} is a fraction of {frac} of a loaf of {item1}. The {shop} has a promotion that if one buys {n22} {item2}s or more, they get a {discount}% discount on {item2}s. How much more do {n1} loaves of {item1} cost than {n2} {item2}s?",
+  "types": {
+    "item1": "str",
+    "item2": "str",
+    "shop": "str",
+    "currency": "str",
+    "price1": "int",
+    "price2": "float",
+    "frac": "float",
+    "n1": "int",
+    "n2": "int",
+    "n22": "int",
+    "discount": "int"
+  },
+  "answer": "n1 * price1 - int(n2 * price2 * (1-discount/100))",
+  "constraints": [],
+  "private_constraints": [
+    "price2 == frac * price1",
+    "is_int(price2 * 10) == False",
+    "n1 * price1 > n2 * price2",
+    "n22 < n2",
+    "is_int(n1 * price1 - n2 * price2)",
+    "is_int(n2 * price2 * discount/100)"
+  ]
+}

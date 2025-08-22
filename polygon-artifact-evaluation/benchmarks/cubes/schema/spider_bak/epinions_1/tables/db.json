@@ -1,0 +1,106 @@
+{
+    "Problem Number": "spider_bak/epinions_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "item",
+            "PKeys": [
+                {
+                    "Name": "i_id",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "title",
+                    "Type": "varchar(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "review",
+            "PKeys": [
+                {
+                    "Name": "a_id",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "i_id",
+                    "PName": "i_id",
+                    "PTable": 0
+                },
+                {
+                    "FName": "u_id",
+                    "PName": "u_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "u_id",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "i_id",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "rating",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "rank",
+                    "Type": "integer"
+                }
+            ]
+        },
+        {
+            "TableName": "useracct",
+            "PKeys": [
+                {
+                    "Name": "u_id",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "varchar(128)"
+                }
+            ]
+        },
+        {
+            "TableName": "trust",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "target_u_id",
+                    "PName": "u_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "source_u_id",
+                    "PName": "u_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "source_u_id",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "target_u_id",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "trust",
+                    "Type": "integer"
+                }
+            ]
+        }
+    ]
+}

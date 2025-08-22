@@ -1,0 +1,49 @@
+{
+    "Problem Number": "spider/student_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "list",
+            "PKeys": [
+                {
+                    "Name": "LastName",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "FirstName",
+                    "Type": "TEXT"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Grade",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Classroom",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "teachers",
+            "PKeys": [
+                {
+                    "Name": "LastName",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "FirstName",
+                    "Type": "TEXT"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Classroom",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

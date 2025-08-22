@@ -1,0 +1,39 @@
+{
+    "Problem Number": "textbook/tables/34",
+    "Tables": [
+        {
+            "TableName": "certified",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "eid",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "aid",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "employees",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "eid",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "ename",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "salary",
+                    "Type": "FLOAT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,392 @@
+{
+    "Problem Number": "spider_bak/customer_deliveries/tables/db",
+    "Tables": [
+        {
+            "TableName": "Products",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "product_name",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "product_price",
+                    "Type": "DECIMAL(19,4)"
+                },
+                {
+                    "Name": "product_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Addresses",
+            "PKeys": [
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "address_details",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "city",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "zip_postcode",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "state_province_county",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "country",
+                    "Type": "VARCHAR(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "payment_method",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "customer_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "customer_phone",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "customer_email",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "date_became_customer",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Regular_Orders",
+            "PKeys": [
+                {
+                    "Name": "regular_order_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "distributer_id",
+                    "PName": "customer_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "distributer_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Regular_Order_Products",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "regular_order_id",
+                    "PName": "regular_order_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "regular_order_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Actual_Orders",
+            "PKeys": [
+                {
+                    "Name": "actual_order_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "regular_order_id",
+                    "PName": "regular_order_id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "order_status_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "regular_order_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "actual_order_date",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Actual_Order_Products",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "actual_order_id",
+                    "PName": "actual_order_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "actual_order_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer_Addresses",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "address_id",
+                    "PName": "address_id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "address_type",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "date_to",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Delivery_Routes",
+            "PKeys": [
+                {
+                    "Name": "route_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "route_name",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "other_route_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Delivery_Route_Locations",
+            "PKeys": [
+                {
+                    "Name": "location_code",
+                    "Type": "VARCHAR(10)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "route_id",
+                    "PName": "route_id",
+                    "PTable": 8
+                },
+                {
+                    "FName": "location_address_id",
+                    "PName": "address_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "route_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "location_address_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "location_name",
+                    "Type": "VARCHAR(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "Trucks",
+            "PKeys": [
+                {
+                    "Name": "truck_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "truck_licence_number",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "truck_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Employees",
+            "PKeys": [
+                {
+                    "Name": "employee_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "employee_address_id",
+                    "PName": "address_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "employee_address_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "employee_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "employee_phone",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Order_Deliveries",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "driver_employee_id",
+                    "PName": "employee_id",
+                    "PTable": 11
+                },
+                {
+                    "FName": "location_code",
+                    "PName": "location_code",
+                    "PTable": 9
+                },
+                {
+                    "FName": "actual_order_id",
+                    "PName": "actual_order_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "truck_id",
+                    "PName": "truck_id",
+                    "PTable": 10
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "location_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "actual_order_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "delivery_status_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "driver_employee_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "truck_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "delivery_date",
+                    "Type": "DATETIME"
+                }
+            ]
+        }
+    ]
+}

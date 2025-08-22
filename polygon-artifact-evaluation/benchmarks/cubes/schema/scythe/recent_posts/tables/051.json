@@ -1,0 +1,35 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/051",
+    "Tables": [
+        {
+            "TableName": "051_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "isbn",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "title",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "051_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "isbn",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Author",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

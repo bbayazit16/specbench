@@ -1,0 +1,676 @@
+{
+    "Problem Number": "spider/cre_Drama_Workshop_Groups/tables/db",
+    "Tables": [
+        {
+            "TableName": "Ref_Payment_Methods",
+            "PKeys": [
+                {
+                    "Name": "payment_method_code",
+                    "Type": "CHAR(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "payment_method_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Service_Types",
+            "PKeys": [
+                {
+                    "Name": "Service_Type_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Parent_Service_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Service_Type_Description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Addresses",
+            "PKeys": [
+                {
+                    "Name": "Address_ID",
+                    "Type": "VARCHAR(100)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Line_1",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Line_2",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "City_Town",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "State_County",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Products",
+            "PKeys": [
+                {
+                    "Name": "Product_ID",
+                    "Type": "VARCHAR(100)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Product_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Product_Price",
+                    "Type": "DECIMAL(20,4)"
+                },
+                {
+                    "Name": "Product_Description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Product_Service_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Marketing_Regions",
+            "PKeys": [
+                {
+                    "Name": "Marketing_Region_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Marketing_Region_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Marketing_Region_Descriptrion",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Clients",
+            "PKeys": [
+                {
+                    "Name": "Client_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Address_ID",
+                    "PName": "Address_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Address_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Customer_Email_Address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Customer_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Customer_Phone",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Drama_Workshop_Groups",
+            "PKeys": [
+                {
+                    "Name": "Workshop_Group_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Address_ID",
+                    "PName": "Address_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Address_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Currency_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Marketing_Region_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Store_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Store_Phone",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Store_Email_Address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Performers",
+            "PKeys": [
+                {
+                    "Name": "Performer_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Address_ID",
+                    "PName": "Address_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Address_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Customer_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Customer_Phone",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Customer_Email_Address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "Customer_ID",
+                    "Type": "VARCHAR(100)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Address_ID",
+                    "PName": "Address_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Address_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Customer_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Customer_Phone",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Customer_Email_Address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Stores",
+            "PKeys": [
+                {
+                    "Name": "Store_ID",
+                    "Type": "VARCHAR(100)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Marketing_Region_Code",
+                    "PName": "Marketing_Region_Code",
+                    "PTable": 4
+                },
+                {
+                    "FName": "Address_ID",
+                    "PName": "Address_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Address_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Marketing_Region_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Store_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Store_Phone",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Store_Email_Address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Bookings",
+            "PKeys": [
+                {
+                    "Name": "Booking_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Workshop_Group_ID",
+                    "PName": "Workshop_Group_ID",
+                    "PTable": 6
+                },
+                {
+                    "FName": "Customer_ID",
+                    "PName": "Client_ID",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Customer_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Workshop_Group_ID",
+                    "Type": "VARCHAR(100)"
+                },
+                {
+                    "Name": "Status_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Store_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Order_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Planned_Delivery_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Actual_Delivery_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Other_Order_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Performers_in_Bookings",
+            "PKeys": [
+                {
+                    "Name": "Order_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Performer_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Order_ID",
+                    "PName": "Booking_ID",
+                    "PTable": 10
+                },
+                {
+                    "FName": "Performer_ID",
+                    "PName": "Performer_ID",
+                    "PTable": 7
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "Customer_Orders",
+            "PKeys": [
+                {
+                    "Name": "Order_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Store_ID",
+                    "PName": "Store_ID",
+                    "PTable": 9
+                },
+                {
+                    "FName": "Customer_ID",
+                    "PName": "Customer_ID",
+                    "PTable": 8
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Customer_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Store_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Order_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Planned_Delivery_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Actual_Delivery_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Other_Order_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Order_Items",
+            "PKeys": [
+                {
+                    "Name": "Order_Item_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Product_ID",
+                    "PName": "Product_ID",
+                    "PTable": 3
+                },
+                {
+                    "FName": "Order_ID",
+                    "PName": "Order_ID",
+                    "PTable": 12
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Order_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Product_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Order_Quantity",
+                    "Type": "VARCHAR(288)"
+                },
+                {
+                    "Name": "Other_Item_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Invoices",
+            "PKeys": [
+                {
+                    "Name": "Invoice_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "payment_method_code",
+                    "PName": "payment_method_code",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Order_ID",
+                    "PName": "Order_ID",
+                    "PTable": 12
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Order_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "payment_method_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Product_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Order_Quantity",
+                    "Type": "VARCHAR(288)"
+                },
+                {
+                    "Name": "Other_Item_Details",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Order_Item_ID",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Services",
+            "PKeys": [
+                {
+                    "Name": "Service_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Service_Type_Code",
+                    "PName": "Service_Type_Code",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Workshop_Group_ID",
+                    "PName": "Workshop_Group_ID",
+                    "PTable": 6
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Service_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Workshop_Group_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Product_Description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Product_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Product_Price",
+                    "Type": "DECIMAL(20,4)"
+                },
+                {
+                    "Name": "Other_Product_Service_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Bookings_Services",
+            "PKeys": [
+                {
+                    "Name": "Order_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Product_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Product_ID",
+                    "PName": "Service_ID",
+                    "PTable": 15
+                },
+                {
+                    "FName": "Order_ID",
+                    "PName": "Booking_ID",
+                    "PTable": 10
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "Invoice_Items",
+            "PKeys": [
+                {
+                    "Name": "Invoice_Item_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Order_ID",
+                    "PName": "Order_ID",
+                    "PTable": 16
+                },
+                {
+                    "FName": "Product_ID",
+                    "PName": "Product_ID",
+                    "PTable": 16
+                },
+                {
+                    "FName": "Invoice_ID",
+                    "PName": "Invoice_ID",
+                    "PTable": 14
+                },
+                {
+                    "FName": "Order_Item_ID",
+                    "PName": "Order_Item_ID",
+                    "PTable": 13
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Invoice_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Order_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Order_Item_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Product_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Order_Quantity",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Other_Item_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        }
+    ]
+}

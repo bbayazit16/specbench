@@ -1,0 +1,22 @@
+{
+  "question": "I have {n1} liters of {fruit1} drink that are a fraction of {frac1} water and I wish to add it to {n2} liters of {fruit2} drink that is a fraction of {frac2} water. But as I pour it, I spill {spill} liters of the {fruit1} drink. How much water is in the remaining {total} liters?",
+  "types": {
+    "fruit1": "str",
+    "fruit2": "str",
+    "n1": "int",
+    "n2": "int",
+    "frac1": "float",
+    "frac2": "float",
+    "spill": "int",
+    "total": "int"
+  },
+  "answer": "int(n2 * frac2 + (n1 - spill) * frac1)",
+  "constraints": [],
+  "private_constraints": [
+    "spill < n1",
+    "n1 + n2 - spill == total",
+    "is_int(n2 * frac2)",
+    "is_int((n1 - spill) * frac1)",
+    "is_int(n2 * frac2 + (n1 - spill) * frac1)"
+  ]
+}

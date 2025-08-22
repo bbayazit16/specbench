@@ -1,0 +1,425 @@
+{
+    "Problem Number": "spider_bak/store_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "artists",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "VARCHAR(120)"
+                }
+            ]
+        },
+        {
+            "TableName": "sqlite_sequence",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": ""
+                },
+                {
+                    "Name": "seq",
+                    "Type": ""
+                }
+            ]
+        },
+        {
+            "TableName": "albums",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "artist_id",
+                    "PName": "id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "title",
+                    "Type": "VARCHAR(160)"
+                },
+                {
+                    "Name": "artist_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "employees",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "reports_to",
+                    "PName": "id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "title",
+                    "Type": "VARCHAR(30)"
+                },
+                {
+                    "Name": "reports_to",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "birth_date",
+                    "Type": "TIMESTAMP"
+                },
+                {
+                    "Name": "hire_date",
+                    "Type": "TIMESTAMP"
+                },
+                {
+                    "Name": "address",
+                    "Type": "VARCHAR(70)"
+                },
+                {
+                    "Name": "city",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "state",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "country",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "postal_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "phone",
+                    "Type": "VARCHAR(24)"
+                },
+                {
+                    "Name": "fax",
+                    "Type": "VARCHAR(24)"
+                },
+                {
+                    "Name": "email",
+                    "Type": "VARCHAR(60)"
+                }
+            ]
+        },
+        {
+            "TableName": "customers",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "support_rep_id",
+                    "PName": "id",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "company",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "address",
+                    "Type": "VARCHAR(70)"
+                },
+                {
+                    "Name": "city",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "state",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "country",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "postal_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "phone",
+                    "Type": "VARCHAR(24)"
+                },
+                {
+                    "Name": "fax",
+                    "Type": "VARCHAR(24)"
+                },
+                {
+                    "Name": "email",
+                    "Type": "VARCHAR(60)"
+                },
+                {
+                    "Name": "support_rep_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "genres",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "VARCHAR(120)"
+                }
+            ]
+        },
+        {
+            "TableName": "invoices",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "id",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "invoice_date",
+                    "Type": "TIMESTAMP"
+                },
+                {
+                    "Name": "billing_address",
+                    "Type": "VARCHAR(70)"
+                },
+                {
+                    "Name": "billing_city",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "billing_state",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "billing_country",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "billing_postal_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "total",
+                    "Type": "NUMERIC(10,2)"
+                }
+            ]
+        },
+        {
+            "TableName": "media_types",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "VARCHAR(120)"
+                }
+            ]
+        },
+        {
+            "TableName": "tracks",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "media_type_id",
+                    "PName": "id",
+                    "PTable": 7
+                },
+                {
+                    "FName": "genre_id",
+                    "PName": "id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "album_id",
+                    "PName": "id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "VARCHAR(200)"
+                },
+                {
+                    "Name": "album_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "media_type_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "genre_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "composer",
+                    "Type": "VARCHAR(220)"
+                },
+                {
+                    "Name": "milliseconds",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "bytes",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "unit_price",
+                    "Type": "NUMERIC(10,2)"
+                }
+            ]
+        },
+        {
+            "TableName": "invoice_lines",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "track_id",
+                    "PName": "id",
+                    "PTable": 8
+                },
+                {
+                    "FName": "invoice_id",
+                    "PName": "id",
+                    "PTable": 6
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "invoice_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "track_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "unit_price",
+                    "Type": "NUMERIC(10,2)"
+                },
+                {
+                    "Name": "quantity",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "playlists",
+            "PKeys": [
+                {
+                    "Name": "id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "VARCHAR(120)"
+                }
+            ]
+        },
+        {
+            "TableName": "playlist_tracks",
+            "PKeys": [
+                {
+                    "Name": "playlist_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "track_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "track_id",
+                    "PName": "id",
+                    "PTable": 8
+                },
+                {
+                    "FName": "playlist_id",
+                    "PName": "id",
+                    "PTable": 10
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

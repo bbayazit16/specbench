@@ -1,0 +1,16 @@
+{
+  "question": "{name1} is {age1} years old. In {years} years his {relation_type} {name2} will be {mult} times as old as {name1} is now. How old is {name2} right now?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "relation_type": "str",
+    "age1": "int",
+    "years": "int",
+    "mult": "int"
+  },
+  "answer": "age1 * mult - years",
+  "constraints": [],
+  "private_constraints": [
+    "age1 * mult - years > 0"
+  ]
+}

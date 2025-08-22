@@ -1,0 +1,164 @@
+{
+    "Problem Number": "spider_bak/company_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "works_on",
+            "PKeys": [
+                {
+                    "Name": "Essn",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Pno",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Hours",
+                    "Type": "REAL"
+                }
+            ]
+        },
+        {
+            "TableName": "employee",
+            "PKeys": [
+                {
+                    "Name": "Ssn",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Fname",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Minit",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Lname",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Bdate",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Address",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Sex",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Salary",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Super_ssn",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Dno",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "department",
+            "PKeys": [
+                {
+                    "Name": "Dnumber",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Dname",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Mgr_ssn",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Mgr_start_date",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "project",
+            "PKeys": [
+                {
+                    "Name": "Pnumber",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Pname",
+                    "Type": "Text"
+                },
+                {
+                    "Name": "Plocation",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Dnum",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "dependent",
+            "PKeys": [
+                {
+                    "Name": "Essn",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Dependent_name",
+                    "Type": "TEXT"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Sex",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Bdate",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Relationship",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "dept_locations",
+            "PKeys": [
+                {
+                    "Name": "Dnumber",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Dlocation",
+                    "Type": "TEXT"
+                }
+            ],
+            "FKeys": [],
+            "Others": []
+        }
+    ]
+}

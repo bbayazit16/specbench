@@ -1,0 +1,302 @@
+{
+    "Problem Number": "spider_bak/cre_Doc_Control_Systems/tables/db",
+    "Tables": [
+        {
+            "TableName": "Ref_Document_Types",
+            "PKeys": [
+                {
+                    "Name": "document_type_code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "document_type_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Roles",
+            "PKeys": [
+                {
+                    "Name": "role_code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "role_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Addresses",
+            "PKeys": [
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "address_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Document_Status",
+            "PKeys": [
+                {
+                    "Name": "document_status_code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "document_status_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Shipping_Agents",
+            "PKeys": [
+                {
+                    "Name": "shipping_agent_code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "shipping_agent_name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "shipping_agent_description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Documents",
+            "PKeys": [
+                {
+                    "Name": "document_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "shipping_agent_code",
+                    "PName": "shipping_agent_code",
+                    "PTable": 4
+                },
+                {
+                    "FName": "document_status_code",
+                    "PName": "document_status_code",
+                    "PTable": 3
+                },
+                {
+                    "FName": "document_type_code",
+                    "PName": "document_type_code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "document_status_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "document_type_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "shipping_agent_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "receipt_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "receipt_number",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Employees",
+            "PKeys": [
+                {
+                    "Name": "employee_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "role_code",
+                    "PName": "role_code",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "role_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "employee_name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Document_Drafts",
+            "PKeys": [
+                {
+                    "Name": "document_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "draft_number",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "document_id",
+                    "PName": "document_id",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "draft_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Draft_Copies",
+            "PKeys": [
+                {
+                    "Name": "document_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "draft_number",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "copy_number",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "document_id",
+                    "PName": "document_id",
+                    "PTable": 7
+                },
+                {
+                    "FName": "draft_number",
+                    "PName": "draft_number",
+                    "PTable": 7
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "Circulation_History",
+            "PKeys": [
+                {
+                    "Name": "document_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "draft_number",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "copy_number",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "employee_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "employee_id",
+                    "PName": "employee_id",
+                    "PTable": 6
+                },
+                {
+                    "FName": "document_id",
+                    "PName": "document_id",
+                    "PTable": 8
+                },
+                {
+                    "FName": "draft_number",
+                    "PName": "draft_number",
+                    "PTable": 8
+                },
+                {
+                    "FName": "copy_number",
+                    "PName": "copy_number",
+                    "PTable": 8
+                }
+            ],
+            "Others": []
+        },
+        {
+            "TableName": "Documents_Mailed",
+            "PKeys": [
+                {
+                    "Name": "document_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "mailed_to_address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "mailed_to_address_id",
+                    "PName": "address_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "document_id",
+                    "PName": "document_id",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "mailing_date",
+                    "Type": "DATETIME"
+                }
+            ]
+        }
+    ]
+}

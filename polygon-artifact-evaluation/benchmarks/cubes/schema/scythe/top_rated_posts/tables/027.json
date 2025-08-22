@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/027",
+    "Tables": [
+        {
+            "TableName": "i027",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "cname",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "wmname",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "avg",
+                    "Type": "FLOAT"
+                }
+            ]
+        }
+    ]
+}

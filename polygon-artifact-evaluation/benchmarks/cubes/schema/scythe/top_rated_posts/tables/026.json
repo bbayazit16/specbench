@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/026",
+    "Tables": [
+        {
+            "TableName": "i026",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "date",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "category",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "amount",
+                    "Type": "FLOAT"
+                }
+            ]
+        }
+    ]
+}

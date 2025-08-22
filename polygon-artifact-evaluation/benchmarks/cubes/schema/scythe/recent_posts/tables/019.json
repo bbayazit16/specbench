@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/019",
+    "Tables": [
+        {
+            "TableName": "019",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "CustomerID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Balance",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

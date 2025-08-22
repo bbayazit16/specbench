@@ -1,0 +1,176 @@
+{
+    "Problem Number": "spider_bak/customer_complaints/tables/db",
+    "Tables": [
+        {
+            "TableName": "Staff",
+            "PKeys": [
+                {
+                    "Name": "staff_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "gender",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "email_address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "phone_number",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "customer_type_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "address_line_1",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "address_line_2",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "town_city",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "state",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "email_address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "phone_number",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Products",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "parent_product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_category_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "date_product_first_available",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_product_discontinued",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "product_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "product_description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "product_price",
+                    "Type": "DECIMAL(19,4)"
+                }
+            ]
+        },
+        {
+            "TableName": "Complaints",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 1
+                },
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 2
+                },
+                {
+                    "FName": "staff_id",
+                    "PName": "staff_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "complaint_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "complaint_outcome_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "complaint_status_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "complaint_type_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "date_complaint_raised",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_complaint_closed",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "staff_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,227 @@
+{
+    "Problem Number": "spider_bak/customers_and_products_contacts/tables/db",
+    "Tables": [
+        {
+            "TableName": "Addresses",
+            "PKeys": [
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "line_1_number_building",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "city",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "zip_postcode",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "state_province_county",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "country",
+                    "Type": "VARCHAR(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "Products",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "product_type_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "product_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "product_price",
+                    "Type": "DOUBLE"
+                }
+            ]
+        },
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "payment_method_code",
+                    "Type": "VARCHAR(15)"
+                },
+                {
+                    "Name": "customer_number",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "customer_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "customer_address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "customer_phone",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "customer_email",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Contacts",
+            "PKeys": [
+                {
+                    "Name": "contact_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "gender",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "contact_phone",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer_Address_History",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "address_id",
+                    "PName": "address_id",
+                    "PTable": 0
+                },
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "address_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_from",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_to",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer_Orders",
+            "PKeys": [
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "order_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "order_status_code",
+                    "Type": "VARCHAR(15)"
+                }
+            ]
+        },
+        {
+            "TableName": "Order_Items",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "order_id",
+                    "PName": "order_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "order_item_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "order_quantity",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        }
+    ]
+}

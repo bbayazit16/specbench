@@ -1,0 +1,207 @@
+{
+    "Problem Number": "spider/tracking_orders/tables/db",
+    "Tables": [
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "customer_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "customer_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Invoices",
+            "PKeys": [
+                {
+                    "Name": "invoice_number",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "invoice_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "invoice_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Orders",
+            "PKeys": [
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "customer_id",
+                    "PName": "customer_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "order_status",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "date_order_placed",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "order_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Products",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "product_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "product_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Order_Items",
+            "PKeys": [
+                {
+                    "Name": "order_item_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "order_id",
+                    "PName": "order_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "order_item_status",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "order_item_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Shipments",
+            "PKeys": [
+                {
+                    "Name": "shipment_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "invoice_number",
+                    "PName": "invoice_number",
+                    "PTable": 1
+                },
+                {
+                    "FName": "order_id",
+                    "PName": "order_id",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "order_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "invoice_number",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "shipment_tracking_number",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "shipment_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "other_shipment_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Shipment_Items",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "shipment_id",
+                    "PName": "shipment_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "order_item_id",
+                    "PName": "order_item_id",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "shipment_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "order_item_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

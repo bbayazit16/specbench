@@ -1,0 +1,36 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/041",
+    "Tables": [
+        {
+            "TableName": "041",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Pay1Click",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "PayMailCC",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "PayMailCheck",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "PayPhoneACH",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "PayPhoneCC",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "PayWuFoo",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

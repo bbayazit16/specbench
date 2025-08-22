@@ -1,0 +1,129 @@
+{
+    "Problem Number": "spider_bak/protein_institute/tables/db",
+    "Tables": [
+        {
+            "TableName": "building",
+            "PKeys": [
+                {
+                    "Name": "building_id",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Street_address",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Years_as_tallest",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Height_feet",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Floors",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "Institution",
+            "PKeys": [
+                {
+                    "Name": "Institution_id",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "building_id",
+                    "PName": "building_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Institution",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Founded",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Enrollment",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Team",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Primary_Conference",
+                    "Type": "text"
+                },
+                {
+                    "Name": "building_id",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "protein",
+            "PKeys": [
+                {
+                    "Name": "common_name",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Institution_id",
+                    "PName": "Institution_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "protein_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "divergence_from_human_lineage",
+                    "Type": "real"
+                },
+                {
+                    "Name": "accession_number",
+                    "Type": "text"
+                },
+                {
+                    "Name": "sequence_length",
+                    "Type": "real"
+                },
+                {
+                    "Name": "sequence_identity_to_human_protein",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Institution_id",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

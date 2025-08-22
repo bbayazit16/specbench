@@ -1,0 +1,177 @@
+{
+    "Problem Number": "spider_bak/sports_competition/tables/db",
+    "Tables": [
+        {
+            "TableName": "club",
+            "PKeys": [
+                {
+                    "Name": "Club_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Region",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Start_year",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "club_rank",
+            "PKeys": [
+                {
+                    "Name": "Rank",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Club_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Club_ID",
+                    "PName": "Club_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Gold",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Silver",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Bronze",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Total",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "player",
+            "PKeys": [
+                {
+                    "Name": "Player_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Club_ID",
+                    "PName": "Club_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Position",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Club_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Apps",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Tries",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Goals",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Points",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "competition",
+            "PKeys": [
+                {
+                    "Name": "Competition_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Year",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Competition_type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "competition_result",
+            "PKeys": [
+                {
+                    "Name": "Competition_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Club_ID_1",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Club_ID_2",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Competition_ID",
+                    "PName": "Competition_ID",
+                    "PTable": 3
+                },
+                {
+                    "FName": "Club_ID_2",
+                    "PName": "Club_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Club_ID_1",
+                    "PName": "Club_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Score",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

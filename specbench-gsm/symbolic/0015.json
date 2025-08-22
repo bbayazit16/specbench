@@ -1,0 +1,17 @@
+{
+  "question": "{name1}'s dog has {n1} puppies, {k1} of which have spots. {name2}'s dog has {n2} puppies, {k2} of which have spots. What percentage of all the puppies have spots?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "n1": "int",
+    "n2": "int",
+    "k1": "int",
+    "k2": "int"
+  },
+  "answer": "int(100 * (k1+k2) / (n1+n2))",
+  "constraints": [],
+  "private_constraints": [
+    "divides(n1 + n2, k1 + k2)",
+    "is_int(100 * (k1+k2) / (n1+n2))"
+  ]
+}

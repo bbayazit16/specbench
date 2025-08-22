@@ -1,0 +1,28 @@
+{
+  "question": "{name1} initially had {n} dozen {food}, then ate {eat} {food} for breakfast, and then hid the rest in the yard for the Easter egg hunt. {name2} finds {x} {food}. {name3} finds {mult1} as many as {name2}. {name4} finds {y} less than {name3}. {name5} finds {frac} as many as {name4}, and {name6} finds {extra} dozen {food} more than {name3} and {name2} combined. How many {food} are still hidden in the yard?",
+  "types": {
+    "name1": "str",
+    "name2": "str",
+    "name3": "str",
+    "name4": "str",
+    "name5": "str",
+    "name6": "str",
+    "food": "str",
+    "n": "int",
+    "x": "int",
+    "y": "int",
+    "mult1": "float",
+    "frac": "float",
+    "extra": "int",
+    "eat": "int"
+  },
+  "answer": "(n * 12-eat)- (x + mult1 * x + (mult1 * x - y) + frac * (mult1 * x - y)+((12*extra)+x+mult1 * x))",
+  "constraints": [],
+  "private_constraints": [
+    "is_int((n * 12-eat) - (x + mult1 * x + (mult1 * x - y) + frac * (mult1 * x - y)))",
+    "is_int(x * mult1)",
+    "x * mult1 - y > 0",
+    "is_int((x * mult1 - y) * frac)",
+    "n * 12 - eat > x + mult1 * x + (mult1 * x - y) + frac * (mult1 * x - y) + ((12*extra)+x+mult1 * x)"
+  ]
+}

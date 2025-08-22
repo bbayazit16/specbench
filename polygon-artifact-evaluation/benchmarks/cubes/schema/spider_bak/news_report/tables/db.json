@@ -1,0 +1,92 @@
+{
+    "Problem Number": "spider_bak/news_report/tables/db",
+    "Tables": [
+        {
+            "TableName": "event",
+            "PKeys": [
+                {
+                    "Name": "Event_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Venue",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Event_Attendance",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "journalist",
+            "PKeys": [
+                {
+                    "Name": "journalist_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Nationality",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Years_working",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "news_report",
+            "PKeys": [
+                {
+                    "Name": "journalist_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Event_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Event_ID",
+                    "PName": "Event_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "journalist_ID",
+                    "PName": "journalist_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Work_Type",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

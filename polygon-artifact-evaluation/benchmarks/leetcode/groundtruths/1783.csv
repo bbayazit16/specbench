@@ -1,0 +1,2 @@
+qid,mysql_groundtruth
+1783,"select * from (select player_id, player_name, sum((case when player_id = wimbledon then 1 else 0 end + case when player_id = fr_open then 1 else 0 end + case when player_id = us_open then 1 else 0 end + case when player_id = au_open then 1 else 0 end)) as grand_slams_count from players cross join championships group by player_id) as z where grand_slams_count > 0  "

@@ -1,0 +1,4 @@
+row_dep: unique(Triangle.x , Triangle.y, Triangle.z)
+col_val: triangle.x > 0;
+         triangle.y > 0;
+         triangle.z > 0

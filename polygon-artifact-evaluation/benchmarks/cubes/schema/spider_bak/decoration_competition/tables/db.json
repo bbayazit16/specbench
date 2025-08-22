@@ -1,0 +1,89 @@
+{
+    "Problem Number": "spider_bak/decoration_competition/tables/db",
+    "Tables": [
+        {
+            "TableName": "college",
+            "PKeys": [
+                {
+                    "Name": "College_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Leader_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "College_Location",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "member",
+            "PKeys": [
+                {
+                    "Name": "Member_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "College_ID",
+                    "PName": "College_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "College_ID",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "round",
+            "PKeys": [
+                {
+                    "Name": "Round_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Member_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Member_ID",
+                    "PName": "Member_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Decoration_Theme",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Rank_in_Round",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

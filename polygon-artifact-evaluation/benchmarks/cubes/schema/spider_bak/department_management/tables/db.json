@@ -1,0 +1,92 @@
+{
+    "Problem Number": "spider_bak/department_management/tables/db",
+    "Tables": [
+        {
+            "TableName": "department",
+            "PKeys": [
+                {
+                    "Name": "Department_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Creation",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Ranking",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Budget_in_Billions",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Num_Employees",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "head",
+            "PKeys": [
+                {
+                    "Name": "head_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "born_state",
+                    "Type": "text"
+                },
+                {
+                    "Name": "age",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "management",
+            "PKeys": [
+                {
+                    "Name": "department_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "head_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "head_ID",
+                    "PName": "head_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "department_ID",
+                    "PName": "Department_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "temporary_acting",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

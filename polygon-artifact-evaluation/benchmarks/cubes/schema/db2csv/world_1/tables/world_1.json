@@ -1,0 +1,152 @@
+{
+    "Problem Number": "db2csv/world_1/tables/world_1",
+    "Tables": [
+        {
+            "TableName": "city",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "integer"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "CountryCode",
+                    "PName": "Code",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "char(35)"
+                },
+                {
+                    "Name": "CountryCode",
+                    "Type": "char(3)"
+                },
+                {
+                    "Name": "District",
+                    "Type": "char(20)"
+                },
+                {
+                    "Name": "Population",
+                    "Type": "integer"
+                }
+            ]
+        },
+        {
+            "TableName": "sqlite_sequence",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "name",
+                    "Type": ""
+                },
+                {
+                    "Name": "seq",
+                    "Type": ""
+                }
+            ]
+        },
+        {
+            "TableName": "country",
+            "PKeys": [
+                {
+                    "Name": "Code",
+                    "Type": "char(3)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "char(52)"
+                },
+                {
+                    "Name": "Continent",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Region",
+                    "Type": "char(26)"
+                },
+                {
+                    "Name": "SurfaceArea",
+                    "Type": "float(10,2)"
+                },
+                {
+                    "Name": "IndepYear",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "Population",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "LifeExpectancy",
+                    "Type": "float(3,1)"
+                },
+                {
+                    "Name": "GNP",
+                    "Type": "float(10,2)"
+                },
+                {
+                    "Name": "GNPOld",
+                    "Type": "float(10,2)"
+                },
+                {
+                    "Name": "LocalName",
+                    "Type": "char(45)"
+                },
+                {
+                    "Name": "GovernmentForm",
+                    "Type": "char(45)"
+                },
+                {
+                    "Name": "HeadOfState",
+                    "Type": "char(60)"
+                },
+                {
+                    "Name": "Capital",
+                    "Type": "integer"
+                },
+                {
+                    "Name": "Code2",
+                    "Type": "char(2)"
+                }
+            ]
+        },
+        {
+            "TableName": "countrylanguage",
+            "PKeys": [
+                {
+                    "Name": "CountryCode",
+                    "Type": "char(3)"
+                },
+                {
+                    "Name": "Language",
+                    "Type": "char(30)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "CountryCode",
+                    "PName": "Code",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "IsOfficial",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Percentage",
+                    "Type": "float(4,1)"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "Problem Number": "textbook/tables/8",
+    "Tables": [
+        {
+            "TableName": "8-1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "level",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "age",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

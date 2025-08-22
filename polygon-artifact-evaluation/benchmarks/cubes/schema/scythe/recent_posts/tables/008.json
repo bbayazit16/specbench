@@ -1,0 +1,36 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/008",
+    "Tables": [
+        {
+            "TableName": "008",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "InspectYear",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Part",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Pos1",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Pos2",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Pos3",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Pos4",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

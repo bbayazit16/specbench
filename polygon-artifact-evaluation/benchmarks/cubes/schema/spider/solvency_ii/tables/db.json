@@ -1,0 +1,278 @@
+{
+    "Problem Number": "spider/solvency_ii/tables/db",
+    "Tables": [
+        {
+            "TableName": "Addresses",
+            "PKeys": [
+                {
+                    "Name": "Address_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "address_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Locations",
+            "PKeys": [
+                {
+                    "Name": "Location_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Products",
+            "PKeys": [
+                {
+                    "Name": "Product_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Product_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Product_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Product_Price",
+                    "Type": "DECIMAL(20,4)"
+                }
+            ]
+        },
+        {
+            "TableName": "Parties",
+            "PKeys": [
+                {
+                    "Name": "Party_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Party_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Assets",
+            "PKeys": [
+                {
+                    "Name": "Asset_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Channels",
+            "PKeys": [
+                {
+                    "Name": "Channel_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Finances",
+            "PKeys": [
+                {
+                    "Name": "Finance_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Events",
+            "PKeys": [
+                {
+                    "Name": "Event_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Finance_ID",
+                    "PName": "Finance_ID",
+                    "PTable": 6
+                },
+                {
+                    "FName": "Address_ID",
+                    "PName": "Address_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Location_ID",
+                    "PName": "Location_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Address_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Channel_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Event_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Finance_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Location_ID",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Products_in_Events",
+            "PKeys": [
+                {
+                    "Name": "Product_in_Event_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Product_ID",
+                    "PName": "Product_ID",
+                    "PTable": 2
+                },
+                {
+                    "FName": "Event_ID",
+                    "PName": "Event_ID",
+                    "PTable": 7
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Event_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Product_ID",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Parties_in_Events",
+            "PKeys": [
+                {
+                    "Name": "Party_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Event_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Event_ID",
+                    "PName": "Event_ID",
+                    "PTable": 7
+                },
+                {
+                    "FName": "Party_ID",
+                    "PName": "Party_ID",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Role_Code",
+                    "Type": "CHAR(15)"
+                }
+            ]
+        },
+        {
+            "TableName": "Agreements",
+            "PKeys": [
+                {
+                    "Name": "Document_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Event_ID",
+                    "PName": "Event_ID",
+                    "PTable": 7
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Event_ID",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Assets_in_Events",
+            "PKeys": [
+                {
+                    "Name": "Asset_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Event_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Event_ID",
+                    "PName": "Event_ID",
+                    "PTable": 7
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

@@ -1,0 +1,202 @@
+{
+    "Problem Number": "spider/tracking_software_problems/tables/db",
+    "Tables": [
+        {
+            "TableName": "Problem_Category_Codes",
+            "PKeys": [
+                {
+                    "Name": "problem_category_code",
+                    "Type": "VARCHAR(20)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "problem_category_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Problem_Log",
+            "PKeys": [
+                {
+                    "Name": "problem_log_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "problem_status_code",
+                    "PName": "problem_status_code",
+                    "PTable": 2
+                },
+                {
+                    "FName": "problem_id",
+                    "PName": "problem_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "assigned_to_staff_id",
+                    "PName": "staff_id",
+                    "PTable": 4
+                },
+                {
+                    "FName": "problem_category_code",
+                    "PName": "problem_category_code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "assigned_to_staff_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "problem_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "problem_category_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "problem_status_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "log_entry_date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "log_entry_description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "log_entry_fix",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_log_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Problem_Status_Codes",
+            "PKeys": [
+                {
+                    "Name": "problem_status_code",
+                    "Type": "VARCHAR(20)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "problem_status_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Product",
+            "PKeys": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "product_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "product_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Staff",
+            "PKeys": [
+                {
+                    "Name": "staff_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "staff_first_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "staff_last_name",
+                    "Type": "VARCHAR(80)"
+                },
+                {
+                    "Name": "other_staff_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Problems",
+            "PKeys": [
+                {
+                    "Name": "problem_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "reported_by_staff_id",
+                    "PName": "staff_id",
+                    "PTable": 4
+                },
+                {
+                    "FName": "product_id",
+                    "PName": "product_id",
+                    "PTable": 3
+                },
+                {
+                    "FName": "closure_authorised_by_staff_id",
+                    "PName": "staff_id",
+                    "PTable": 4
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "product_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "closure_authorised_by_staff_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "reported_by_staff_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "date_problem_reported",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_problem_closed",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "problem_description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "other_problem_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/016",
+    "Tables": [
+        {
+            "TableName": "i016",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "COMPANY_ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "EMPLOYEE",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+  "question": "A {person1} has {n} {item}s. His {relation} has {k} fewer {item}s than he has. How many {item}s do they have together?",
+  "types": {
+    "person1": "str",
+    "item": "str",
+    "relation": "str",
+    "n": "int",
+    "k": "int"
+  },
+  "answer": "n + (n-k)",
+  "constraints": [],
+  "private_constraints": [
+    "n > k"
+  ]
+}

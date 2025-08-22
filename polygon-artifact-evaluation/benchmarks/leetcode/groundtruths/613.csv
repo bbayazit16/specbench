@@ -1,0 +1,2 @@
+qid,mysql_groundtruth
+613,"select min(abs((a.x - b.x))) as shortest from point as a, point as b where a.x <> b.x "

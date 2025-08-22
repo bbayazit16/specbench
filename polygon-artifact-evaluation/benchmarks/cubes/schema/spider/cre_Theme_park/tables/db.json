@@ -1,0 +1,421 @@
+{
+    "Problem Number": "spider/cre_Theme_park/tables/db",
+    "Tables": [
+        {
+            "TableName": "Ref_Hotel_Star_Ratings",
+            "PKeys": [
+                {
+                    "Name": "star_rating_code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "star_rating_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Locations",
+            "PKeys": [
+                {
+                    "Name": "Location_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Location_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Address",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Attraction_Types",
+            "PKeys": [
+                {
+                    "Name": "Attraction_Type_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Attraction_Type_Description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Visitors",
+            "PKeys": [
+                {
+                    "Name": "Tourist_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Tourist_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Features",
+            "PKeys": [
+                {
+                    "Name": "Feature_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Feature_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Hotels",
+            "PKeys": [
+                {
+                    "Name": "hotel_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "star_rating_code",
+                    "PName": "star_rating_code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "star_rating_code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "pets_allowed_yn",
+                    "Type": "CHAR(1)"
+                },
+                {
+                    "Name": "price_range",
+                    "Type": "real"
+                },
+                {
+                    "Name": "other_hotel_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Tourist_Attractions",
+            "PKeys": [
+                {
+                    "Name": "Tourist_Attraction_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Attraction_Type_Code",
+                    "PName": "Attraction_Type_Code",
+                    "PTable": 2
+                },
+                {
+                    "FName": "Location_ID",
+                    "PName": "Location_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Attraction_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Location_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "How_to_Get_There",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Opening_Hours",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Street_Markets",
+            "PKeys": [
+                {
+                    "Name": "Market_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Market_ID",
+                    "PName": "Tourist_Attraction_ID",
+                    "PTable": 6
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Market_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Shops",
+            "PKeys": [
+                {
+                    "Name": "Shop_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Shop_ID",
+                    "PName": "Tourist_Attraction_ID",
+                    "PTable": 6
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Shop_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Museums",
+            "PKeys": [
+                {
+                    "Name": "Museum_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Museum_ID",
+                    "PName": "Tourist_Attraction_ID",
+                    "PTable": 6
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Museum_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Royal_Family",
+            "PKeys": [
+                {
+                    "Name": "Royal_Family_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Royal_Family_ID",
+                    "PName": "Tourist_Attraction_ID",
+                    "PTable": 6
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Royal_Family_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Theme_Parks",
+            "PKeys": [
+                {
+                    "Name": "Theme_Park_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Theme_Park_ID",
+                    "PName": "Tourist_Attraction_ID",
+                    "PTable": 6
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Theme_Park_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Visits",
+            "PKeys": [
+                {
+                    "Name": "Visit_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Tourist_ID",
+                    "PName": "Tourist_ID",
+                    "PTable": 3
+                },
+                {
+                    "FName": "Tourist_Attraction_ID",
+                    "PName": "Tourist_Attraction_ID",
+                    "PTable": 6
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Tourist_Attraction_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Tourist_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Visit_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Visit_Details",
+                    "Type": "VARCHAR(40)"
+                }
+            ]
+        },
+        {
+            "TableName": "Photos",
+            "PKeys": [
+                {
+                    "Name": "Photo_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Tourist_Attraction_ID",
+                    "PName": "Tourist_Attraction_ID",
+                    "PTable": 6
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Tourist_Attraction_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Description",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Filename",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Staff",
+            "PKeys": [
+                {
+                    "Name": "Staff_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Tourist_Attraction_ID",
+                    "PName": "Tourist_Attraction_ID",
+                    "PTable": 6
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Tourist_Attraction_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "VARCHAR(40)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Tourist_Attraction_Features",
+            "PKeys": [
+                {
+                    "Name": "Tourist_Attraction_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Feature_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Feature_ID",
+                    "PName": "Feature_ID",
+                    "PTable": 4
+                },
+                {
+                    "FName": "Tourist_Attraction_ID",
+                    "PName": "Tourist_Attraction_ID",
+                    "PTable": 6
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

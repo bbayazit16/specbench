@@ -1,0 +1,19 @@
+{
+  "question": "{name} is trying to decide whether to do {task} herself or hire {profession}. If she does them herself, she'll be able to do {n} fewer hours of {work_type} work, losing {cur}{rate}/hour in missed income. Additionally, if she does {task} herself, she'll need to spend {extra} hours mailing the completed tax documents, further reducing her {work_type} time. {profession} charges {cur}{fee}. How much more money will she have if she hires {profession}?",
+  "types": {
+    "name": "str",
+    "task": "str",
+    "profession": "str",
+    "work_type": "str",
+    "cur": "str",
+    "n": "int",
+    "rate": "int",
+    "fee": "int",
+    "extra": "int"
+  },
+  "answer": "(n+extra) * rate - fee",
+  "constraints": [],
+  "private_constraints": [
+    "(n+extra) * rate > fee"
+  ]
+}

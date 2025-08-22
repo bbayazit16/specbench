@@ -1,0 +1,265 @@
+{
+    "Problem Number": "spider_bak/cre_Doc_Tracking_DB/tables/db",
+    "Tables": [
+        {
+            "TableName": "Ref_Document_Types",
+            "PKeys": [
+                {
+                    "Name": "Document_Type_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Document_Type_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Document_Type_Description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Calendar",
+            "PKeys": [
+                {
+                    "Name": "Calendar_Date",
+                    "Type": "DATETIME"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Day_Number",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Ref_Locations",
+            "PKeys": [
+                {
+                    "Name": "Location_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Location_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Location_Description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Roles",
+            "PKeys": [
+                {
+                    "Name": "Role_Code",
+                    "Type": "CHAR(15)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Role_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Role_Description",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "All_Documents",
+            "PKeys": [
+                {
+                    "Name": "Document_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Date_Stored",
+                    "PName": "Calendar_Date",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Document_Type_Code",
+                    "PName": "Document_Type_Code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Date_Stored",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Document_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Document_Name",
+                    "Type": "CHAR(255)"
+                },
+                {
+                    "Name": "Document_Description",
+                    "Type": "CHAR(255)"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Employees",
+            "PKeys": [
+                {
+                    "Name": "Employee_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Role_Code",
+                    "PName": "Role_Code",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Role_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Employee_Name",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Gender_MFU",
+                    "Type": "CHAR(1)"
+                },
+                {
+                    "Name": "Date_of_Birth",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Document_Locations",
+            "PKeys": [
+                {
+                    "Name": "Document_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Location_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Date_in_Location_From",
+                    "Type": "DATETIME"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Document_ID",
+                    "PName": "Document_ID",
+                    "PTable": 4
+                },
+                {
+                    "FName": "Date_in_Locaton_To",
+                    "PName": "Calendar_Date",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Date_in_Location_From",
+                    "PName": "Calendar_Date",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Location_Code",
+                    "PName": "Location_Code",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Date_in_Locaton_To",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Documents_to_be_Destroyed",
+            "PKeys": [
+                {
+                    "Name": "Document_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Document_ID",
+                    "PName": "Document_ID",
+                    "PTable": 4
+                },
+                {
+                    "FName": "Actual_Destruction_Date",
+                    "PName": "Calendar_Date",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Planned_Destruction_Date",
+                    "PName": "Calendar_Date",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Destruction_Authorised_by_Employee_ID",
+                    "PName": "Employee_ID",
+                    "PTable": 5
+                },
+                {
+                    "FName": "Destroyed_by_Employee_ID",
+                    "PName": "Employee_ID",
+                    "PTable": 5
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Destruction_Authorised_by_Employee_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Destroyed_by_Employee_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Planned_Destruction_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Actual_Destruction_Date",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "Other_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        }
+    ]
+}

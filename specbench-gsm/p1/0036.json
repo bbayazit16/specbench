@@ -1,0 +1,23 @@
+{
+  "question": "{name} went to the {shop} and bought various types of {item}. She bought {n1} dozen {item1} which cost ${p1} per dozen, {n2} dozen {item2} which cost ${p2} per dozen, and {n3} dozen {item3} for ${p3} per dozen. How much was the total cost if she received {disc}% discount on all purchases?",
+  "types": {
+    "name": "str",
+    "shop": "str",
+    "item": "str",
+    "item1": "str",
+    "item2": "str",
+    "item3": "str",
+    "n1": "int",
+    "n2": "int",
+    "n3": "int",
+    "p1": "int",
+    "p2": "int",
+    "p3": "int",
+    "disc": "int"
+  },
+  "answer": "((n1 * p1 + n2 * p2 + n3 * p3) * (100-disc)) // 100",
+  "constraints": [],
+  "private_constraints": [
+    "is_int((n1 * p1 + n2 * p2 + n3 * p3) * (disc / 100))"
+  ]
+}

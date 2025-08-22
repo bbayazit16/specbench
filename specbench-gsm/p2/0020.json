@@ -1,0 +1,23 @@
+{
+  "question": "{name} picks {n1} {fruit}s on {d1}. Then he picks {n2} {fruit}s on {d2}. On {d3}, he picks {mult} times the number of {fruit}s he did on {d1}. On {d4}, he picks half the amount of what he picked in the past 3 days combined. On {d5}, {name} is going to sell {fruit}s in boxes of {div} {fruit}s each. He is going to sell each box for ${price}. How much is {name} going to make?",
+  "types": {
+    "name": "str",
+    "d1": "str",
+    "d2": "str",
+    "d3": "str",
+    "d4": "str",
+    "d5": "str",
+    "fruit": "str",
+    "n1": "int",
+    "n2": "int",
+    "mult": "int",
+    "price": "int",
+    "div": "int"
+  },
+  "answer": "int((n1 + n2 + mult * n1)*1.5) // div * price",
+  "constraints": [],
+  "private_constraints": [
+    "divides(n1 + n2 + mult * n1, 2)",
+    "divides(int((n1 + n2 + mult * n1)*1.5), div)"
+  ]
+}

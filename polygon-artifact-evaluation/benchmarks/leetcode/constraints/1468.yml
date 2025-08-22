@@ -1,0 +1,2 @@
+row_dep: unique(Salaries.company_id, Salaries.employee_id)
+col_val: Salaries.salary>0

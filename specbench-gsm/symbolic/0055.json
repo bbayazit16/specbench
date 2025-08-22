@@ -1,0 +1,16 @@
+{
+  "question": "{name} is learning to write and decides to keep re-writing the {alphabets} until she knows it. She writes it in full {n1}, writes a fraction of {frac} of it once, then re-writes everything she has already written. How many letters has {name} written in total?",
+  "types": {
+    "name": "str",
+    "alphabets": "int",
+    "n1": "float",
+    "frac": "float"
+  },
+  "answer": "2 * (alphabets * n1 + alphabets * frac)",
+  "constraints": [
+    "`alphabets` is an integer representing the number of letters in the given alphabet"
+  ],
+  "private_constraints": [
+    "is_int(alphabets * frac)"
+  ]
+}

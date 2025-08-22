@@ -1,0 +1,67 @@
+{
+    "Problem Number": "spider/scientist_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Scientists",
+            "PKeys": [
+                {
+                    "Name": "SSN",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "Char(30)"
+                }
+            ]
+        },
+        {
+            "TableName": "Projects",
+            "PKeys": [
+                {
+                    "Name": "Code",
+                    "Type": "Char(4)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "Char(50)"
+                },
+                {
+                    "Name": "Hours",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "AssignedTo",
+            "PKeys": [
+                {
+                    "Name": "Scientist",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Project",
+                    "Type": "char(4)"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Project",
+                    "PName": "Code",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Scientist",
+                    "PName": "SSN",
+                    "PTable": 0
+                }
+            ],
+            "Others": []
+        }
+    ]
+}

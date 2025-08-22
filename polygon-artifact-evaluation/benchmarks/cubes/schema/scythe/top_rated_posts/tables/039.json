@@ -1,0 +1,16 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/039",
+    "Tables": [
+        {
+            "TableName": "i039",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "c",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

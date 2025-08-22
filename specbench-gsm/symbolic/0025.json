@@ -1,0 +1,21 @@
+{
+  "question": "In {teacher}'s class of {total} students, {p1}% of the class are {group1}. Out of the remaining class, {p2}% of the students are {group2} or part of {group3}. These 3 groups of students will need to leave early today to travel to an away {event}. How many students are leaving early?",
+  "types": {
+    "teacher": "str",
+    "group1": "str",
+    "group2": "str",
+    "group3": "str",
+    "event": "str",
+    "total": "int",
+    "p1": "int",
+    "p2": "int"
+  },
+  "answer": "int(total * p1 / 100 + (total - total * p1 / 100) * p2 / 100)",
+  "constraints": [],
+  "private_constraints": [
+    "p1 < 100",
+    "p2 < 100",
+    "is_int(total * p1 / 100)",
+    "is_int((total - total * p1 / 100) * p2 / 100)"
+  ]
+}

@@ -1,0 +1,292 @@
+{
+    "Problem Number": "kaggle/tables/1_4_T_1",
+    "Tables": [
+        {
+            "TableName": "comments_4",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "state_number",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "state_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "consecutive_number",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "number_of_vehicle_forms_submitted_all",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "number_of_motor_vehicles_in_transport_mvit",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "number_of_parked_working_vehicles",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "number_of_forms_submitted_for_persons_not_in_motor_vehicles",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "number_of_persons_not_in_motor_vehicles_in_transport_mvit",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "number_of_persons_in_motor_vehicles_in_transport_mvit",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "number_of_forms_submitted_for_persons_in_motor_vehicles",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "county",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "city",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "day_of_crash",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "month_of_crash",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "year_of_crash",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "day_of_week",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "hour_of_crash",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "minute_of_crash",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "national_highway_system",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "land_use",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "land_use_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "functional_system",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "functional_system_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "ownership",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "ownership_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "route_signing",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "route_signing_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "trafficway_identifier",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "trafficway_identifier_2",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "milepoint",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "latitude",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "longitude",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "special_jurisdiction",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "special_jurisdiction_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "first_harmful_event",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "first_harmful_event_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "manner_of_collision",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "manner_of_collision_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "relation_to_junction_within_interchange_area",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "relation_to_junction_specific_location",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "relation_to_junction_specific_location_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "type_of_intersection",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "work_zone",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "relation_to_trafficway",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "relation_to_trafficway_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "light_condition",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "light_condition_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "atmospheric_conditions_1",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "atmospheric_conditions_1_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "atmospheric_conditions_2",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "atmospheric_conditions_2_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "atmospheric_conditions",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "atmospheric_conditions_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "school_bus_related",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "rail_grade_crossing_identifier",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "hour_of_notification",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "minute_of_notification",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "hour_of_arrival_at_scene",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "minute_of_arrival_at_scene",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "hour_of_ems_arrival_at_hospital",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "minute_of_ems_arrival_at_hospital",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "related_factors_crash_level_1",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "related_factors_crash_level_1_name",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "related_factors_crash_level_2",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "related_factors_crash_level_2_name",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "related_factors_crash_level_3",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "related_factors_crash_level_3_name",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "number_of_fatalities",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "number_of_drunk_drivers",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "timestamp_of_crash",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

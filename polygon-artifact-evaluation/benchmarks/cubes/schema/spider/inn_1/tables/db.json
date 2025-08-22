@@ -1,0 +1,91 @@
+{
+    "Problem Number": "spider/inn_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Rooms",
+            "PKeys": [
+                {
+                    "Name": "RoomId",
+                    "Type": "TEXT"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "roomName",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "beds",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "bedType",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "maxOccupancy",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "basePrice",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "decor",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "Reservations",
+            "PKeys": [
+                {
+                    "Name": "Code",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Room",
+                    "PName": "RoomId",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Room",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "CheckIn",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "CheckOut",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Rate",
+                    "Type": "REAL"
+                },
+                {
+                    "Name": "LastName",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "FirstName",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Adults",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Kids",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

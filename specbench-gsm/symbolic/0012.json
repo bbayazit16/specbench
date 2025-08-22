@@ -1,0 +1,16 @@
+{
+  "question": "{name} places {obj}s on some {surface}s. Each {surface} can hold {x} {obj}s. If he has {n} {obj}s and {k} {surface}s, how many {obj}s won't he be able to place on the {surface}?",
+  "types": {
+    "name": "str",
+    "obj": "str",
+    "surface": "str",
+    "x": "int",
+    "k": "int",
+    "n": "int"
+  },
+  "answer": "n - k*x",
+  "constraints": [],
+  "private_constraints": [
+    "k * x < n"
+  ]
+}

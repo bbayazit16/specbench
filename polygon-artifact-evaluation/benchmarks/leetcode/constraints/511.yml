@@ -1,0 +1,2 @@
+row_dep: unique(Activity.player_id, Activity.event_date)
+col_val: Activity.games_played>=0

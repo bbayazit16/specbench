@@ -1,0 +1,116 @@
+{
+    "Problem Number": "spider_bak/pilot_record/tables/db",
+    "Tables": [
+        {
+            "TableName": "aircraft",
+            "PKeys": [
+                {
+                    "Name": "Aircraft_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Order_Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Manufacturer",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Model",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Fleet_Series",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Powertrain",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Fuel_Propulsion",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "pilot",
+            "PKeys": [
+                {
+                    "Name": "Pilot_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Pilot_name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Rank",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Nationality",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Position",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Join_Year",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Team",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "pilot_record",
+            "PKeys": [
+                {
+                    "Name": "Pilot_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Aircraft_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Aircraft_ID",
+                    "PName": "Aircraft_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Pilot_ID",
+                    "PName": "Pilot_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Record_ID",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,179 @@
+{
+    "Problem Number": "spider/local_govt_mdm/tables/db",
+    "Tables": [
+        {
+            "TableName": "Customer_Master_Index",
+            "PKeys": [
+                {
+                    "Name": "master_customer_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "cmi_details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "CMI_Cross_References",
+            "PKeys": [
+                {
+                    "Name": "cmi_cross_ref_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "master_customer_id",
+                    "PName": "master_customer_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "master_customer_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "source_system_code",
+                    "Type": "CHAR(15)"
+                }
+            ]
+        },
+        {
+            "TableName": "Council_Tax",
+            "PKeys": [
+                {
+                    "Name": "council_tax_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "cmi_cross_ref_id",
+                    "PName": "cmi_cross_ref_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "cmi_cross_ref_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Business_Rates",
+            "PKeys": [
+                {
+                    "Name": "business_rates_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "cmi_cross_ref_id",
+                    "PName": "cmi_cross_ref_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "cmi_cross_ref_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Benefits_Overpayments",
+            "PKeys": [
+                {
+                    "Name": "council_tax_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "cmi_cross_ref_id",
+                    "PName": "cmi_cross_ref_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "cmi_cross_ref_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Parking_Fines",
+            "PKeys": [
+                {
+                    "Name": "council_tax_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "cmi_cross_ref_id",
+                    "PName": "cmi_cross_ref_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "cmi_cross_ref_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Rent_Arrears",
+            "PKeys": [
+                {
+                    "Name": "council_tax_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "cmi_cross_ref_id",
+                    "PName": "cmi_cross_ref_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "cmi_cross_ref_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Electoral_Register",
+            "PKeys": [
+                {
+                    "Name": "electoral_register_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "cmi_cross_ref_id",
+                    "PName": "cmi_cross_ref_id",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "cmi_cross_ref_id",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

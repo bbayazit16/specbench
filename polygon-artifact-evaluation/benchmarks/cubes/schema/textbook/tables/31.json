@@ -1,0 +1,58 @@
+{
+    "Problem Number": "textbook/tables/31",
+    "Tables": [
+        {
+            "TableName": "aircraft",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "aid",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "aname",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "crusingrange",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "certified",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "eid",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "aid",
+                    "Type": "BIGINT"
+                }
+            ]
+        },
+        {
+            "TableName": "employees",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "eid",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "ename",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "salary",
+                    "Type": "FLOAT"
+                }
+            ]
+        }
+    ]
+}

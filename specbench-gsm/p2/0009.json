@@ -1,0 +1,17 @@
+{
+  "question": "When {name} watches her {family}, she gets out a variety of toys for him. The bag of building blocks has {x} blocks in it. The bin of stuffed animals has {y} stuffed animals inside. The number of action figures in the action figure pack is twice the number of blocks and stuffed animals combined. The crayon box has {crayon} different colors of crayon, and the sticker book has {sticker_mult} pages, each with {sticker_page} stickers. The tower of stacking rings has {z} multicolored rings on it. {name} recently bought a tube of bouncy balls, bringing her total number of items for her {family} up to {total}. How many bouncy balls came in the tube?",
+  "types": {
+    "name": "str",
+    "family": "str",
+    "x": "int",
+    "y": "int",
+    "z": "int",
+    "crayon": "int",
+    "total": "int",
+    "sticker_mult": "int",
+    "sticker_page": "int"
+  },
+  "answer": "total - (3 * x + 3 * y + crayon + z + sticker_mult * sticker_page)",
+  "constraints": [],
+  "private_constraints": []
+}

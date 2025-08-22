@@ -1,0 +1,6 @@
+row_dep: unique(Employee.empId);
+         unique(Bonus.empId)
+col_dep: Bonus.empId<-Employee.empId;
+         Employee.empId!=Employee.supervisor
+col_val: Bonus.bonus >= 0;
+         Employee.salary>= 0

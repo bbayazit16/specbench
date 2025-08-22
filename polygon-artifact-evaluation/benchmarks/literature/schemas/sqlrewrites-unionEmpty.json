@@ -1,0 +1,16 @@
+{
+  "Tables": [
+    {
+      "TableName": "a",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "x",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

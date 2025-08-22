@@ -1,0 +1,25 @@
+{
+  "question": "{name} has a {product} stand at the {location}. {name} sells three kinds of {product}s: {item1}, {item2} and {item3}. {name} usually sells {item1} for {cur}{p1} per {unit}, {item2} for {cur}{p2} per {unit} and {item3} for {cur}{p3} per {unit}. {name} has no change today, so {name} has decided to round all his prices to the nearest dollar. {name} sells {n1} {unit}s of {item1}, {n2} {unit}s of {item2} and {n3} {unit}s of {item3}. How much will {name} make, after receiving a {k}% tip on every purchase?",
+  "types": {
+    "name": "str",
+    "product": "str",
+    "location": "str",
+    "item1": "str",
+    "item2": "str",
+    "item3": "str",
+    "unit": "str",
+    "cur": "str",
+    "k": "int",
+    "p1": "float",
+    "p2": "float",
+    "p3": "float",
+    "n1": "int",
+    "n2": "int",
+    "n3": "int"
+  },
+  "answer": "int((n1*round(p1) + n2*round(p2) + n3*round(p3))*(1+(k/100.0)))",
+  "constraints": [],
+  "private_constraints": [
+    "is_int((n1*round(p1) + n2*round(p2) + n3*round(p3))*(k/100.0))"
+  ]
+}

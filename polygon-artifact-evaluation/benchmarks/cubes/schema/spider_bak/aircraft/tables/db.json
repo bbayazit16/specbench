@@ -1,0 +1,179 @@
+{
+    "Problem Number": "spider_bak/aircraft/tables/db",
+    "Tables": [
+        {
+            "TableName": "pilot",
+            "PKeys": [
+                {
+                    "Name": "Pilot_Id",
+                    "Type": "int(11)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "varchar(50)"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int(11)"
+                }
+            ]
+        },
+        {
+            "TableName": "aircraft",
+            "PKeys": [
+                {
+                    "Name": "Aircraft_ID",
+                    "Type": "int(11)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Aircraft",
+                    "Type": "varchar(50)"
+                },
+                {
+                    "Name": "Description",
+                    "Type": "varchar(50)"
+                },
+                {
+                    "Name": "Max_Gross_Weight",
+                    "Type": "varchar(50)"
+                },
+                {
+                    "Name": "Total_disk_area",
+                    "Type": "varchar(50)"
+                },
+                {
+                    "Name": "Max_disk_Loading",
+                    "Type": "varchar(50)"
+                }
+            ]
+        },
+        {
+            "TableName": "match",
+            "PKeys": [
+                {
+                    "Name": "Round",
+                    "Type": "real"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Winning_Pilot",
+                    "PName": "Pilot_Id",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Winning_Aircraft",
+                    "PName": "Aircraft_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Location",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Country",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Fastest_Qualifying",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Winning_Pilot",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Winning_Aircraft",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "airport",
+            "PKeys": [
+                {
+                    "Name": "Airport_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Airport_Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Total_Passengers",
+                    "Type": "real"
+                },
+                {
+                    "Name": "%_Change_2007",
+                    "Type": "text"
+                },
+                {
+                    "Name": "International_Passengers",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Domestic_Passengers",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Transit_Passengers",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Aircraft_Movements",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Freight_Metric_Tonnes",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "airport_aircraft",
+            "PKeys": [
+                {
+                    "Name": "Airport_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Aircraft_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Aircraft_ID",
+                    "PName": "Aircraft_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Airport_ID",
+                    "PName": "Airport_ID",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "int"
+                }
+            ]
+        }
+    ]
+}

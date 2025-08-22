@@ -1,0 +1,20 @@
+{
+  "question": "{n} saw a {x}-foot {big_fish} with {k} {y}-inch remoras attached to it. But a fraction of {frac} of the remoras go away. What percentage of the {big_fish}'s body length is the combined length of the remaining remoras?",
+  "types": {
+    "n": "str",
+    "big_fish": "str",
+    "x": "int",
+    "k": "int",
+    "y": "int",
+    "frac": "float"
+  },
+  "answer": "int(((k-k*frac) * y)/ (x * 12) * 100)",
+  "constraints": [],
+  "private_constraints": [
+    "k * y < x * 12",
+    "is_int(frac * k)",
+    "frac* k > 2",
+    "divides(x * 12, (k-frac*k)*y)",
+    "divides(100, x * 12 / ((k-frac*k)*y))"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+    "Problem Number": "db2csv/singer/tables/singer",
+    "Tables": [
+        {
+            "TableName": "singer",
+            "PKeys": [
+                {
+                    "Name": "Singer_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Birth_Year",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Net_Worth_Millions",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Citizenship",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "song",
+            "PKeys": [
+                {
+                    "Name": "Song_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Singer_ID",
+                    "PName": "Singer_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Title",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Singer_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Sales",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Highest_Position",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

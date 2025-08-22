@@ -1,0 +1,30 @@
+{
+  "question": "{name} is knitting winter wear for her {count} grandchildren. They're {children}, so they're all the same size. She wants to make a {c1}, {c2}, {c3}, {c4}, and {c5} for each of them. It takes {n1} skeins of wool to make a {c1}, {n2} for a {c2}, {n3} for a {c3}, {n4} for a pair of {c4}, and {n5} for a pair of {c5}. {name} wants to make two warm jackets for herself, each needing {extra} skeins of wool. Each dozen skeins of wool costs ${price}. The store has a promotion where customers receive a $20 discount on purchases over ${limit}. How much should {name} pay for all the skeins of wool she needs?",
+  "types": {
+    "name": "str",
+    "c1": "str",
+    "c2": "str",
+    "c3": "str",
+    "c4": "str",
+    "c5": "str",
+    "n1": "int",
+    "n2": "int",
+    "n3": "int",
+    "n4": "int",
+    "n5": "int",
+    "count": "int",
+    "extra": "int",
+    "children": "int",
+    "price": "int",
+    "limit": "int"
+  },
+  "answer": "((count*(n1+n2+n3+n4+n5) + 2*extra) // 12 * price) - 20",
+  "constraints": [
+    "{children} variable represents the integer number of children, derived from the group term (e.g., twins -> 2)"
+  ],
+  "private_constraints": [
+    "divides(count*(n1+n2+n3+n4+n5) + 2*extra, 12)",
+    "count == children",
+    "limit < (count*(n1+n2+n3+n4+n5) + 2*extra)//12*price < limit + 200"
+  ]
+}

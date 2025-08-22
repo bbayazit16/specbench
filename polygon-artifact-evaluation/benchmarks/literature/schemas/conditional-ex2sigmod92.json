@@ -1,0 +1,36 @@
+{
+  "Tables": [
+    {
+      "TableName": "itp",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "itemno",
+          "Type": "int"
+        },
+        {
+          "Name": "np",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "itm",
+      "PKeys": [
+        {
+          "Name": "itemno",
+          "Type": "int"
+        }
+      ],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "type",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

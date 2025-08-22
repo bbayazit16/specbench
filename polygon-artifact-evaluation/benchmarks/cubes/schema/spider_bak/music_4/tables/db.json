@@ -1,0 +1,109 @@
+{
+    "Problem Number": "spider_bak/music_4/tables/db",
+    "Tables": [
+        {
+            "TableName": "artist",
+            "PKeys": [
+                {
+                    "Name": "Artist_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Artist",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Famous_Title",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Famous_Release_date",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "volume",
+            "PKeys": [
+                {
+                    "Name": "Volume_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Artist_ID",
+                    "PName": "Artist_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Volume_Issue",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Issue_Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Weeks_on_Top",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Song",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Artist_ID",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "music_festival",
+            "PKeys": [
+                {
+                    "Name": "ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Volume",
+                    "PName": "Volume_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Music_Festival",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Date_of_ceremony",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Category",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Volume",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Result",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

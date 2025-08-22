@@ -1,0 +1,51 @@
+{
+    "Problem Number": "kaggle/tables/1_6_T_1",
+    "Tables": [
+        {
+            "TableName": "sample_files",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "repo_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "ref",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "path",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "mode",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "id",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "symlink_target",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "licenses",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "repo_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "license",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

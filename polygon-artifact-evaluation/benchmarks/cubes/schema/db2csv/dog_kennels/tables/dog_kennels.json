@@ -1,0 +1,297 @@
+{
+    "Problem Number": "db2csv/dog_kennels/tables/dog_kennels",
+    "Tables": [
+        {
+            "TableName": "Breeds",
+            "PKeys": [
+                {
+                    "Name": "breed_code",
+                    "Type": "VARCHAR(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "breed_name",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Charges",
+            "PKeys": [
+                {
+                    "Name": "charge_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "charge_type",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "charge_amount",
+                    "Type": "DECIMAL(19,4)"
+                }
+            ]
+        },
+        {
+            "TableName": "Sizes",
+            "PKeys": [
+                {
+                    "Name": "size_code",
+                    "Type": "VARCHAR(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "size_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Treatment_Types",
+            "PKeys": [
+                {
+                    "Name": "treatment_type_code",
+                    "Type": "VARCHAR(10)"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "treatment_type_description",
+                    "Type": "VARCHAR(80)"
+                }
+            ]
+        },
+        {
+            "TableName": "Owners",
+            "PKeys": [
+                {
+                    "Name": "owner_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "street",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "city",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "state",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "zip_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "email_address",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "home_phone",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "cell_number",
+                    "Type": "VARCHAR(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "Dogs",
+            "PKeys": [
+                {
+                    "Name": "dog_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "owner_id",
+                    "PName": "owner_id",
+                    "PTable": 4
+                },
+                {
+                    "FName": "size_code",
+                    "PName": "size_code",
+                    "PTable": 2
+                },
+                {
+                    "FName": "breed_code",
+                    "PName": "breed_code",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "owner_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "abandoned_yn",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "breed_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "size_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "name",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "age",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "date_of_birth",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "gender",
+                    "Type": "VARCHAR(1)"
+                },
+                {
+                    "Name": "weight",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "date_arrived",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_adopted",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "date_departed",
+                    "Type": "DATETIME"
+                }
+            ]
+        },
+        {
+            "TableName": "Professionals",
+            "PKeys": [
+                {
+                    "Name": "professional_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "role_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "first_name",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "street",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "city",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "state",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "zip_code",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "email_address",
+                    "Type": "VARCHAR(50)"
+                },
+                {
+                    "Name": "home_phone",
+                    "Type": "VARCHAR(20)"
+                },
+                {
+                    "Name": "cell_number",
+                    "Type": "VARCHAR(20)"
+                }
+            ]
+        },
+        {
+            "TableName": "Treatments",
+            "PKeys": [
+                {
+                    "Name": "treatment_id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "dog_id",
+                    "PName": "dog_id",
+                    "PTable": 5
+                },
+                {
+                    "FName": "professional_id",
+                    "PName": "professional_id",
+                    "PTable": 6
+                },
+                {
+                    "FName": "treatment_type_code",
+                    "PName": "treatment_type_code",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "dog_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "professional_id",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "treatment_type_code",
+                    "Type": "VARCHAR(10)"
+                },
+                {
+                    "Name": "date_of_treatment",
+                    "Type": "DATETIME"
+                },
+                {
+                    "Name": "cost_of_treatment",
+                    "Type": "DECIMAL(19,4)"
+                }
+            ]
+        }
+    ]
+}

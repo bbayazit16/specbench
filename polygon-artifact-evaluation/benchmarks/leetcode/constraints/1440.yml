@@ -1,0 +1,5 @@
+row_dep: unique(Variables.name);
+         unique(Expressions.left_operand, Expressions.operator, Expressions.right_operand)
+col_val: Expressions.operator<-{'<', '>', '='}
+col_dep: Expressions.left_operand<-Variables.name;
+         Expressions.right_operand<-Variables.name

@@ -1,0 +1,127 @@
+{
+    "Problem Number": "spider_bak/program_share/tables/db",
+    "Tables": [
+        {
+            "TableName": "program",
+            "PKeys": [
+                {
+                    "Name": "Program_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Origin",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Launch",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Owner",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "channel",
+            "PKeys": [
+                {
+                    "Name": "Channel_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Owner",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Share_in_percent",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Rating_in_percent",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "broadcast",
+            "PKeys": [
+                {
+                    "Name": "Channel_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Program_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Program_ID",
+                    "PName": "Program_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Channel_ID",
+                    "PName": "Channel_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Time_of_day",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "broadcast_share",
+            "PKeys": [
+                {
+                    "Name": "Channel_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Program_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Program_ID",
+                    "PName": "Program_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Channel_ID",
+                    "PName": "Channel_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Share_in_percent",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

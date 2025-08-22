@@ -1,0 +1,35 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/013",
+    "Tables": [
+        {
+            "TableName": "013_1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "013_2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "Company_group",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

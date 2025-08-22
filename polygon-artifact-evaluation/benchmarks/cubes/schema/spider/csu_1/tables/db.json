@@ -1,0 +1,174 @@
+{
+    "Problem Number": "spider/csu_1/tables/db",
+    "Tables": [
+        {
+            "TableName": "Campuses",
+            "PKeys": [
+                {
+                    "Name": "Id",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Campus",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Location",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "County",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "csu_fees",
+            "PKeys": [
+                {
+                    "Name": "Campus",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Campus",
+                    "PName": "Id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Year",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "CampusFee",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "degrees",
+            "PKeys": [
+                {
+                    "Name": "Year",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Campus",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Campus",
+                    "PName": "Id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Degrees",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "discipline_enrollments",
+            "PKeys": [
+                {
+                    "Name": "Campus",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Discipline",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Campus",
+                    "PName": "Id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Year",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Undergraduate",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Graduate",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "enrollments",
+            "PKeys": [
+                {
+                    "Name": "Campus",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Campus",
+                    "PName": "Id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "TotalEnrollment_AY",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "FTE_AY",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "faculty",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "Campus",
+                    "PName": "Id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Campus",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Year",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Faculty",
+                    "Type": "REAL"
+                }
+            ]
+        }
+    ]
+}

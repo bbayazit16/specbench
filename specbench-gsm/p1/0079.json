@@ -1,0 +1,16 @@
+{
+  "question": "{name} finished a fraction of {frac1} of a {n1} piece puzzle, and then started and finished a fraction of {frac2} of another {n2} piece puzzle within an hour. How many puzzle pieces did {name} place during that hour?",
+  "types": {
+    "name": "str",
+    "frac1": "float",
+    "frac2": "float",
+    "n1": "int",
+    "n2": "int"
+  },
+  "answer": "int(n1 * frac1) + int(n2*frac2)",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n1 * frac1)",
+    "is_int(n2 * frac2)"
+  ]
+}

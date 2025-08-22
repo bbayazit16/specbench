@@ -1,0 +1,28 @@
+{
+    "Problem Number": "scythe/top_rated_posts/tables/055",
+    "Tables": [
+        {
+            "TableName": "i055",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "BIGINT"
+                },
+                {
+                    "Name": "User",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Activity",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "PageURL",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

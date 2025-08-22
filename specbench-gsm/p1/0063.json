@@ -1,0 +1,16 @@
+{
+  "question": "A {person1} has {n} {item}s. His {relation} has {k} fewer {item}s than {mult} times what he has. How many {item}s do they have together?",
+  "types": {
+    "person1": "str",
+    "item": "str",
+    "relation": "str",
+    "n": "int",
+    "k": "int",
+    "mult": "float"
+  },
+  "answer": "n + (mult*n-k)",
+  "constraints": [],
+  "private_constraints": [
+    "mult*n > k"
+  ]
+}

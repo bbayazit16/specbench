@@ -1,0 +1,69 @@
+{
+    "Problem Number": "textbook/tables/1",
+    "Tables": [
+        {
+            "TableName": "1-1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "C_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "F_key",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "1-2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "C_name",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "1-3",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "F_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "F_name",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "1-4",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "S_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "level",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

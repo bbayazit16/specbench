@@ -1,0 +1,16 @@
+{
+  "question": "{school} is holding graduation in their {venue} this year which has space for {total} people. After accounting for {graduates} seats for graduates and {faculty} seats for faculty attending, how many tickets would each graduate receive to give to their friends and family if the tickets are split equally?",
+  "types": {
+    "school": "str",
+    "venue": "str",
+    "total": "int",
+    "graduates": "int",
+    "faculty": "int"
+  },
+  "answer": "(total - graduates - faculty) // graduates",
+  "constraints": [],
+  "private_constraints": [
+    "total > graduates + faculty",
+    "is_int((total - graduates - faculty) / graduates)"
+  ]
+}

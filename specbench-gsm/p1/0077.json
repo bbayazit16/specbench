@@ -1,0 +1,17 @@
+{
+  "question": "{name} is required to submit a {n}-page {document}. She already finished writing a fraction of {frac} of the {document}, and she has {d} more days until the submission deadline. On average, how many pages does she have left to write per day?",
+  "types": {
+    "name": "str",
+    "document": "str",
+    "n": "int",
+    "frac": "float",
+    "d": "int"
+  },
+  "answer": "(n - int(n * frac))//d",
+  "constraints": [],
+  "private_constraints": [
+    "is_int(n * frac)",
+    "n * frac < n",
+    "divides( n - int(n * frac), d)"
+  ]
+}

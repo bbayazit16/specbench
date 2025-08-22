@@ -1,0 +1,80 @@
+{
+    "Problem Number": "spider/journal_committee/tables/db",
+    "Tables": [
+        {
+            "TableName": "journal",
+            "PKeys": [
+                {
+                    "Name": "Journal_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Theme",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Sales",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "editor",
+            "PKeys": [
+                {
+                    "Name": "Editor_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "journal_committee",
+            "PKeys": [
+                {
+                    "Name": "Editor_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Journal_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Journal_ID",
+                    "PName": "Journal_ID",
+                    "PTable": 0
+                },
+                {
+                    "FName": "Editor_ID",
+                    "PName": "Editor_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Work_Type",
+                    "Type": "text"
+                }
+            ]
+        }
+    ]
+}

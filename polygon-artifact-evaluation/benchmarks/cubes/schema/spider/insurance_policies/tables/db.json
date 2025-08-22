@@ -1,0 +1,169 @@
+{
+    "Problem Number": "spider/insurance_policies/tables/db",
+    "Tables": [
+        {
+            "TableName": "Customers",
+            "PKeys": [
+                {
+                    "Name": "Customer_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Customer_Details",
+                    "Type": "VARCHAR(255)"
+                }
+            ]
+        },
+        {
+            "TableName": "Customer_Policies",
+            "PKeys": [
+                {
+                    "Name": "Policy_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Customer_ID",
+                    "PName": "Customer_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Customer_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Policy_Type_Code",
+                    "Type": "CHAR(15)"
+                },
+                {
+                    "Name": "Start_Date",
+                    "Type": "DATE"
+                },
+                {
+                    "Name": "End_Date",
+                    "Type": "DATE"
+                }
+            ]
+        },
+        {
+            "TableName": "Claims",
+            "PKeys": [
+                {
+                    "Name": "Claim_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Policy_ID",
+                    "PName": "Policy_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Policy_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Date_Claim_Made",
+                    "Type": "DATE"
+                },
+                {
+                    "Name": "Date_Claim_Settled",
+                    "Type": "DATE"
+                },
+                {
+                    "Name": "Amount_Claimed",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Amount_Settled",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Settlements",
+            "PKeys": [
+                {
+                    "Name": "Settlement_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Claim_ID",
+                    "PName": "Claim_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Claim_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Date_Claim_Made",
+                    "Type": "DATE"
+                },
+                {
+                    "Name": "Date_Claim_Settled",
+                    "Type": "DATE"
+                },
+                {
+                    "Name": "Amount_Claimed",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Amount_Settled",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Customer_Policy_ID",
+                    "Type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "TableName": "Payments",
+            "PKeys": [
+                {
+                    "Name": "Payment_ID",
+                    "Type": "INTEGER"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Settlement_ID",
+                    "PName": "Settlement_ID",
+                    "PTable": 3
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Settlement_ID",
+                    "Type": "INTEGER"
+                },
+                {
+                    "Name": "Payment_Method_Code",
+                    "Type": "VARCHAR(255)"
+                },
+                {
+                    "Name": "Date_Payment_Made",
+                    "Type": "DATE"
+                },
+                {
+                    "Name": "Amount_Payment",
+                    "Type": "INTEGER"
+                }
+            ]
+        }
+    ]
+}

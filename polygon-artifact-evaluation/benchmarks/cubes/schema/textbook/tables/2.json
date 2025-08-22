@@ -1,0 +1,69 @@
+{
+    "Problem Number": "textbook/tables/2",
+    "Tables": [
+        {
+            "TableName": "2-1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "C_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "F_key",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "2-2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "C_name",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "2-3",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "F_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "F_name",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "2-4",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "major",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "age",
+                    "Type": "BIGINT"
+                }
+            ]
+        }
+    ]
+}

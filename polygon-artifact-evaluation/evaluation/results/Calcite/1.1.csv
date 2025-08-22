@@ -1,0 +1,5 @@
+ID,?Refuted,Time,Counterexample,#Iters,#Backtracking,%Backtracking Type 2,Unsat core size,%unsat core,solving times
+13,False,,,,,,,,
+166,False,,,,,,,,
+245,False,,,,,,,,
+326,True,0.707238,"{'emp': [['empno', 'deptno', 'ename', 'job', 'mgr', 'hiredate', 'sal', 'comm', 'slacker'], [11, 35, '35', '34', 35, '1000-02-05', -3, 192, 35], [10, 35, '35', '34', 35, '1000-02-05', -712, 191, 35]], 'dept': [['deptno', 'name'], [35, '35']], 'bonus': [['ename', 'job', 'sal', 'comm'], ['35', '35', 35, 35], ['35', '35', 35, 35]], 'empnullables': [['empno', 'deptno', 'ename', 'job', 'mgr', 'hiredate', 'sal', 'comm', 'slacker'], [13, 35, '35', '35', 35, '1000-02-05', 35, 35, 35], [12, 35, '35', '35', 35, '1000-02-05', 35, 35, 35]], 'empnullables_20': [['empno', 'deptno', 'ename', 'job', 'mgr', 'hiredate', 'sal', 'comm', 'slacker'], [15, 35, '35', '35', 35, '1000-02-05', 35, 35, 35], [14, 35, '35', '35', 35, '1000-02-05', 35, 35, 35]], 'emp_b': [['empno', 'deptno', 'ename', 'job', 'mgr', 'hiredate', 'sal', 'comm', 'slacker', 'birthdate'], [35, 35, '35', '35', 35, '1000-02-05', 35, 35, 35, '1000-02-05']]}",43,0,,,,[]

@@ -1,0 +1,3 @@
+row_dep: unique(Friendship.user1_id, Friendship.user2_id);
+         unique(Likes.user_id, Likes.page_id)
+col_dep: Friendship.user1_id != Friendship.user2_id

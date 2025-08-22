@@ -1,0 +1,40 @@
+{
+  "Tables": [
+    {
+      "TableName": "itp",
+      "PKeys": [
+        {
+          "Name": "itemn",
+          "Type": "int"
+        }
+      ],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "ponum",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "itl",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "itemn",
+          "Type": "int"
+        },
+        {
+          "Name": "wkcen",
+          "Type": "int"
+        },
+        {
+          "Name": "locan",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

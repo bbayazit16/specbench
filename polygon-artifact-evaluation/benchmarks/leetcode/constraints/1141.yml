@@ -1,0 +1,1 @@
+col_val: Activity.activity_type <- {'open_session', 'end_session', 'scroll_down', 'send_message'}

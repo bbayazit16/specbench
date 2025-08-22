@@ -1,0 +1,35 @@
+{
+  "Tables": [
+    {
+      "TableName": "usr",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "usrUid",
+          "Type": "int"
+        },
+        {
+          "Name": "usrName",
+          "Type": "varchar"
+        }
+      ]
+    },
+    {
+      "TableName": "pic",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "picUid",
+          "Type": "int"
+        },
+        {
+          "Name": "picSize",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

@@ -1,0 +1,216 @@
+{
+    "Problem Number": "db2csv/wta_1/tables/wta_1",
+    "Tables": [
+        {
+            "TableName": "players",
+            "PKeys": [
+                {
+                    "Name": "player_id",
+                    "Type": "INT"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "first_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "last_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "hand",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "birth_date",
+                    "Type": "DATE"
+                },
+                {
+                    "Name": "country_code",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "matches",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "winner_id",
+                    "PName": "player_id",
+                    "PTable": 0
+                },
+                {
+                    "FName": "loser_id",
+                    "PName": "player_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "best_of",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "draw_size",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "loser_age",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "loser_entry",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "loser_hand",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "loser_ht",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "loser_id",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "loser_ioc",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "loser_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "loser_rank",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "loser_rank_points",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "loser_seed",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "match_num",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "minutes",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "round",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "score",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "surface",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "tourney_date",
+                    "Type": "DATE"
+                },
+                {
+                    "Name": "tourney_id",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "tourney_level",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "tourney_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "winner_age",
+                    "Type": "FLOAT"
+                },
+                {
+                    "Name": "winner_entry",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "winner_hand",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "winner_ht",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "winner_id",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "winner_ioc",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "winner_name",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "winner_rank",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "winner_rank_points",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "winner_seed",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "year",
+                    "Type": "INT"
+                }
+            ]
+        },
+        {
+            "TableName": "rankings",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "player_id",
+                    "PName": "player_id",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "ranking_date",
+                    "Type": "DATE"
+                },
+                {
+                    "Name": "ranking",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "player_id",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "ranking_points",
+                    "Type": "INT"
+                },
+                {
+                    "Name": "tours",
+                    "Type": "INT"
+                }
+            ]
+        }
+    ]
+}

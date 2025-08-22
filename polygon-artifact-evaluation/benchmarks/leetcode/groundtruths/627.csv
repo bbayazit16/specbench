@@ -1,0 +1,2 @@
+qid,mysql_groundtruth
+627,"UPDATE SALARY SET SEX = CASE WHEN SEX = 'M THEN F ELSE M' END"

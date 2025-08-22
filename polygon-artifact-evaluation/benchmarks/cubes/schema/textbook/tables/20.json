@@ -1,0 +1,50 @@
+{
+    "Problem Number": "textbook/tables/20",
+    "Tables": [
+        {
+            "TableName": "20-1",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "P_id",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "20-2",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "P_id",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "color",
+                    "Type": "TEXT"
+                }
+            ]
+        },
+        {
+            "TableName": "20-3",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "S_key",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "S_name",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

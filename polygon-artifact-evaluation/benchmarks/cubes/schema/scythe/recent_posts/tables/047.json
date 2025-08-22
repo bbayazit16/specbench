@@ -1,0 +1,24 @@
+{
+    "Problem Number": "scythe/recent_posts/tables/047",
+    "Tables": [
+        {
+            "TableName": "047",
+            "PKeys": [],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "ID",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Payment_type",
+                    "Type": "TEXT"
+                },
+                {
+                    "Name": "Time",
+                    "Type": "TEXT"
+                }
+            ]
+        }
+    ]
+}

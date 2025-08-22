@@ -1,0 +1,39 @@
+{
+  "Tables": [
+    {
+      "TableName": "user",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "uid",
+          "Type": "int"
+        },
+        {
+          "Name": "uname",
+          "Type": "int"
+        },
+        {
+          "Name": "city",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "TableName": "picture",
+      "PKeys": [],
+      "FKeys": [],
+      "Others": [
+        {
+          "Name": "uid",
+          "Type": "int"
+        },
+        {
+          "Name": "size",
+          "Type": "int"
+        }
+      ]
+    }
+  ],
+  "Tuples": []
+}

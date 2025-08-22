@@ -1,0 +1,17 @@
+{
+  "question": "{name} can peel {n1} {food}s a minute and saute {n2} {food}s in {t} minutes. How long will it take her to peel and saute {total} {food}s?",
+  "types": {
+    "name": "str",
+    "food": "str",
+    "n1": "int",
+    "n2": "int",
+    "t": "int",
+    "total": "int"
+  },
+  "answer": "total // n1 + (total // n2) * t",
+  "constraints": [],
+  "private_constraints": [
+    "divides(total, n1)",
+    "divides(total, n2)"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+    "Problem Number": "spider/manufacturer/tables/db",
+    "Tables": [
+        {
+            "TableName": "manufacturer",
+            "PKeys": [
+                {
+                    "Name": "Manufacturer_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Open_Year",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Num_of_Factories",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Num_of_Shops",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "furniture",
+            "PKeys": [
+                {
+                    "Name": "Furniture_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Num_of_Component",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Market_Rate",
+                    "Type": "real"
+                }
+            ]
+        },
+        {
+            "TableName": "furniture_manufacte",
+            "PKeys": [
+                {
+                    "Name": "Manufacturer_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Furniture_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Furniture_ID",
+                    "PName": "Furniture_ID",
+                    "PTable": 1
+                },
+                {
+                    "FName": "Manufacturer_ID",
+                    "PName": "Manufacturer_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Price_in_Dollar",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

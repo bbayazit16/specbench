@@ -1,0 +1,146 @@
+{
+    "Problem Number": "db2csv/orchestra/tables/orchestra",
+    "Tables": [
+        {
+            "TableName": "conductor",
+            "PKeys": [
+                {
+                    "Name": "Conductor_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [],
+            "Others": [
+                {
+                    "Name": "Name",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Age",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Nationality",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Year_of_Work",
+                    "Type": "int"
+                }
+            ]
+        },
+        {
+            "TableName": "orchestra",
+            "PKeys": [
+                {
+                    "Name": "Orchestra_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Conductor_ID",
+                    "PName": "Conductor_ID",
+                    "PTable": 0
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Orchestra",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Conductor_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Record_Company",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Year_of_Founded",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Major_Record_Format",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "performance",
+            "PKeys": [
+                {
+                    "Name": "Performance_ID",
+                    "Type": "int"
+                }
+            ],
+            "FKeys": [
+                {
+                    "FName": "Orchestra_ID",
+                    "PName": "Orchestra_ID",
+                    "PTable": 1
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Orchestra_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Type",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Date",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Official_ratings_(millions)",
+                    "Type": "real"
+                },
+                {
+                    "Name": "Weekly_rank",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Share",
+                    "Type": "text"
+                }
+            ]
+        },
+        {
+            "TableName": "show",
+            "PKeys": [],
+            "FKeys": [
+                {
+                    "FName": "Performance_ID",
+                    "PName": "Performance_ID",
+                    "PTable": 2
+                }
+            ],
+            "Others": [
+                {
+                    "Name": "Show_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "Performance_ID",
+                    "Type": "int"
+                },
+                {
+                    "Name": "If_first_show",
+                    "Type": "bool"
+                },
+                {
+                    "Name": "Result",
+                    "Type": "text"
+                },
+                {
+                    "Name": "Attendance",
+                    "Type": "real"
+                }
+            ]
+        }
+    ]
+}

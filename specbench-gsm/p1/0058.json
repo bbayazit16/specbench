@@ -1,0 +1,23 @@
+{
+  "question": "One {worker} can mine {base} {unit} of ore per day with {tool1}. He can mine {mult1} as much with one {tool2} and {mult2}% more with a {tool3} than with one {tool2}. How many {unit} of ore can {n} {worker}s mine in a month with {days} days if they all use {tool2} in the first half, and then switch to {tool3}s in the second half of the month?",
+  "types": {
+    "worker": "str",
+    "tool1": "str",
+    "unit": "str",
+    "tool2": "str",
+    "tool3": "str",
+    "base": "int",
+    "mult1": "float",
+    "mult2": "int",
+    "n": "int",
+    "days": "int"
+  },
+  "answer": "int(base * mult1 * (1 + mult2/100) * n * days//2) + (n*days//2*base*mult1)",
+  "constraints": [
+    "unit in ['pounds', 'kgs']"
+  ],
+  "private_constraints": [
+    "is_int(mult2/100*base*mult1)",
+    "int(base * mult1 * (1 + mult2/100) * n * days) < 6000"
+  ]
+}

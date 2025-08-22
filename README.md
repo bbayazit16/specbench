@@ -2,7 +2,7 @@
 
 Slides are easy to understand and enhanced with examples! Even if you don't know anything about the topic, it should be easy to follow.
 
-I'm Baris, an undergraduate starting my third year interested in programming languages and formal methods. This work was done under the supervision of Prof. Xujie Si during this summer (2025)!.
+I'm Baris, an undergraduate starting my third year interested in programming languages and formal methods. This work was done under the supervision of Prof. Xujie Si during this summer (2025)!
 
 My contact info for questions: baris at cs dot toronto dot edu.
 
@@ -16,6 +16,6 @@ Feel free to reach out to me if you have any questions. I'd be happy to help and
 
 ## License Information
 
-The repository polygon-artifact-evaluation is directly copied from [the original artifact](https://zenodo.org/records/15059866). The folder additionally includes the Polygon aspect of the benchmark named `specbench.py` (and others), subject to the terms of the license of this repository.
+The repository polygon-artifact-evaluation is directly copied from [the original artifact](https://zenodo.org/records/15059866). The folder additionally includes the Polygon aspect of the benchmark named `specbench.py` (and others, all also included in polygon-extra directory), subject to the terms of the license of this repository.
 
 This work is licensed under the [MIT License](LICENSE).
